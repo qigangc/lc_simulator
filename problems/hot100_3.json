@@ -1,0 +1,12 @@
+[
+{"id":21,"slug":"rotate-image","title_en":"Rotate Image","title_zh":"旋转图像","difficulty":"medium","categories":["matrix"],"function":{"name":"rotate","params":[["matrix","List[List[int]]"]],"return":"List[List[int]]"}},
+{"id":22,"slug":"group-anagrams","title_en":"Group Anagrams","title_zh":"字母异位词分组","difficulty":"medium","categories":["hash"],"function":{"name":"groupAnagrams","params":[["strs","List[str]"]],"return":"List[List[str]]"}},
+{"id":23,"slug":"maximum-subarray","title_en":"Maximum Subarray","title_zh":"最大子数组和","difficulty":"medium","categories":["array","subarray","dp"],"function":{"name":"maxSubArray","params":[["nums","List[int]"]],"return":"int"}},
+{"id":24,"slug":"jump-game","title_en":"Jump Game","title_zh":"跳跃游戏","difficulty":"medium","categories":["array","greedy","dp"],"function":{"name":"canJump","params":[["nums","List[int]"]],"return":"bool"}},
+{"id":25,"slug":"merge-intervals","title_en":"Merge Intervals","title_zh":"合并区间","difficulty":"medium","categories":["array","interval"],"function":{"name":"merge","params":[["intervals","List[List[int]]"]],"return":"List[List[int]]"}},
+{"id":26,"slug":"unique-paths","title_en":"Unique Paths","title_zh":"不同路径","difficulty":"medium","categories":["dp"],"function":{"name":"uniquePaths","params":[["m","int"],["n","int"]],"return":"int"}},
+{"id":27,"slug":"minimum-path-sum","title_en":"Minimum Path Sum","title_zh":"最小路径和","difficulty":"medium","categories":["dp","matrix"],"function":{"name":"minPathSum","params":[["grid","List[List[int]]"]],"return":"int"}},
+{"id":28,"slug":"climbing-stairs","title_en":"Climbing Stairs","title_zh":"爬楼梯","difficulty":"easy","categories":["dp"],"function":{"name":"climbStairs","params":[["n","int"]],"return":"int"}},
+{"id":29,"slug":"edit-distance","title_en":"Edit Distance","title_zh":"编辑距离","difficulty":"medium","categories":["dp"],"function":{"name":"minDistance","params":[["word1","str"],["word2","str"]],"return":"int"}},
+{"id":30,"slug":"sort-colors","title_en":"Sort Colors","title_zh":"颜色分类","difficulty":"medium","categories":["array","two_pointers"],"function":{"name":"sortColors","params":[["nums","List[int]"]],"return":"List[int]"}}
+]

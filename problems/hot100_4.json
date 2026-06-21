@@ -1,0 +1,12 @@
+[
+{"id":31,"slug":"minimum-window-substring","title_en":"Minimum Window Substring","title_zh":"最小覆盖子串","difficulty":"hard","categories":["hash","sliding_window"],"function":{"name":"minWindow","params":[["s","str"],["t","str"]],"return":"str"}},
+{"id":32,"slug":"subsets","title_en":"Subsets","title_zh":"子集","difficulty":"medium","categories":["backtracking"],"function":{"name":"subsets","params":[["nums","List[int]"]],"return":"List[List[int]]"}},
+{"id":33,"slug":"word-search","title_en":"Word Search","title_zh":"单词搜索","difficulty":"medium","categories":["backtracking","matrix"],"function":{"name":"exist","params":[["board","List[List[str]]"],["word","str"]],"return":"bool"}},
+{"id":34,"slug":"largest-rectangle-in-histogram","title_en":"Largest Rectangle in Histogram","title_zh":"柱状图中最大的矩形","difficulty":"hard","categories":["stack"],"function":{"name":"largestRectangleArea","params":[["heights","List[int]"]],"return":"int"}},
+{"id":35,"slug":"maximal-rectangle","title_en":"Maximal Rectangle","title_zh":"最大矩形","difficulty":"hard","categories":["stack","dp","matrix"],"function":{"name":"maximalRectangle","params":[["matrix","List[List[str]]"]],"return":"int"}},
+{"id":36,"slug":"decode-ways","title_en":"Decode Ways","title_zh":"解码方法","difficulty":"medium","categories":["dp"],"function":{"name":"numDecodings","params":[["s","str"]],"return":"int"}},
+{"id":37,"slug":"validate-binary-search-tree","title_en":"Validate Binary Search Tree","title_zh":"验证二叉搜索树","difficulty":"medium","categories":["binary_tree"],"function":{"name":"isValidBST","params":[["root","List[int]"]],"return":"bool"}},
+{"id":38,"slug":"same-tree","title_en":"Same Tree","title_zh":"相同的树","difficulty":"easy","categories":["binary_tree"],"function":{"name":"isSameTree","params":[["p","List[int]"],["q","List[int]"]],"return":"bool"}},
+{"id":39,"slug":"symmetric-tree","title_en":"Symmetric Tree","title_zh":"对称二叉树","difficulty":"easy","categories":["binary_tree"],"function":{"name":"isSymmetric","params":[["root","List[int]"]],"return":"bool"}},
+{"id":40,"slug":"binary-tree-level-order-traversal","title_en":"Binary Tree Level Order Traversal","title_zh":"二叉树的层序遍历","difficulty":"medium","categories":["binary_tree"],"function":{"name":"levelOrder","params":[["root","List[int]"]],"return":"List[List[int]]"}}
+]

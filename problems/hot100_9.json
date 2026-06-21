@@ -1,0 +1,12 @@
+[
+{"id":81,"slug":"partition-equal-subset-sum","title_en":"Partition Equal Subset Sum","title_zh":"分割等和子集","difficulty":"medium","categories":["dp"],"function":{"name":"canPartition","params":[["nums","List[int]"]],"return":"bool"}},
+{"id":82,"slug":"path-sum-iii","title_en":"Path Sum III","title_zh":"路径总和 III","difficulty":"medium","categories":["binary_tree"],"function":{"name":"pathSum","params":[["root","List[int]"],["targetSum","int"]],"return":"int"}},
+{"id":83,"slug":"find-all-anagrams-in-a-string","title_en":"Find All Anagrams In A String","title_zh":"找到字符串中所有字母异位词","difficulty":"medium","categories":["sliding_window","hash"],"function":{"name":"findAnagrams","params":[["s","str"],["p","str"]],"return":"List[int]"}},
+{"id":84,"slug":"target-sum","title_en":"Target Sum","title_zh":"目标和","difficulty":"medium","categories":["dp"],"function":{"name":"findTargetSumWays","params":[["nums","List[int]"],["target","int"]],"return":"int"}},
+{"id":85,"slug":"diameter-of-binary-tree","title_en":"Diameter Of Binary Tree","title_zh":"二叉树的直径","difficulty":"easy","categories":["binary_tree"],"function":{"name":"diameterOfBinaryTree","params":[["root","List[int]"]],"return":"int"}},
+{"id":86,"slug":"subarray-sum-equals-k","title_en":"Subarray Sum Equals K","title_zh":"和为 K 的子数组","difficulty":"medium","categories":["subarray","hash"],"function":{"name":"subarraySum","params":[["nums","List[int]"],["k","int"]],"return":"int"}},
+{"id":87,"slug":"shortest-unsorted-continuous-subarray","title_en":"Shortest Unsorted Continuous Subarray","title_zh":"最短无序连续子数组","difficulty":"medium","categories":["array"],"function":{"name":"findUnsortedSubarray","params":[["nums","List[int]"]],"return":"int"}},
+{"id":88,"slug":"merge-two-binary-trees","title_en":"Merge Two Binary Trees","title_zh":"合并二叉树","difficulty":"easy","categories":["binary_tree"],"function":{"name":"mergeTrees","params":[["root1","List[int]"],["root2","List[int]"]],"return":"List[int]"}},
+{"id":89,"slug":"task-scheduler","title_en":"Task Scheduler","title_zh":"任务调度器","difficulty":"medium","categories":["greedy","heap"],"function":{"name":"leastInterval","params":[["tasks","List[str]"],["n","int"]],"return":"int"}},
+{"id":90,"slug":"palindromic-substrings","title_en":"Palindromic Substrings","title_zh":"回文子串","difficulty":"medium","categories":["dp","two_pointers"],"function":{"name":"countSubstrings","params":[["s","str"]],"return":"int"}}
+]
