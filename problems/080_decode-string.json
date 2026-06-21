@@ -1,0 +1,20 @@
+﻿{
+    "id":  80,
+    "slug":  "decode-string",
+    "title_en":  "Decode String",
+    "title_zh":  "字符串解码",
+    "difficulty":  "medium",
+    "categories":  [
+                       "stack"
+                   ],
+    "function":  {
+                     "name":  "decodeString",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "str"
+                 }
+}

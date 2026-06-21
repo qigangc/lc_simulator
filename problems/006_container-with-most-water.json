@@ -1,0 +1,40 @@
+﻿{
+    "id":  6,
+    "slug":  "container-with-most-water",
+    "title_en":  "Container With Most Water",
+    "title_zh":  "盛最多水的容器",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "two_pointers",
+                       "greedy"
+                   ],
+    "function":  {
+                     "name":  "maxArea",
+                     "params":  [
+                                    [
+                                        "height",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "height":  [
+                                                      1,
+                                                      8,
+                                                      6,
+                                                      2,
+                                                      5,
+                                                      4,
+                                                      8,
+                                                      3,
+                                                      7
+                                                  ]
+                                   },
+                         "output":  49
+                     }
+                 ]
+}

@@ -1,0 +1,24 @@
+﻿{
+    "id":  26,
+    "slug":  "unique-paths",
+    "title_en":  "Unique Paths",
+    "title_zh":  "不同路径",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "uniquePaths",
+                     "params":  [
+                                    [
+                                        "m",
+                                        "int"
+                                    ],
+                                    [
+                                        "n",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

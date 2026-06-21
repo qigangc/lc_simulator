@@ -1,0 +1,21 @@
+﻿{
+    "id":  43,
+    "slug":  "flatten-binary-tree-to-linked-list",
+    "title_en":  "Flatten Binary Tree To Linked List",
+    "title_zh":  "二叉树展开为链表",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree",
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "flatten",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

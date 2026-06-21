@@ -1,0 +1,29 @@
+﻿{
+    "id":  3,
+    "slug":  "longest-substring-without-repeating-characters",
+    "title_en":  "Longest Substring Without Repeating Characters",
+    "title_zh":  "无重复字符的最长子串",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash",
+                       "sliding_window"
+                   ],
+    "function":  {
+                     "name":  "lengthOfLongestSubstring",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "s":  "abcabcbb"
+                                   },
+                         "output":  3
+                     }
+                 ]
+}

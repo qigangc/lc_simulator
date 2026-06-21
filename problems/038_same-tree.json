@@ -1,0 +1,24 @@
+﻿{
+    "id":  38,
+    "slug":  "same-tree",
+    "title_en":  "Same Tree",
+    "title_zh":  "相同的树",
+    "difficulty":  "easy",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "isSameTree",
+                     "params":  [
+                                    [
+                                        "p",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "q",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 }
+}

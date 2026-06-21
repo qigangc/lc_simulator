@@ -1,0 +1,20 @@
+﻿{
+    "id":  69,
+    "slug":  "perfect-squares",
+    "title_en":  "Perfect Squares",
+    "title_zh":  "完全平方数",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "numSquares",
+                     "params":  [
+                                    [
+                                        "n",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

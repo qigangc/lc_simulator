@@ -1,0 +1,21 @@
+﻿{
+    "id":  73,
+    "slug":  "longest-increasing-subsequence",
+    "title_en":  "Longest Increasing Subsequence",
+    "title_zh":  "最长递增子序列",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp",
+                       "binary_search"
+                   ],
+    "function":  {
+                     "name":  "lengthOfLIS",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

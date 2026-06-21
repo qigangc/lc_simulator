@@ -1,0 +1,24 @@
+﻿{
+    "id":  76,
+    "slug":  "coin-change",
+    "title_en":  "Coin Change",
+    "title_zh":  "零钱兑换",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "coinChange",
+                     "params":  [
+                                    [
+                                        "coins",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "amount",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

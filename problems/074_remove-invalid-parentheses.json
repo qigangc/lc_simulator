@@ -1,0 +1,20 @@
+﻿{
+    "id":  74,
+    "slug":  "remove-invalid-parentheses",
+    "title_en":  "Remove Invalid Parentheses",
+    "title_zh":  "删除无效的括号",
+    "difficulty":  "hard",
+    "categories":  [
+                       "backtracking"
+                   ],
+    "function":  {
+                     "name":  "removeInvalidParentheses",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "List[str]"
+                 }
+}

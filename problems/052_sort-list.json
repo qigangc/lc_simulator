@@ -1,0 +1,20 @@
+﻿{
+    "id":  52,
+    "slug":  "sort-list",
+    "title_en":  "Sort List",
+    "title_zh":  "排序链表",
+    "difficulty":  "medium",
+    "categories":  [
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "sortList",
+                     "params":  [
+                                    [
+                                        "head",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

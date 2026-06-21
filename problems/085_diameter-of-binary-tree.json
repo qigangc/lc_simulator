@@ -1,0 +1,20 @@
+﻿{
+    "id":  85,
+    "slug":  "diameter-of-binary-tree",
+    "title_en":  "Diameter Of Binary Tree",
+    "title_zh":  "二叉树的直径",
+    "difficulty":  "easy",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "diameterOfBinaryTree",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

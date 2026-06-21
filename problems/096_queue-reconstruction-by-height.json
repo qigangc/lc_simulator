@@ -1,0 +1,20 @@
+﻿{
+    "id":  96,
+    "slug":  "queue-reconstruction-by-height",
+    "title_en":  "Queue Reconstruction By Height",
+    "title_zh":  "根据身高重建队列",
+    "difficulty":  "medium",
+    "categories":  [
+                       "greedy"
+                   ],
+    "function":  {
+                     "name":  "reconstructQueue",
+                     "params":  [
+                                    [
+                                        "people",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 }
+}

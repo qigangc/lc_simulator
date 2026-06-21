@@ -1,0 +1,21 @@
+﻿{
+    "id":  90,
+    "slug":  "palindromic-substrings",
+    "title_en":  "Palindromic Substrings",
+    "title_zh":  "回文子串",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "countSubstrings",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

@@ -1,0 +1,20 @@
+﻿{
+    "id":  66,
+    "slug":  "product-of-array-except-self",
+    "title_en":  "Product Of Array Except Self",
+    "title_zh":  "除自身以外数组的乘积",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array"
+                   ],
+    "function":  {
+                     "name":  "productExceptSelf",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "id":  70,
+    "slug":  "move-zeroes",
+    "title_en":  "Move Zeroes",
+    "title_zh":  "移动零",
+    "difficulty":  "easy",
+    "categories":  [
+                       "array",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "moveZeroes",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

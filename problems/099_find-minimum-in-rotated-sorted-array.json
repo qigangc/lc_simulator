@@ -1,0 +1,21 @@
+﻿{
+    "id":  99,
+    "slug":  "find-minimum-in-rotated-sorted-array",
+    "title_en":  "Find Minimum In Rotated Sorted Array",
+    "title_zh":  "寻找旋转排序数组中的最小值",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_search",
+                       "array"
+                   ],
+    "function":  {
+                     "name":  "findMin",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "id":  93,
+    "slug":  "shortest-path-in-binary-matrix",
+    "title_en":  "Shortest Path In Binary Matrix",
+    "title_zh":  "二进制矩阵中的最短路径",
+    "difficulty":  "medium",
+    "categories":  [
+                       "graph",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "shortestPathBinaryMatrix",
+                     "params":  [
+                                    [
+                                        "grid",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

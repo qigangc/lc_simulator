@@ -1,0 +1,20 @@
+﻿{
+    "id":  40,
+    "slug":  "binary-tree-level-order-traversal",
+    "title_en":  "Binary Tree Level Order Traversal",
+    "title_zh":  "二叉树的层序遍历",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "levelOrder",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 }
+}

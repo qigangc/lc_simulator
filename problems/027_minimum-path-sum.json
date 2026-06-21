@@ -1,0 +1,21 @@
+﻿{
+    "id":  27,
+    "slug":  "minimum-path-sum",
+    "title_en":  "Minimum Path Sum",
+    "title_zh":  "最小路径和",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "minPathSum",
+                     "params":  [
+                                    [
+                                        "grid",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

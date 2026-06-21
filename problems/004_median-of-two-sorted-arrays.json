@@ -1,0 +1,39 @@
+﻿{
+    "id":  4,
+    "slug":  "median-of-two-sorted-arrays",
+    "title_en":  "Median of Two Sorted Arrays",
+    "title_zh":  "寻找两个正序数组的中位数",
+    "difficulty":  "hard",
+    "categories":  [
+                       "array",
+                       "binary_search"
+                   ],
+    "function":  {
+                     "name":  "findMedianSortedArrays",
+                     "params":  [
+                                    [
+                                        "nums1",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "nums2",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "float"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "nums1":  [
+                                                     1,
+                                                     3
+                                                 ],
+                                       "nums2":  [
+                                                     2
+                                                 ]
+                                   },
+                         "output":  2.0
+                     }
+                 ]
+}

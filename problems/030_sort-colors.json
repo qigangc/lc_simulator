@@ -1,0 +1,21 @@
+﻿{
+    "id":  30,
+    "slug":  "sort-colors",
+    "title_en":  "Sort Colors",
+    "title_zh":  "颜色分类",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "sortColors",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

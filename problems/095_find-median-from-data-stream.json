@@ -1,0 +1,24 @@
+﻿{
+    "id":  95,
+    "slug":  "find-median-from-data-stream",
+    "title_en":  "Find Median From Data Stream",
+    "title_zh":  "数据流的中位数",
+    "difficulty":  "hard",
+    "categories":  [
+                       "heap"
+                   ],
+    "function":  {
+                     "name":  "medianFinder",
+                     "params":  [
+                                    [
+                                        "operations",
+                                        "List[str]"
+                                    ],
+                                    [
+                                        "values",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[float]"
+                 }
+}

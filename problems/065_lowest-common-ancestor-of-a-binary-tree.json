@@ -1,0 +1,28 @@
+﻿{
+    "id":  65,
+    "slug":  "lowest-common-ancestor-of-a-binary-tree",
+    "title_en":  "Lowest Common Ancestor Of A Binary Tree",
+    "title_zh":  "二叉树的最近公共祖先",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "lowestCommonAncestor",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "p",
+                                        "int"
+                                    ],
+                                    [
+                                        "q",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

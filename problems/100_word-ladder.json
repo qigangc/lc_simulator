@@ -1,0 +1,28 @@
+﻿{
+    "id":  100,
+    "slug":  "word-ladder",
+    "title_en":  "Word Ladder",
+    "title_zh":  "单词接龙",
+    "difficulty":  "hard",
+    "categories":  [
+                       "graph"
+                   ],
+    "function":  {
+                     "name":  "ladderLength",
+                     "params":  [
+                                    [
+                                        "beginWord",
+                                        "str"
+                                    ],
+                                    [
+                                        "endWord",
+                                        "str"
+                                    ],
+                                    [
+                                        "wordList",
+                                        "List[str]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

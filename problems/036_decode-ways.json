@@ -1,0 +1,20 @@
+﻿{
+    "id":  36,
+    "slug":  "decode-ways",
+    "title_en":  "Decode Ways",
+    "title_zh":  "解码方法",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "numDecodings",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

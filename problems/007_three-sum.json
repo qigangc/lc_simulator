@@ -1,0 +1,47 @@
+﻿{
+    "id":  7,
+    "slug":  "three-sum",
+    "title_en":  "3Sum",
+    "title_zh":  "三数之和",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "threeSum",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "nums":  [
+                                                    -1,
+                                                    0,
+                                                    1,
+                                                    2,
+                                                    -1,
+                                                    -4
+                                                ]
+                                   },
+                         "output":  [
+                                        [
+                                            -1,
+                                            -1,
+                                            2
+                                        ],
+                                        [
+                                            -1,
+                                            0,
+                                            1
+                                        ]
+                                    ]
+                     }
+                 ]
+}

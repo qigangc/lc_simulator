@@ -1,0 +1,24 @@
+﻿{
+    "id":  84,
+    "slug":  "target-sum",
+    "title_en":  "Target Sum",
+    "title_zh":  "目标和",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "findTargetSumWays",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "target",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

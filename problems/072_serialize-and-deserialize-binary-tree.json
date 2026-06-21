@@ -1,0 +1,20 @@
+﻿{
+    "id":  72,
+    "slug":  "serialize-and-deserialize-binary-tree",
+    "title_en":  "Serialize And Deserialize Binary Tree",
+    "title_zh":  "二叉树的序列化与反序列化",
+    "difficulty":  "hard",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "codec",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

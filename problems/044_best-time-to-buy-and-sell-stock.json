@@ -1,0 +1,21 @@
+﻿{
+    "id":  44,
+    "slug":  "best-time-to-buy-and-sell-stock",
+    "title_en":  "Best Time To Buy And Sell Stock",
+    "title_zh":  "买卖股票的最佳时机",
+    "difficulty":  "easy",
+    "categories":  [
+                       "array",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "maxProfit",
+                     "params":  [
+                                    [
+                                        "prices",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

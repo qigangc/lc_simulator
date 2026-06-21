@@ -1,0 +1,20 @@
+﻿{
+    "id":  39,
+    "slug":  "symmetric-tree",
+    "title_en":  "Symmetric Tree",
+    "title_zh":  "对称二叉树",
+    "difficulty":  "easy",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "isSymmetric",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 }
+}

@@ -1,5 +1,5 @@
 import json
-from .paths import PROBLEMS_FILE
+from .paths import PROBLEMS_DIR
 
 
 def default_output(return_type):
@@ -55,13 +55,10 @@ def ensure_examples(problem):
 
 
 def load_problems():
-    if PROBLEMS_FILE.exists():
-        with PROBLEMS_FILE.open("r", encoding="utf-8") as f:
-            return [ensure_examples(p) for p in json.load(f)]
     problems = []
-    for path in sorted(PROBLEMS_FILE.parent.glob("hot100_*.json")):
+    for path in sorted(PROBLEMS_DIR.glob("[0-9][0-9][0-9]_*.json")):
         with path.open("r", encoding="utf-8") as f:
-            problems.extend(json.load(f))
+            problems.append(json.load(f))
     return [ensure_examples(p) for p in sorted(problems, key=lambda p: p["id"])]
 
 

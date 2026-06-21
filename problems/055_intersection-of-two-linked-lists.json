@@ -1,0 +1,24 @@
+﻿{
+    "id":  55,
+    "slug":  "intersection-of-two-linked-lists",
+    "title_en":  "Intersection Of Two Linked Lists",
+    "title_zh":  "相交链表",
+    "difficulty":  "easy",
+    "categories":  [
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "getIntersectionNode",
+                     "params":  [
+                                    [
+                                        "listA",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "listB",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

@@ -1,0 +1,21 @@
+﻿{
+    "id":  53,
+    "slug":  "maximum-product-subarray",
+    "title_en":  "Maximum Product Subarray",
+    "title_zh":  "乘积最大子数组",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "maxProduct",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

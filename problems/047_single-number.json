@@ -1,0 +1,20 @@
+﻿{
+    "id":  47,
+    "slug":  "single-number",
+    "title_en":  "Single Number",
+    "title_zh":  "只出现一次的数字",
+    "difficulty":  "easy",
+    "categories":  [
+                       "array"
+                   ],
+    "function":  {
+                     "name":  "singleNumber",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

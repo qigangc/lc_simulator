@@ -1,0 +1,20 @@
+﻿{
+    "id":  91,
+    "slug":  "daily-temperatures",
+    "title_en":  "Daily Temperatures",
+    "title_zh":  "每日温度",
+    "difficulty":  "medium",
+    "categories":  [
+                       "stack"
+                   ],
+    "function":  {
+                     "name":  "dailyTemperatures",
+                     "params":  [
+                                    [
+                                        "temperatures",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

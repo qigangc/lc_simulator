@@ -1,0 +1,20 @@
+﻿{
+    "id":  81,
+    "slug":  "partition-equal-subset-sum",
+    "title_en":  "Partition Equal Subset Sum",
+    "title_zh":  "分割等和子集",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "canPartition",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 }
+}

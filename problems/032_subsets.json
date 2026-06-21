@@ -1,0 +1,20 @@
+﻿{
+    "id":  32,
+    "slug":  "subsets",
+    "title_en":  "Subsets",
+    "title_zh":  "子集",
+    "difficulty":  "medium",
+    "categories":  [
+                       "backtracking"
+                   ],
+    "function":  {
+                     "name":  "subsets",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 }
+}

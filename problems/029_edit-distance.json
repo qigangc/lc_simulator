@@ -1,0 +1,24 @@
+﻿{
+    "id":  29,
+    "slug":  "edit-distance",
+    "title_en":  "Edit Distance",
+    "title_zh":  "编辑距离",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "minDistance",
+                     "params":  [
+                                    [
+                                        "word1",
+                                        "str"
+                                    ],
+                                    [
+                                        "word2",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

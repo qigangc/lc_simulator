@@ -1,0 +1,28 @@
+﻿{
+    "id":  10,
+    "slug":  "valid-parentheses",
+    "title_en":  "Valid Parentheses",
+    "title_zh":  "有效的括号",
+    "difficulty":  "easy",
+    "categories":  [
+                       "stack"
+                   ],
+    "function":  {
+                     "name":  "isValid",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "s":  "()[]{}"
+                                   },
+                         "output":  true
+                     }
+                 ]
+}

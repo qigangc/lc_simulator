@@ -1,0 +1,42 @@
+﻿{
+    "id":  1,
+    "slug":  "two-sum",
+    "title_en":  "Two Sum",
+    "title_zh":  "两数之和",
+    "difficulty":  "easy",
+    "categories":  [
+                       "array",
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "twoSum",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "target",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "nums":  [
+                                                    2,
+                                                    7,
+                                                    11,
+                                                    15
+                                                ],
+                                       "target":  9
+                                   },
+                         "output":  [
+                                        0,
+                                        1
+                                    ]
+                     }
+                 ]
+}

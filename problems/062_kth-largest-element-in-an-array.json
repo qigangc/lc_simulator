@@ -1,0 +1,24 @@
+﻿{
+    "id":  62,
+    "slug":  "kth-largest-element-in-an-array",
+    "title_en":  "Kth Largest Element In An Array",
+    "title_zh":  "数组中的第 K 个最大元素",
+    "difficulty":  "medium",
+    "categories":  [
+                       "heap"
+                   ],
+    "function":  {
+                     "name":  "findKthLargest",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "k",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 }
+}

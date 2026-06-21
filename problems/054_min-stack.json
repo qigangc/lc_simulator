@@ -1,0 +1,24 @@
+﻿{
+    "id":  54,
+    "slug":  "min-stack",
+    "title_en":  "Min Stack",
+    "title_zh":  "最小栈",
+    "difficulty":  "medium",
+    "categories":  [
+                       "stack"
+                   ],
+    "function":  {
+                     "name":  "minStack",
+                     "params":  [
+                                    [
+                                        "operations",
+                                        "List[str]"
+                                    ],
+                                    [
+                                        "values",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}

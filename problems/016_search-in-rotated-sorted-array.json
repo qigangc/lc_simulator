@@ -1,0 +1,42 @@
+﻿{
+    "id":  16,
+    "slug":  "search-in-rotated-sorted-array",
+    "title_en":  "Search in Rotated Sorted Array",
+    "title_zh":  "搜索旋转排序数组",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "binary_search"
+                   ],
+    "function":  {
+                     "name":  "search",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "target",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "nums":  [
+                                                    4,
+                                                    5,
+                                                    6,
+                                                    7,
+                                                    0,
+                                                    1,
+                                                    2
+                                                ],
+                                       "target":  0
+                                   },
+                         "output":  4
+                     }
+                 ]
+}

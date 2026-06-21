@@ -1,0 +1,20 @@
+﻿{
+    "id":  59,
+    "slug":  "reverse-linked-list",
+    "title_en":  "Reverse Linked List",
+    "title_zh":  "反转链表",
+    "difficulty":  "easy",
+    "categories":  [
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "reverseList",
+                     "params":  [
+                                    [
+                                        "head",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 }
+}
