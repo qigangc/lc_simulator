@@ -57,7 +57,7 @@ def ensure_examples(problem):
 def load_problems():
     problems = []
     for path in sorted(PROBLEMS_DIR.glob("[0-9][0-9][0-9]_*.json")):
-        with path.open("r", encoding="utf-8") as f:
+        with path.open("r", encoding="utf-8-sig") as f:
             problems.append(json.load(f))
     return [ensure_examples(p) for p in sorted(problems, key=lambda p: p["id"])]
 
