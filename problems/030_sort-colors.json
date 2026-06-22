@@ -1,22 +1,29 @@
 {
-    "id":  30,
-    "slug":  "sort-colors",
-    "title_en":  "Sort Colors",
-    "title_zh":  "颜色分类",
-    "difficulty":  "medium",
-    "categories":  [
-                       "array",
-                       "two_pointers"
-                   ],
-    "function":  {
-                     "name":  "sortColors",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "List[int]"
-                 },
-    "url":  "https://leetcode.com/problems/sort-colors/"
+    "id": 30,
+    "slug": "sort-colors",
+    "title_en": "Sort Colors",
+    "title_zh": "颜色分类",
+    "difficulty": "medium",
+    "categories": [
+        "array",
+        "two_pointers"
+    ],
+    "function": {
+        "name": "sortColors",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ]
+        ],
+        "return": "List[int]"
+    },
+    "url": "https://leetcode.com/problems/sort-colors/",
+    "description_en": "Given an array `nums` with `n` objects colored red, white, or blue, sort them **in-place** so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\n\nWe will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.\n\nYou must solve this problem without using the library's sort function.\n\n**Example 1:**\n\n```\n**Input:** nums = [2,0,2,1,1,0]\n**Output:** [0,0,1,1,2,2]\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [2,0,1]\n**Output:** [0,1,2]\n```\n\n**Constraints:**\n\n- `n == nums.length`\n- `1 <= n <= 300`\n- `nums[i]` is either `0`, `1`, or `2`.\n\n**Follow up:** Could you come up with a one-pass algorithm using only constant extra space?",
+    "description_zh": "Given an array `nums` with `n` objects colored red, white, or blue, sort them **in-place** so that objects of the same color are adjacent, with the colors in the order red, white, and blue.\n\nWe will use the integers `0`, `1`, and `2` to represent the color red, white, and blue, respectively.\n\nYou must solve this problem without using the library's sort function.\n\n**Example 1:**\n\n```\n**Input:** nums = [2,0,2,1,1,0]\n**Output:** [0,0,1,1,2,2]\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [2,0,1]\n**Output:** [0,1,2]\n```\n\n**Constraints:**\n\n- `n == nums.length`\n- `1 <= n <= 300`\n- `nums[i]` is either `0`, `1`, or `2`.\n\n**Follow up:** Could you come up with a one-pass algorithm using only constant extra space?",
+    "constraints": "- `n == nums.length`\n- `1 <= n <= 300`\n- `nums[i]` is either `0`, `1`, or `2`.",
+    "leetcode_examples": [
+        "[2,0,2,1,1,0]",
+        "[2,0,1]"
+    ]
 }

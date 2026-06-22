@@ -1,0 +1,26 @@
+{
+    "id":  86,
+    "slug":  "subarray-sum-equals-k",
+    "title_en":  "Subarray Sum Equals K",
+    "title_zh":  "和为 K 的子数组",
+    "difficulty":  "medium",
+    "categories":  [
+                       "subarray",
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "subarraySum",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "k",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/subarray-sum-equals-k/"
+}

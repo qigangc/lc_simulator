@@ -1,48 +1,56 @@
 {
-    "id":  7,
-    "slug":  "three-sum",
-    "title_en":  "3Sum",
-    "title_zh":  "三数之和",
-    "difficulty":  "medium",
-    "categories":  [
-                       "array",
-                       "two_pointers"
-                   ],
-    "function":  {
-                     "name":  "threeSum",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "List[List[int]]"
-                 },
-    "examples":  [
-                     {
-                         "input":  {
-                                       "nums":  [
-                                                    -1,
-                                                    0,
-                                                    1,
-                                                    2,
-                                                    -1,
-                                                    -4
-                                                ]
-                                   },
-                         "output":  [
-                                        [
-                                            -1,
-                                            -1,
-                                            2
-                                        ],
-                                        [
-                                            -1,
-                                            0,
-                                            1
-                                        ]
-                                    ]
-                     }
-                 ],
-    "url":  "https://leetcode.com/problems/three-sum/"
+    "id": 7,
+    "slug": "3sum",
+    "title_en": "3Sum",
+    "title_zh": "三数之和",
+    "difficulty": "medium",
+    "categories": [
+        "array",
+        "two_pointers"
+    ],
+    "function": {
+        "name": "threeSum",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ]
+        ],
+        "return": "List[List[int]]"
+    },
+    "examples": [
+        {
+            "input": {
+                "nums": [
+                    -1,
+                    0,
+                    1,
+                    2,
+                    -1,
+                    -4
+                ]
+            },
+            "output": [
+                [
+                    -1,
+                    -1,
+                    2
+                ],
+                [
+                    -1,
+                    0,
+                    1
+                ]
+            ]
+        }
+    ],
+    "url": "https://leetcode.com/problems/3sum/",
+    "description_en": "Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.\n\nNotice that the solution set must not contain duplicate triplets.\n\n**Example 1:**\n\n```\n**Input:** nums = [-1,0,1,2,-1,-4]\n**Output:** [[-1,-1,2],[-1,0,1]]\n**Explanation:**\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [0,1,1]\n**Output:** []\n**Explanation:** The only possible triplet does not sum up to 0.\n```\n\n**Example 3:**\n\n```\n**Input:** nums = [0,0,0]\n**Output:** [[0,0,0]]\n**Explanation:** The only possible triplet sums up to 0.\n```\n\n**Constraints:**\n\n- `3 <= nums.length <= 3000`\n- `-10(5) <= nums[i] <= 10(5)`",
+    "description_zh": "Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.\n\nNotice that the solution set must not contain duplicate triplets.\n\n**Example 1:**\n\n```\n**Input:** nums = [-1,0,1,2,-1,-4]\n**Output:** [[-1,-1,2],[-1,0,1]]\n**Explanation:**\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [0,1,1]\n**Output:** []\n**Explanation:** The only possible triplet does not sum up to 0.\n```\n\n**Example 3:**\n\n```\n**Input:** nums = [0,0,0]\n**Output:** [[0,0,0]]\n**Explanation:** The only possible triplet sums up to 0.\n```\n\n**Constraints:**\n\n- `3 <= nums.length <= 3000`\n- `-10(5) <= nums[i] <= 10(5)`",
+    "constraints": "- `3 <= nums.length <= 3000`\n- `-10(5) <= nums[i] <= 10(5)`",
+    "leetcode_examples": [
+        "[-1,0,1,2,-1,-4]",
+        "[0,1,1]",
+        "[0,0,0]"
+    ]
 }

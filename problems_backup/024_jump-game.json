@@ -1,0 +1,23 @@
+{
+    "id":  24,
+    "slug":  "jump-game",
+    "title_en":  "Jump Game",
+    "title_zh":  "跳跃游戏",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "greedy",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "canJump",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/jump-game/"
+}

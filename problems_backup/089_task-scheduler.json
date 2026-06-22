@@ -1,0 +1,26 @@
+{
+    "id":  89,
+    "slug":  "task-scheduler",
+    "title_en":  "Task Scheduler",
+    "title_zh":  "任务调度器",
+    "difficulty":  "medium",
+    "categories":  [
+                       "greedy",
+                       "heap"
+                   ],
+    "function":  {
+                     "name":  "leastInterval",
+                     "params":  [
+                                    [
+                                        "tasks",
+                                        "List[str]"
+                                    ],
+                                    [
+                                        "n",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/task-scheduler/"
+}

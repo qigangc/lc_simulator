@@ -1,22 +1,29 @@
 {
-    "id":  27,
-    "slug":  "minimum-path-sum",
-    "title_en":  "Minimum Path Sum",
-    "title_zh":  "最小路径和",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp",
-                       "matrix"
-                   ],
-    "function":  {
-                     "name":  "minPathSum",
-                     "params":  [
-                                    [
-                                        "grid",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/minimum-path-sum/"
+    "id": 27,
+    "slug": "minimum-path-sum",
+    "title_en": "Minimum Path Sum",
+    "title_zh": "最小路径和",
+    "difficulty": "medium",
+    "categories": [
+        "dp",
+        "matrix"
+    ],
+    "function": {
+        "name": "minPathSum",
+        "params": [
+            [
+                "grid",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/minimum-path-sum/",
+    "description_en": "Given a `m x n` `grid` filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.\n\n**Note:** You can only move either down or right at any point in time.\n\n**Example 1:**\n\n[image]\n```\n**Input:** grid = [[1,3,1],[1,5,1],[4,2,1]]\n**Output:** 7\n**Explanation:** Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.\n```\n\n**Example 2:**\n\n```\n**Input:** grid = [[1,2,3],[4,5,6]]\n**Output:** 12\n```\n\n**Constraints:**\n\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 200`\n- `0 <= grid[i][j] <= 200`",
+    "description_zh": "Given a `m x n` `grid` filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.\n\n**Note:** You can only move either down or right at any point in time.\n\n**Example 1:**\n\n[image]\n```\n**Input:** grid = [[1,3,1],[1,5,1],[4,2,1]]\n**Output:** 7\n**Explanation:** Because the path 1 → 3 → 1 → 1 → 1 minimizes the sum.\n```\n\n**Example 2:**\n\n```\n**Input:** grid = [[1,2,3],[4,5,6]]\n**Output:** 12\n```\n\n**Constraints:**\n\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 200`\n- `0 <= grid[i][j] <= 200`",
+    "constraints": "- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 200`\n- `0 <= grid[i][j] <= 200`",
+    "leetcode_examples": [
+        "[[1,3,1],[1,5,1],[4,2,1]]",
+        "[[1,2,3],[4,5,6]]"
+    ]
 }

@@ -1,0 +1,21 @@
+{
+    "id":  64,
+    "slug":  "invert-binary-tree",
+    "title_en":  "Invert Binary Tree",
+    "title_zh":  "翻转二叉树",
+    "difficulty":  "easy",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "invertTree",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/invert-binary-tree/"
+}

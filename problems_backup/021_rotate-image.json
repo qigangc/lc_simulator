@@ -1,0 +1,21 @@
+{
+    "id":  21,
+    "slug":  "rotate-image",
+    "title_en":  "Rotate Image",
+    "title_zh":  "旋转图像",
+    "difficulty":  "medium",
+    "categories":  [
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "rotate",
+                     "params":  [
+                                    [
+                                        "matrix",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 },
+    "url":  "https://leetcode.com/problems/rotate-image/"
+}

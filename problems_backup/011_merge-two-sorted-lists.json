@@ -1,0 +1,49 @@
+{
+    "id":  11,
+    "slug":  "merge-two-sorted-lists",
+    "title_en":  "Merge Two Sorted Lists",
+    "title_zh":  "合并两个有序链表",
+    "difficulty":  "easy",
+    "categories":  [
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "mergeTwoLists",
+                     "params":  [
+                                    [
+                                        "list1",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "list2",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "list1":  [
+                                                     1,
+                                                     2,
+                                                     4
+                                                 ],
+                                       "list2":  [
+                                                     1,
+                                                     3,
+                                                     4
+                                                 ]
+                                   },
+                         "output":  [
+                                        1,
+                                        1,
+                                        2,
+                                        3,
+                                        4,
+                                        4
+                                    ]
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/merge-two-sorted-lists/"
+}

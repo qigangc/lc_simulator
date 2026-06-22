@@ -1,21 +1,29 @@
 {
-    "id":  64,
-    "slug":  "invert-binary-tree",
-    "title_en":  "Invert Binary Tree",
-    "title_zh":  "翻转二叉树",
-    "difficulty":  "easy",
-    "categories":  [
-                       "binary_tree"
-                   ],
-    "function":  {
-                     "name":  "invertTree",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "List[int]"
-                 },
-    "url":  "https://leetcode.com/problems/invert-binary-tree/"
+    "id": 64,
+    "slug": "invert-binary-tree",
+    "title_en": "Invert Binary Tree",
+    "title_zh": "翻转二叉树",
+    "difficulty": "easy",
+    "categories": [
+        "binary_tree"
+    ],
+    "function": {
+        "name": "invertTree",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ]
+        ],
+        "return": "List[int]"
+    },
+    "url": "https://leetcode.com/problems/invert-binary-tree/",
+    "description_en": "Given the `root` of a binary tree, invert the tree, and return *its root*.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [4,2,7,1,3,6,9]\n**Output:** [4,7,2,9,6,3,1]\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** root = [2,1,3]\n**Output:** [2,3,1]\n```\n\n**Example 3:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 100]`.\n- `-100 <= Node.val <= 100`",
+    "description_zh": "Given the `root` of a binary tree, invert the tree, and return *its root*.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [4,2,7,1,3,6,9]\n**Output:** [4,7,2,9,6,3,1]\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** root = [2,1,3]\n**Output:** [2,3,1]\n```\n\n**Example 3:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 100]`.\n- `-100 <= Node.val <= 100`",
+    "constraints": "- The number of nodes in the tree is in the range `[0, 100]`.\n- `-100 <= Node.val <= 100`",
+    "leetcode_examples": [
+        "[4,2,7,1,3,6,9]",
+        "[2,1,3]",
+        "[]"
+    ]
 }

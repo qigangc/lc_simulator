@@ -1,0 +1,21 @@
+{
+    "id":  57,
+    "slug":  "house-robber",
+    "title_en":  "House Robber",
+    "title_zh":  "打家劫舍",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "rob",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/house-robber/"
+}

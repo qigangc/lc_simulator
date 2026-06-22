@@ -1,25 +1,34 @@
 {
-    "id":  26,
-    "slug":  "unique-paths",
-    "title_en":  "Unique Paths",
-    "title_zh":  "不同路径",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp"
-                   ],
-    "function":  {
-                     "name":  "uniquePaths",
-                     "params":  [
-                                    [
-                                        "m",
-                                        "int"
-                                    ],
-                                    [
-                                        "n",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/unique-paths/"
+    "id": 26,
+    "slug": "unique-paths",
+    "title_en": "Unique Paths",
+    "title_zh": "不同路径",
+    "difficulty": "medium",
+    "categories": [
+        "dp"
+    ],
+    "function": {
+        "name": "uniquePaths",
+        "params": [
+            [
+                "m",
+                "int"
+            ],
+            [
+                "n",
+                "int"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/unique-paths/",
+    "description_en": "There is a robot on an `m x n` grid. The robot is initially located at the **top-left corner** (i.e., `grid[0][0]`). The robot tries to move to the **bottom-right corner** (i.e., `grid[m - 1][n - 1]`). The robot can only move either down or right at any point in time.\n\nGiven the two integers `m` and `n`, return *the number of possible unique paths that the robot can take to reach the bottom-right corner*.\n\nThe test cases are generated so that the answer will be less than or equal to `2 * 10(9)`.\n\n**Example 1:**\n\n[image]\n```\n**Input:** m = 3, n = 7\n**Output:** 28\n```\n\n**Example 2:**\n\n```\n**Input:** m = 3, n = 2\n**Output:** 3\n**Explanation:** From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:\n1. Right -> Down -> Down\n2. Down -> Down -> Right\n3. Down -> Right -> Down\n```\n\n**Constraints:**\n\n- `1 <= m, n <= 100`",
+    "description_zh": "There is a robot on an `m x n` grid. The robot is initially located at the **top-left corner** (i.e., `grid[0][0]`). The robot tries to move to the **bottom-right corner** (i.e., `grid[m - 1][n - 1]`). The robot can only move either down or right at any point in time.\n\nGiven the two integers `m` and `n`, return *the number of possible unique paths that the robot can take to reach the bottom-right corner*.\n\nThe test cases are generated so that the answer will be less than or equal to `2 * 10(9)`.\n\n**Example 1:**\n\n[image]\n```\n**Input:** m = 3, n = 7\n**Output:** 28\n```\n\n**Example 2:**\n\n```\n**Input:** m = 3, n = 2\n**Output:** 3\n**Explanation:** From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:\n1. Right -> Down -> Down\n2. Down -> Down -> Right\n3. Down -> Right -> Down\n```\n\n**Constraints:**\n\n- `1 <= m, n <= 100`",
+    "constraints": "- `1 <= m, n <= 100`",
+    "leetcode_examples": [
+        "3",
+        "7",
+        "3",
+        "2"
+    ]
 }

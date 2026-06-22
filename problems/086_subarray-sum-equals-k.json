@@ -1,26 +1,35 @@
 {
-    "id":  86,
-    "slug":  "subarray-sum-equals-k",
-    "title_en":  "Subarray Sum Equals K",
-    "title_zh":  "和为 K 的子数组",
-    "difficulty":  "medium",
-    "categories":  [
-                       "subarray",
-                       "hash"
-                   ],
-    "function":  {
-                     "name":  "subarraySum",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ],
-                                    [
-                                        "k",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/subarray-sum-equals-k/"
+    "id": 86,
+    "slug": "subarray-sum-equals-k",
+    "title_en": "Subarray Sum Equals K",
+    "title_zh": "和为 K 的子数组",
+    "difficulty": "medium",
+    "categories": [
+        "subarray",
+        "hash"
+    ],
+    "function": {
+        "name": "subarraySum",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ],
+            [
+                "k",
+                "int"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+    "description_en": "Given an array of integers `nums` and an integer `k`, return *the total number of subarrays whose sum equals to* `k`.\n\nA subarray is a contiguous **non-empty** sequence of elements within an array.\n\n**Example 1:**\n\n```\n**Input:** nums = [1,1,1], k = 2\n**Output:** 2\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [1,2,3], k = 3\n**Output:** 2\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 2 * 10(4)`\n- `-1000 <= nums[i] <= 1000`\n- `-10(7) <= k <= 10(7)`",
+    "description_zh": "Given an array of integers `nums` and an integer `k`, return *the total number of subarrays whose sum equals to* `k`.\n\nA subarray is a contiguous **non-empty** sequence of elements within an array.\n\n**Example 1:**\n\n```\n**Input:** nums = [1,1,1], k = 2\n**Output:** 2\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [1,2,3], k = 3\n**Output:** 2\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 2 * 10(4)`\n- `-1000 <= nums[i] <= 1000`\n- `-10(7) <= k <= 10(7)`",
+    "constraints": "- `1 <= nums.length <= 2 * 10(4)`\n- `-1000 <= nums[i] <= 1000`\n- `-10(7) <= k <= 10(7)`",
+    "leetcode_examples": [
+        "[1,1,1]",
+        "2",
+        "[1,2,3]",
+        "3"
+    ]
 }

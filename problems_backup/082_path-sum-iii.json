@@ -1,0 +1,25 @@
+{
+    "id":  82,
+    "slug":  "path-sum-iii",
+    "title_en":  "Path Sum III",
+    "title_zh":  "路径总和 III",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "pathSum",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "targetSum",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/path-sum-iii/"
+}

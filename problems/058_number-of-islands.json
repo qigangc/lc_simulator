@@ -1,22 +1,29 @@
 {
-    "id":  58,
-    "slug":  "number-of-islands",
-    "title_en":  "Number Of Islands",
-    "title_zh":  "岛屿数量",
-    "difficulty":  "medium",
-    "categories":  [
-                       "graph",
-                       "matrix"
-                   ],
-    "function":  {
-                     "name":  "numIslands",
-                     "params":  [
-                                    [
-                                        "grid",
-                                        "List[List[str]]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/number-of-islands/"
+    "id": 58,
+    "slug": "number-of-islands",
+    "title_en": "Number Of Islands",
+    "title_zh": "岛屿数量",
+    "difficulty": "medium",
+    "categories": [
+        "graph",
+        "matrix"
+    ],
+    "function": {
+        "name": "numIslands",
+        "params": [
+            [
+                "grid",
+                "List[List[str]]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/number-of-islands/",
+    "description_en": "Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return *the number of islands*.\n\nAn **island** is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n**Example 1:**\n\n```\n**Input:** grid = [\n[\"1\",\"1\",\"1\",\"1\",\"0\"],\n[\"1\",\"1\",\"0\",\"1\",\"0\"],\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\n**Output:** 1\n```\n\n**Example 2:**\n\n```\n**Input:** grid = [\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"0\",\"0\",\"1\",\"0\",\"0\"],\n[\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\n**Output:** 3\n```\n\n**Constraints:**\n\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 300`\n- `grid[i][j]` is `'0'` or `'1'`.",
+    "description_zh": "Given an `m x n` 2D binary grid `grid` which represents a map of `'1'`s (land) and `'0'`s (water), return *the number of islands*.\n\nAn **island** is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.\n\n**Example 1:**\n\n```\n**Input:** grid = [\n[\"1\",\"1\",\"1\",\"1\",\"0\"],\n[\"1\",\"1\",\"0\",\"1\",\"0\"],\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"0\",\"0\",\"0\",\"0\",\"0\"]\n]\n**Output:** 1\n```\n\n**Example 2:**\n\n```\n**Input:** grid = [\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"1\",\"1\",\"0\",\"0\",\"0\"],\n[\"0\",\"0\",\"1\",\"0\",\"0\"],\n[\"0\",\"0\",\"0\",\"1\",\"1\"]\n]\n**Output:** 3\n```\n\n**Constraints:**\n\n- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 300`\n- `grid[i][j]` is `'0'` or `'1'`.",
+    "constraints": "- `m == grid.length`\n- `n == grid[i].length`\n- `1 <= m, n <= 300`\n- `grid[i][j]` is `'0'` or `'1'`.",
+    "leetcode_examples": [
+        "[[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+        "[[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]"
+    ]
 }

@@ -1,0 +1,25 @@
+{
+    "id":  60,
+    "slug":  "course-schedule",
+    "title_en":  "Course Schedule",
+    "title_zh":  "课程表",
+    "difficulty":  "medium",
+    "categories":  [
+                       "graph"
+                   ],
+    "function":  {
+                     "name":  "canFinish",
+                     "params":  [
+                                    [
+                                        "numCourses",
+                                        "int"
+                                    ],
+                                    [
+                                        "prerequisites",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/course-schedule/"
+}

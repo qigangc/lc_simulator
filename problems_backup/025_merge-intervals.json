@@ -1,0 +1,22 @@
+{
+    "id":  25,
+    "slug":  "merge-intervals",
+    "title_en":  "Merge Intervals",
+    "title_zh":  "合并区间",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "interval"
+                   ],
+    "function":  {
+                     "name":  "merge",
+                     "params":  [
+                                    [
+                                        "intervals",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 },
+    "url":  "https://leetcode.com/problems/merge-intervals/"
+}

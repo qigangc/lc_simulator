@@ -1,0 +1,23 @@
+{
+    "id":  23,
+    "slug":  "maximum-subarray",
+    "title_en":  "Maximum Subarray",
+    "title_zh":  "最大子数组和",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "subarray",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "maxSubArray",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/maximum-subarray/"
+}

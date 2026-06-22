@@ -1,0 +1,26 @@
+{
+    "id":  83,
+    "slug":  "find-all-anagrams-in-a-string",
+    "title_en":  "Find All Anagrams In A String",
+    "title_zh":  "找到字符串中所有字母异位词",
+    "difficulty":  "medium",
+    "categories":  [
+                       "sliding_window",
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "findAnagrams",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ],
+                                    [
+                                        "p",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/find-all-anagrams-in-a-string/"
+}

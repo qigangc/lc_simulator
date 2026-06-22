@@ -1,22 +1,30 @@
 {
-    "id":  43,
-    "slug":  "flatten-binary-tree-to-linked-list",
-    "title_en":  "Flatten Binary Tree To Linked List",
-    "title_zh":  "二叉树展开为链表",
-    "difficulty":  "medium",
-    "categories":  [
-                       "binary_tree",
-                       "linked_list"
-                   ],
-    "function":  {
-                     "name":  "flatten",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "List[int]"
-                 },
-    "url":  "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
+    "id": 43,
+    "slug": "flatten-binary-tree-to-linked-list",
+    "title_en": "Flatten Binary Tree To Linked List",
+    "title_zh": "二叉树展开为链表",
+    "difficulty": "medium",
+    "categories": [
+        "binary_tree",
+        "linked_list"
+    ],
+    "function": {
+        "name": "flatten",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ]
+        ],
+        "return": "List[int]"
+    },
+    "url": "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/",
+    "description_en": "Given the `root` of a binary tree, flatten the tree into a \"linked list\":\n\n- The \"linked list\" should use the same `TreeNode` class where the `right` child pointer points to the next node in the list and the `left` child pointer is always `null`.\n- The \"linked list\" should be in the same order as a **pre-order** **traversal** of the binary tree.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [1,2,5,3,4,null,6]\n**Output:** [1,null,2,null,3,null,4,null,5,null,6]\n```\n\n**Example 2:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Example 3:**\n\n```\n**Input:** root = [0]\n**Output:** [0]\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Can you flatten the tree in-place (with `O(1)` extra space)?",
+    "description_zh": "Given the `root` of a binary tree, flatten the tree into a \"linked list\":\n\n- The \"linked list\" should use the same `TreeNode` class where the `right` child pointer points to the next node in the list and the `left` child pointer is always `null`.\n- The \"linked list\" should be in the same order as a **pre-order** **traversal** of the binary tree.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [1,2,5,3,4,null,6]\n**Output:** [1,null,2,null,3,null,4,null,5,null,6]\n```\n\n**Example 2:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Example 3:**\n\n```\n**Input:** root = [0]\n**Output:** [0]\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Can you flatten the tree in-place (with `O(1)` extra space)?",
+    "constraints": "- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-100 <= Node.val <= 100`",
+    "leetcode_examples": [
+        "[1,2,5,3,4,null,6]",
+        "[]",
+        "[0]"
+    ]
 }

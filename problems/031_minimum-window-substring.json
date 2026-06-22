@@ -1,26 +1,37 @@
 {
-    "id":  31,
-    "slug":  "minimum-window-substring",
-    "title_en":  "Minimum Window Substring",
-    "title_zh":  "最小覆盖子串",
-    "difficulty":  "hard",
-    "categories":  [
-                       "hash",
-                       "sliding_window"
-                   ],
-    "function":  {
-                     "name":  "minWindow",
-                     "params":  [
-                                    [
-                                        "s",
-                                        "str"
-                                    ],
-                                    [
-                                        "t",
-                                        "str"
-                                    ]
-                                ],
-                     "return":  "str"
-                 },
-    "url":  "https://leetcode.com/problems/minimum-window-substring/"
+    "id": 31,
+    "slug": "minimum-window-substring",
+    "title_en": "Minimum Window Substring",
+    "title_zh": "最小覆盖子串",
+    "difficulty": "hard",
+    "categories": [
+        "hash",
+        "sliding_window"
+    ],
+    "function": {
+        "name": "minWindow",
+        "params": [
+            [
+                "s",
+                "str"
+            ],
+            [
+                "t",
+                "str"
+            ]
+        ],
+        "return": "str"
+    },
+    "url": "https://leetcode.com/problems/minimum-window-substring/",
+    "description_en": "Given two strings `s` and `t` of lengths `m` and `n` respectively, return *the **minimum window*** ***substring*** *of* `s` *such that every character in* `t` *(**including duplicates**) is included in the window*. If there is no such substring, return *the empty string* `\"\"`.\n\nThe testcases will be generated such that the answer is **unique**.\n\n**Example 1:**\n\n```\n**Input:** s = \"ADOBECODEBANC\", t = \"ABC\"\n**Output:** \"BANC\"\n**Explanation:** The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"a\", t = \"a\"\n**Output:** \"a\"\n**Explanation:** The entire string s is the minimum window.\n```\n\n**Example 3:**\n\n```\n**Input:** s = \"a\", t = \"aa\"\n**Output:** \"\"\n**Explanation:** Both 'a's from t must be included in the window.\nSince the largest window of s only has one 'a', return empty string.\n```\n\n**Constraints:**\n\n- `m == s.length`\n- `n == t.length`\n- `1 <= m, n <= 10(5)`\n- `s` and `t` consist of uppercase and lowercase English letters.\n\n**Follow up:** Could you find an algorithm that runs in `O(m + n)` time?",
+    "description_zh": "Given two strings `s` and `t` of lengths `m` and `n` respectively, return *the **minimum window*** ***substring*** *of* `s` *such that every character in* `t` *(**including duplicates**) is included in the window*. If there is no such substring, return *the empty string* `\"\"`.\n\nThe testcases will be generated such that the answer is **unique**.\n\n**Example 1:**\n\n```\n**Input:** s = \"ADOBECODEBANC\", t = \"ABC\"\n**Output:** \"BANC\"\n**Explanation:** The minimum window substring \"BANC\" includes 'A', 'B', and 'C' from string t.\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"a\", t = \"a\"\n**Output:** \"a\"\n**Explanation:** The entire string s is the minimum window.\n```\n\n**Example 3:**\n\n```\n**Input:** s = \"a\", t = \"aa\"\n**Output:** \"\"\n**Explanation:** Both 'a's from t must be included in the window.\nSince the largest window of s only has one 'a', return empty string.\n```\n\n**Constraints:**\n\n- `m == s.length`\n- `n == t.length`\n- `1 <= m, n <= 10(5)`\n- `s` and `t` consist of uppercase and lowercase English letters.\n\n**Follow up:** Could you find an algorithm that runs in `O(m + n)` time?",
+    "constraints": "- `m == s.length`\n- `n == t.length`\n- `1 <= m, n <= 10(5)`\n- `s` and `t` consist of uppercase and lowercase English letters.",
+    "leetcode_examples": [
+        "\"ADOBECODEBANC\"",
+        "\"ABC\"",
+        "\"a\"",
+        "\"a\"",
+        "\"a\"",
+        "\"aa\""
+    ]
 }

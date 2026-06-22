@@ -1,0 +1,22 @@
+{
+    "id":  77,
+    "slug":  "house-robber-iii",
+    "title_en":  "House Robber III",
+    "title_zh":  "打家劫舍 III",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "robTree",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/house-robber-iii/"
+}

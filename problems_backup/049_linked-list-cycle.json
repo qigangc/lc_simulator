@@ -1,0 +1,26 @@
+{
+    "id":  49,
+    "slug":  "linked-list-cycle",
+    "title_en":  "Linked List Cycle",
+    "title_zh":  "环形链表",
+    "difficulty":  "easy",
+    "categories":  [
+                       "linked_list",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "hasCycle",
+                     "params":  [
+                                    [
+                                        "head",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "pos",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/linked-list-cycle/"
+}

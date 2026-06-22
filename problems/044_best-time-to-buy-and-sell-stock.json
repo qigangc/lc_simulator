@@ -1,22 +1,29 @@
 {
-    "id":  44,
-    "slug":  "best-time-to-buy-and-sell-stock",
-    "title_en":  "Best Time To Buy And Sell Stock",
-    "title_zh":  "买卖股票的最佳时机",
-    "difficulty":  "easy",
-    "categories":  [
-                       "array",
-                       "dp"
-                   ],
-    "function":  {
-                     "name":  "maxProfit",
-                     "params":  [
-                                    [
-                                        "prices",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+    "id": 44,
+    "slug": "best-time-to-buy-and-sell-stock",
+    "title_en": "Best Time To Buy And Sell Stock",
+    "title_zh": "买卖股票的最佳时机",
+    "difficulty": "easy",
+    "categories": [
+        "array",
+        "dp"
+    ],
+    "function": {
+        "name": "maxProfit",
+        "params": [
+            [
+                "prices",
+                "List[int]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+    "description_en": "You are given an array `prices` where `prices[i]` is the price of a given stock on the `i(th)` day.\n\nYou want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.\n\nReturn *the maximum profit you can achieve from this transaction*. If you cannot achieve any profit, return `0`.\n\n**Example 1:**\n\n```\n**Input:** prices = [7,1,5,3,6,4]\n**Output:** 5\n**Explanation:** Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\nNote that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.\n```\n\n**Example 2:**\n\n```\n**Input:** prices = [7,6,4,3,1]\n**Output:** 0\n**Explanation:** In this case, no transactions are done and the max profit = 0.\n```\n\n**Constraints:**\n\n- `1 <= prices.length <= 10(5)`\n- `0 <= prices[i] <= 10(4)`",
+    "description_zh": "You are given an array `prices` where `prices[i]` is the price of a given stock on the `i(th)` day.\n\nYou want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.\n\nReturn *the maximum profit you can achieve from this transaction*. If you cannot achieve any profit, return `0`.\n\n**Example 1:**\n\n```\n**Input:** prices = [7,1,5,3,6,4]\n**Output:** 5\n**Explanation:** Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.\nNote that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.\n```\n\n**Example 2:**\n\n```\n**Input:** prices = [7,6,4,3,1]\n**Output:** 0\n**Explanation:** In this case, no transactions are done and the max profit = 0.\n```\n\n**Constraints:**\n\n- `1 <= prices.length <= 10(5)`\n- `0 <= prices[i] <= 10(4)`",
+    "constraints": "- `1 <= prices.length <= 10(5)`\n- `0 <= prices[i] <= 10(4)`",
+    "leetcode_examples": [
+        "[7,1,5,3,6,4]",
+        "[7,6,4,3,1]"
+    ]
 }

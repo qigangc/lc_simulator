@@ -1,21 +1,29 @@
 {
-    "id":  74,
-    "slug":  "remove-invalid-parentheses",
-    "title_en":  "Remove Invalid Parentheses",
-    "title_zh":  "删除无效的括号",
-    "difficulty":  "hard",
-    "categories":  [
-                       "backtracking"
-                   ],
-    "function":  {
-                     "name":  "removeInvalidParentheses",
-                     "params":  [
-                                    [
-                                        "s",
-                                        "str"
-                                    ]
-                                ],
-                     "return":  "List[str]"
-                 },
-    "url":  "https://leetcode.com/problems/remove-invalid-parentheses/"
+    "id": 74,
+    "slug": "remove-invalid-parentheses",
+    "title_en": "Remove Invalid Parentheses",
+    "title_zh": "删除无效的括号",
+    "difficulty": "hard",
+    "categories": [
+        "backtracking"
+    ],
+    "function": {
+        "name": "removeInvalidParentheses",
+        "params": [
+            [
+                "s",
+                "str"
+            ]
+        ],
+        "return": "List[str]"
+    },
+    "url": "https://leetcode.com/problems/remove-invalid-parentheses/",
+    "description_en": "Given a string `s` that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.\n\nReturn *a list of **unique strings** that are valid with the minimum number of removals*. You may return the answer in **any order**.\n\n**Example 1:**\n\n```\n**Input:** s = \"()())()\"\n**Output:** [\"(())()\",\"()()()\"]\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"(a)())()\"\n**Output:** [\"(a())()\",\"(a)()()\"]\n```\n\n**Example 3:**\n\n```\n**Input:** s = \")(\"\n**Output:** [\"\"]\n```\n\n**Constraints:**\n\n- `1 <= s.length <= 25`\n- `s` consists of lowercase English letters and parentheses `'('` and `')'`.\n- There will be at most `20` parentheses in `s`.",
+    "description_zh": "Given a string `s` that contains parentheses and letters, remove the minimum number of invalid parentheses to make the input string valid.\n\nReturn *a list of **unique strings** that are valid with the minimum number of removals*. You may return the answer in **any order**.\n\n**Example 1:**\n\n```\n**Input:** s = \"()())()\"\n**Output:** [\"(())()\",\"()()()\"]\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"(a)())()\"\n**Output:** [\"(a())()\",\"(a)()()\"]\n```\n\n**Example 3:**\n\n```\n**Input:** s = \")(\"\n**Output:** [\"\"]\n```\n\n**Constraints:**\n\n- `1 <= s.length <= 25`\n- `s` consists of lowercase English letters and parentheses `'('` and `')'`.\n- There will be at most `20` parentheses in `s`.",
+    "constraints": "- `1 <= s.length <= 25`\n- `s` consists of lowercase English letters and parentheses `'('` and `')'`.\n- There will be at most `20` parentheses in `s`.",
+    "leetcode_examples": [
+        "\"()())()\"",
+        "\"(a)())()\"",
+        "\")(\""
+    ]
 }

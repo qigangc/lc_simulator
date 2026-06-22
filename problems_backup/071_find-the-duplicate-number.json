@@ -1,0 +1,22 @@
+{
+    "id":  71,
+    "slug":  "find-the-duplicate-number",
+    "title_en":  "Find The Duplicate Number",
+    "title_zh":  "寻找重复数",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "findDuplicate",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/find-the-duplicate-number/"
+}

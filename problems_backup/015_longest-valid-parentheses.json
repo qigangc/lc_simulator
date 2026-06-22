@@ -1,0 +1,30 @@
+{
+    "id":  15,
+    "slug":  "longest-valid-parentheses",
+    "title_en":  "Longest Valid Parentheses",
+    "title_zh":  "最长有效括号",
+    "difficulty":  "hard",
+    "categories":  [
+                       "stack",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "longestValidParentheses",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "s":  "(()"
+                                   },
+                         "output":  2
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/longest-valid-parentheses/"
+}

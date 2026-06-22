@@ -1,21 +1,28 @@
 {
-    "id":  81,
-    "slug":  "partition-equal-subset-sum",
-    "title_en":  "Partition Equal Subset Sum",
-    "title_zh":  "分割等和子集",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp"
-                   ],
-    "function":  {
-                     "name":  "canPartition",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "bool"
-                 },
-    "url":  "https://leetcode.com/problems/partition-equal-subset-sum/"
+    "id": 81,
+    "slug": "partition-equal-subset-sum",
+    "title_en": "Partition Equal Subset Sum",
+    "title_zh": "分割等和子集",
+    "difficulty": "medium",
+    "categories": [
+        "dp"
+    ],
+    "function": {
+        "name": "canPartition",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ]
+        ],
+        "return": "bool"
+    },
+    "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+    "description_en": "Given an integer array `nums`, return `true` *if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or* `false` *otherwise*.\n\n**Example 1:**\n\n```\n**Input:** nums = [1,5,11,5]\n**Output:** true\n**Explanation:** The array can be partitioned as [1, 5, 5] and [11].\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [1,2,3,5]\n**Output:** false\n**Explanation:** The array cannot be partitioned into equal sum subsets.\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 200`\n- `1 <= nums[i] <= 100`",
+    "description_zh": "Given an integer array `nums`, return `true` *if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or* `false` *otherwise*.\n\n**Example 1:**\n\n```\n**Input:** nums = [1,5,11,5]\n**Output:** true\n**Explanation:** The array can be partitioned as [1, 5, 5] and [11].\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [1,2,3,5]\n**Output:** false\n**Explanation:** The array cannot be partitioned into equal sum subsets.\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 200`\n- `1 <= nums[i] <= 100`",
+    "constraints": "- `1 <= nums.length <= 200`\n- `1 <= nums[i] <= 100`",
+    "leetcode_examples": [
+        "[1,5,11,5]",
+        "[1,2,3,5]"
+    ]
 }

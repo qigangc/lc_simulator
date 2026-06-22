@@ -1,0 +1,21 @@
+{
+    "id":  34,
+    "slug":  "largest-rectangle-in-histogram",
+    "title_en":  "Largest Rectangle in Histogram",
+    "title_zh":  "柱状图中最大的矩形",
+    "difficulty":  "hard",
+    "categories":  [
+                       "stack"
+                   ],
+    "function":  {
+                     "name":  "largestRectangleArea",
+                     "params":  [
+                                    [
+                                        "heights",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/largest-rectangle-in-histogram/"
+}

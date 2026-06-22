@@ -1,0 +1,22 @@
+{
+    "id":  63,
+    "slug":  "maximal-square",
+    "title_en":  "Maximal Square",
+    "title_zh":  "最大正方形",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "maximalSquare",
+                     "params":  [
+                                    [
+                                        "matrix",
+                                        "List[List[str]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/maximal-square/"
+}

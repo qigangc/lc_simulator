@@ -1,26 +1,37 @@
 {
-    "id":  50,
-    "slug":  "linked-list-cycle-ii",
-    "title_en":  "Linked List Cycle II",
-    "title_zh":  "环形链表 II",
-    "difficulty":  "medium",
-    "categories":  [
-                       "linked_list",
-                       "two_pointers"
-                   ],
-    "function":  {
-                     "name":  "detectCycle",
-                     "params":  [
-                                    [
-                                        "head",
-                                        "List[int]"
-                                    ],
-                                    [
-                                        "pos",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/linked-list-cycle-ii/"
+    "id": 50,
+    "slug": "linked-list-cycle-ii",
+    "title_en": "Linked List Cycle II",
+    "title_zh": "环形链表 II",
+    "difficulty": "medium",
+    "categories": [
+        "linked_list",
+        "two_pointers"
+    ],
+    "function": {
+        "name": "detectCycle",
+        "params": [
+            [
+                "head",
+                "List[int]"
+            ],
+            [
+                "pos",
+                "int"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/linked-list-cycle-ii/",
+    "description_en": "Given the `head` of a linked list, return *the node where the cycle begins. If there is no cycle, return* `null`.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer. Internally, `pos` is used to denote the index of the node that tail's `next` pointer is connected to (**0-indexed**). It is `-1` if there is no cycle. **Note that** `pos` **is not passed as a parameter**.\n\n**Do not modify** the linked list.\n\n**Example 1:**\n\n[image]\n```\n**Input:** head = [3,2,0,-4], pos = 1\n**Output:** tail connects to node index 1\n**Explanation:** There is a cycle in the linked list, where tail connects to the second node.\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** head = [1,2], pos = 0\n**Output:** tail connects to node index 0\n**Explanation:** There is a cycle in the linked list, where tail connects to the first node.\n```\n\n**Example 3:**\n\n[image]\n```\n**Input:** head = [1], pos = -1\n**Output:** no cycle\n**Explanation:** There is no cycle in the linked list.\n```\n\n**Constraints:**\n\n- The number of the nodes in the list is in the range `[0, 10(4)]`.\n- `-10(5) <= Node.val <= 10(5)`\n- `pos` is `-1` or a **valid index** in the linked-list.\n\n**Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?",
+    "description_zh": "Given the `head` of a linked list, return *the node where the cycle begins. If there is no cycle, return* `null`.\n\nThere is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer. Internally, `pos` is used to denote the index of the node that tail's `next` pointer is connected to (**0-indexed**). It is `-1` if there is no cycle. **Note that** `pos` **is not passed as a parameter**.\n\n**Do not modify** the linked list.\n\n**Example 1:**\n\n[image]\n```\n**Input:** head = [3,2,0,-4], pos = 1\n**Output:** tail connects to node index 1\n**Explanation:** There is a cycle in the linked list, where tail connects to the second node.\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** head = [1,2], pos = 0\n**Output:** tail connects to node index 0\n**Explanation:** There is a cycle in the linked list, where tail connects to the first node.\n```\n\n**Example 3:**\n\n[image]\n```\n**Input:** head = [1], pos = -1\n**Output:** no cycle\n**Explanation:** There is no cycle in the linked list.\n```\n\n**Constraints:**\n\n- The number of the nodes in the list is in the range `[0, 10(4)]`.\n- `-10(5) <= Node.val <= 10(5)`\n- `pos` is `-1` or a **valid index** in the linked-list.\n\n**Follow up:** Can you solve it using `O(1)` (i.e. constant) memory?",
+    "constraints": "- The number of the nodes in the list is in the range `[0, 10(4)]`.\n- `-10(5) <= Node.val <= 10(5)`\n- `pos` is `-1` or a **valid index** in the linked-list.",
+    "leetcode_examples": [
+        "[3,2,0,-4]",
+        "1",
+        "[1,2]",
+        "0",
+        "[1]",
+        "-1"
+    ]
 }

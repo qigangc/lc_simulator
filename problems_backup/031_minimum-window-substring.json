@@ -1,0 +1,26 @@
+{
+    "id":  31,
+    "slug":  "minimum-window-substring",
+    "title_en":  "Minimum Window Substring",
+    "title_zh":  "最小覆盖子串",
+    "difficulty":  "hard",
+    "categories":  [
+                       "hash",
+                       "sliding_window"
+                   ],
+    "function":  {
+                     "name":  "minWindow",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ],
+                                    [
+                                        "t",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "str"
+                 },
+    "url":  "https://leetcode.com/problems/minimum-window-substring/"
+}

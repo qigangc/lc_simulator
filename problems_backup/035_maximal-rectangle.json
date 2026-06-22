@@ -1,0 +1,23 @@
+{
+    "id":  35,
+    "slug":  "maximal-rectangle",
+    "title_en":  "Maximal Rectangle",
+    "title_zh":  "最大矩形",
+    "difficulty":  "hard",
+    "categories":  [
+                       "stack",
+                       "dp",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "maximalRectangle",
+                     "params":  [
+                                    [
+                                        "matrix",
+                                        "List[List[str]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/maximal-rectangle/"
+}

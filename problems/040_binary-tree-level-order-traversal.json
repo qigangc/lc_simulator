@@ -1,21 +1,29 @@
 {
-    "id":  40,
-    "slug":  "binary-tree-level-order-traversal",
-    "title_en":  "Binary Tree Level Order Traversal",
-    "title_zh":  "二叉树的层序遍历",
-    "difficulty":  "medium",
-    "categories":  [
-                       "binary_tree"
-                   ],
-    "function":  {
-                     "name":  "levelOrder",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "List[List[int]]"
-                 },
-    "url":  "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+    "id": 40,
+    "slug": "binary-tree-level-order-traversal",
+    "title_en": "Binary Tree Level Order Traversal",
+    "title_zh": "二叉树的层序遍历",
+    "difficulty": "medium",
+    "categories": [
+        "binary_tree"
+    ],
+    "function": {
+        "name": "levelOrder",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ]
+        ],
+        "return": "List[List[int]]"
+    },
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "description_en": "Given the `root` of a binary tree, return *the level order traversal of its nodes' values*. (i.e., from left to right, level by level).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [3,9,20,null,null,15,7]\n**Output:** [[3],[9,20],[15,7]]\n```\n\n**Example 2:**\n\n```\n**Input:** root = [1]\n**Output:** [[1]]\n```\n\n**Example 3:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-1000 <= Node.val <= 1000`",
+    "description_zh": "Given the `root` of a binary tree, return *the level order traversal of its nodes' values*. (i.e., from left to right, level by level).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [3,9,20,null,null,15,7]\n**Output:** [[3],[9,20],[15,7]]\n```\n\n**Example 2:**\n\n```\n**Input:** root = [1]\n**Output:** [[1]]\n```\n\n**Example 3:**\n\n```\n**Input:** root = []\n**Output:** []\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-1000 <= Node.val <= 1000`",
+    "constraints": "- The number of nodes in the tree is in the range `[0, 2000]`.\n- `-1000 <= Node.val <= 1000`",
+    "leetcode_examples": [
+        "[3,9,20,null,null,15,7]",
+        "[1]",
+        "[]"
+    ]
 }

@@ -1,0 +1,21 @@
+{
+    "id":  37,
+    "slug":  "validate-binary-search-tree",
+    "title_en":  "Validate Binary Search Tree",
+    "title_zh":  "验证二叉搜索树",
+    "difficulty":  "medium",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "isValidBST",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/validate-binary-search-tree/"
+}

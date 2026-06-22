@@ -1,0 +1,22 @@
+{
+    "id":  98,
+    "slug":  "best-time-to-buy-and-sell-stock-ii",
+    "title_en":  "Best Time To Buy And Sell Stock II",
+    "title_zh":  "买卖股票的最佳时机 II",
+    "difficulty":  "medium",
+    "categories":  [
+                       "greedy",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "maxProfit2",
+                     "params":  [
+                                    [
+                                        "prices",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+}

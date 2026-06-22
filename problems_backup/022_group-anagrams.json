@@ -1,0 +1,21 @@
+{
+    "id":  22,
+    "slug":  "group-anagrams",
+    "title_en":  "Group Anagrams",
+    "title_zh":  "字母异位词分组",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "groupAnagrams",
+                     "params":  [
+                                    [
+                                        "strs",
+                                        "List[str]"
+                                    ]
+                                ],
+                     "return":  "List[List[str]]"
+                 },
+    "url":  "https://leetcode.com/problems/group-anagrams/"
+}

@@ -1,0 +1,22 @@
+{
+    "id":  56,
+    "slug":  "majority-element",
+    "title_en":  "Majority Element",
+    "title_zh":  "多数元素",
+    "difficulty":  "easy",
+    "categories":  [
+                       "array",
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "majorityElement",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/majority-element/"
+}

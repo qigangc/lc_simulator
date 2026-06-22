@@ -1,21 +1,28 @@
 {
-    "id":  96,
-    "slug":  "queue-reconstruction-by-height",
-    "title_en":  "Queue Reconstruction By Height",
-    "title_zh":  "根据身高重建队列",
-    "difficulty":  "medium",
-    "categories":  [
-                       "greedy"
-                   ],
-    "function":  {
-                     "name":  "reconstructQueue",
-                     "params":  [
-                                    [
-                                        "people",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "List[List[int]]"
-                 },
-    "url":  "https://leetcode.com/problems/queue-reconstruction-by-height/"
+    "id": 96,
+    "slug": "queue-reconstruction-by-height",
+    "title_en": "Queue Reconstruction By Height",
+    "title_zh": "根据身高重建队列",
+    "difficulty": "medium",
+    "categories": [
+        "greedy"
+    ],
+    "function": {
+        "name": "reconstructQueue",
+        "params": [
+            [
+                "people",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "List[List[int]]"
+    },
+    "url": "https://leetcode.com/problems/queue-reconstruction-by-height/",
+    "description_en": "You are given an array of people, `people`, which are the attributes of some people in a queue (not necessarily in order). Each `people[i] = [h(i), k(i)]` represents the `i(th)` person of height `h(i)` with **exactly** `k(i)` other people in front who have a height greater than or equal to `h(i)`.\n\nReconstruct and return *the queue that is represented by the input array* `people`. The returned queue should be formatted as an array `queue`, where `queue[j] = [h(j), k(j)]` is the attributes of the `j(th)` person in the queue (`queue[0]` is the person at the front of the queue).\n\n**Example 1:**\n\n```\n**Input:** people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]\n**Output:** [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]\n**Explanation:**\nPerson 0 has height 5 with no other people taller or the same height in front.\nPerson 1 has height 7 with no other people taller or the same height in front.\nPerson 2 has height 5 with two persons taller or the same height in front, which is person 0 and 1.\nPerson 3 has height 6 with one person taller or the same height in front, which is person 1.\nPerson 4 has height 4 with four people taller or the same height in front, which are people 0, 1, 2, and 3.\nPerson 5 has height 7 with one person taller or the same height in front, which is person 1.\nHence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue.\n```\n\n**Example 2:**\n\n```\n**Input:** people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]\n**Output:** [[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]\n```\n\n**Constraints:**\n\n- `1 <= people.length <= 2000`\n- `0 <= h(i) <= 10(6)`\n- `0 <= k(i) < people.length`\n- It is guaranteed that the queue can be reconstructed.",
+    "description_zh": "You are given an array of people, `people`, which are the attributes of some people in a queue (not necessarily in order). Each `people[i] = [h(i), k(i)]` represents the `i(th)` person of height `h(i)` with **exactly** `k(i)` other people in front who have a height greater than or equal to `h(i)`.\n\nReconstruct and return *the queue that is represented by the input array* `people`. The returned queue should be formatted as an array `queue`, where `queue[j] = [h(j), k(j)]` is the attributes of the `j(th)` person in the queue (`queue[0]` is the person at the front of the queue).\n\n**Example 1:**\n\n```\n**Input:** people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]\n**Output:** [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]\n**Explanation:**\nPerson 0 has height 5 with no other people taller or the same height in front.\nPerson 1 has height 7 with no other people taller or the same height in front.\nPerson 2 has height 5 with two persons taller or the same height in front, which is person 0 and 1.\nPerson 3 has height 6 with one person taller or the same height in front, which is person 1.\nPerson 4 has height 4 with four people taller or the same height in front, which are people 0, 1, 2, and 3.\nPerson 5 has height 7 with one person taller or the same height in front, which is person 1.\nHence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue.\n```\n\n**Example 2:**\n\n```\n**Input:** people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]\n**Output:** [[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]\n```\n\n**Constraints:**\n\n- `1 <= people.length <= 2000`\n- `0 <= h(i) <= 10(6)`\n- `0 <= k(i) < people.length`\n- It is guaranteed that the queue can be reconstructed.",
+    "constraints": "- `1 <= people.length <= 2000`\n- `0 <= h(i) <= 10(6)`\n- `0 <= k(i) < people.length`\n- It is guaranteed that the queue can be reconstructed.",
+    "leetcode_examples": [
+        "[[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]",
+        "[[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]"
+    ]
 }

@@ -1,0 +1,21 @@
+{
+    "id":  87,
+    "slug":  "shortest-unsorted-continuous-subarray",
+    "title_en":  "Shortest Unsorted Continuous Subarray",
+    "title_zh":  "最短无序连续子数组",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array"
+                   ],
+    "function":  {
+                     "name":  "findUnsortedSubarray",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/shortest-unsorted-continuous-subarray/"
+}

@@ -1,0 +1,26 @@
+{
+    "id":  33,
+    "slug":  "word-search",
+    "title_en":  "Word Search",
+    "title_zh":  "单词搜索",
+    "difficulty":  "medium",
+    "categories":  [
+                       "backtracking",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "exist",
+                     "params":  [
+                                    [
+                                        "board",
+                                        "List[List[str]]"
+                                    ],
+                                    [
+                                        "word",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/word-search/"
+}

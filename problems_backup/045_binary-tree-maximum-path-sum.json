@@ -1,0 +1,22 @@
+{
+    "id":  45,
+    "slug":  "binary-tree-maximum-path-sum",
+    "title_en":  "Binary Tree Maximum Path Sum",
+    "title_zh":  "二叉树中的最大路径和",
+    "difficulty":  "hard",
+    "categories":  [
+                       "binary_tree",
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "maxPathSum",
+                     "params":  [
+                                    [
+                                        "root",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/binary-tree-maximum-path-sum/"
+}

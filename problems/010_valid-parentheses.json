@@ -1,29 +1,39 @@
 {
-    "id":  10,
-    "slug":  "valid-parentheses",
-    "title_en":  "Valid Parentheses",
-    "title_zh":  "有效的括号",
-    "difficulty":  "easy",
-    "categories":  [
-                       "stack"
-                   ],
-    "function":  {
-                     "name":  "isValid",
-                     "params":  [
-                                    [
-                                        "s",
-                                        "str"
-                                    ]
-                                ],
-                     "return":  "bool"
-                 },
-    "examples":  [
-                     {
-                         "input":  {
-                                       "s":  "()[]{}"
-                                   },
-                         "output":  true
-                     }
-                 ],
-    "url":  "https://leetcode.com/problems/valid-parentheses/"
+    "id": 10,
+    "slug": "valid-parentheses",
+    "title_en": "Valid Parentheses",
+    "title_zh": "有效的括号",
+    "difficulty": "easy",
+    "categories": [
+        "stack"
+    ],
+    "function": {
+        "name": "isValid",
+        "params": [
+            [
+                "s",
+                "str"
+            ]
+        ],
+        "return": "bool"
+    },
+    "examples": [
+        {
+            "input": {
+                "s": "()[]{}"
+            },
+            "output": true
+        }
+    ],
+    "url": "https://leetcode.com/problems/valid-parentheses/",
+    "description_en": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.\n\nAn input string is valid if:\n\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.\n\n**Example 1:**\n\n**Input:** s = \"()\"\n\n**Output:** true\n\n**Example 2:**\n\n**Input:** s = \"()[]{}\"\n\n**Output:** true\n\n**Example 3:**\n\n**Input:** s = \"(]\"\n\n**Output:** false\n\n**Example 4:**\n\n**Input:** s = \"([])\"\n\n**Output:** true\n\n**Example 5:**\n\n**Input:** s = \"([)]\"\n\n**Output:** false\n\n**Constraints:**\n\n- `1 <= s.length <= 10(4)`\n- `s` consists of parentheses only `'()[]{}'`.",
+    "description_zh": "Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.\n\nAn input string is valid if:\n\n1. Open brackets must be closed by the same type of brackets.\n2. Open brackets must be closed in the correct order.\n3. Every close bracket has a corresponding open bracket of the same type.\n\n**Example 1:**\n\n**Input:** s = \"()\"\n\n**Output:** true\n\n**Example 2:**\n\n**Input:** s = \"()[]{}\"\n\n**Output:** true\n\n**Example 3:**\n\n**Input:** s = \"(]\"\n\n**Output:** false\n\n**Example 4:**\n\n**Input:** s = \"([])\"\n\n**Output:** true\n\n**Example 5:**\n\n**Input:** s = \"([)]\"\n\n**Output:** false\n\n**Constraints:**\n\n- `1 <= s.length <= 10(4)`\n- `s` consists of parentheses only `'()[]{}'`.",
+    "constraints": "- `1 <= s.length <= 10(4)`\n- `s` consists of parentheses only `'()[]{}'`.",
+    "leetcode_examples": [
+        "\"()\"",
+        "\"()[]{}\"",
+        "\"(]\"",
+        "\"([])\"",
+        "\"([)]\""
+    ]
 }

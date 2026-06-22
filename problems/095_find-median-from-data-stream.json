@@ -1,25 +1,32 @@
 {
-    "id":  95,
-    "slug":  "find-median-from-data-stream",
-    "title_en":  "Find Median From Data Stream",
-    "title_zh":  "数据流的中位数",
-    "difficulty":  "hard",
-    "categories":  [
-                       "heap"
-                   ],
-    "function":  {
-                     "name":  "medianFinder",
-                     "params":  [
-                                    [
-                                        "operations",
-                                        "List[str]"
-                                    ],
-                                    [
-                                        "values",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "List[float]"
-                 },
-    "url":  "https://leetcode.com/problems/find-median-from-data-stream/"
+    "id": 95,
+    "slug": "find-median-from-data-stream",
+    "title_en": "Find Median From Data Stream",
+    "title_zh": "数据流的中位数",
+    "difficulty": "hard",
+    "categories": [
+        "heap"
+    ],
+    "function": {
+        "name": "medianFinder",
+        "params": [
+            [
+                "operations",
+                "List[str]"
+            ],
+            [
+                "values",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "List[float]"
+    },
+    "url": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "description_en": "The **median** is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.\n\n- For example, for `arr = [2,3,4]`, the median is `3`.\n- For example, for `arr = [2,3]`, the median is `(2 + 3) / 2 = 2.5`.\n\nImplement the MedianFinder class:\n\n- `MedianFinder()` initializes the `MedianFinder` object.\n- `void addNum(int num)` adds the integer `num` from the data stream to the data structure.\n- `double findMedian()` returns the median of all elements so far. Answers within `10(-5)` of the actual answer will be accepted.\n\n**Example 1:**\n\n```\n**Input**\n[\"MedianFinder\", \"addNum\", \"addNum\", \"findMedian\", \"addNum\", \"findMedian\"]\n[[], [1], [2], [], [3], []]\n**Output**\n[null, null, null, 1.5, null, 2.0]\n**Explanation**\nMedianFinder medianFinder = new MedianFinder();\nmedianFinder.addNum(1); // arr = [1]\nmedianFinder.addNum(2); // arr = [1, 2]\nmedianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)\nmedianFinder.addNum(3); // arr[1, 2, 3]\nmedianFinder.findMedian(); // return 2.0\n```\n\n**Constraints:**\n\n- `-10(5) <= num <= 10(5)`\n- There will be at least one element in the data structure before calling `findMedian`.\n- At most `5 * 10(4)` calls will be made to `addNum` and `findMedian`.\n\n**Follow up:**\n\n- If all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?\n- If `99%` of all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?",
+    "description_zh": "The **median** is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.\n\n- For example, for `arr = [2,3,4]`, the median is `3`.\n- For example, for `arr = [2,3]`, the median is `(2 + 3) / 2 = 2.5`.\n\nImplement the MedianFinder class:\n\n- `MedianFinder()` initializes the `MedianFinder` object.\n- `void addNum(int num)` adds the integer `num` from the data stream to the data structure.\n- `double findMedian()` returns the median of all elements so far. Answers within `10(-5)` of the actual answer will be accepted.\n\n**Example 1:**\n\n```\n**Input**\n[\"MedianFinder\", \"addNum\", \"addNum\", \"findMedian\", \"addNum\", \"findMedian\"]\n[[], [1], [2], [], [3], []]\n**Output**\n[null, null, null, 1.5, null, 2.0]\n**Explanation**\nMedianFinder medianFinder = new MedianFinder();\nmedianFinder.addNum(1); // arr = [1]\nmedianFinder.addNum(2); // arr = [1, 2]\nmedianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)\nmedianFinder.addNum(3); // arr[1, 2, 3]\nmedianFinder.findMedian(); // return 2.0\n```\n\n**Constraints:**\n\n- `-10(5) <= num <= 10(5)`\n- There will be at least one element in the data structure before calling `findMedian`.\n- At most `5 * 10(4)` calls will be made to `addNum` and `findMedian`.\n\n**Follow up:**\n\n- If all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?\n- If `99%` of all integer numbers from the stream are in the range `[0, 100]`, how would you optimize your solution?",
+    "constraints": "- `-10(5) <= num <= 10(5)`\n- There will be at least one element in the data structure before calling `findMedian`.\n- At most `5 * 10(4)` calls will be made to `addNum` and `findMedian`.",
+    "leetcode_examples": [
+        "[\"MedianFinder\",\"addNum\",\"addNum\",\"findMedian\",\"addNum\",\"findMedian\"]",
+        "[[],[1],[2],[],[3],[]]"
+    ]
 }

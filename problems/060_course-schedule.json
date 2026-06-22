@@ -1,25 +1,34 @@
 {
-    "id":  60,
-    "slug":  "course-schedule",
-    "title_en":  "Course Schedule",
-    "title_zh":  "课程表",
-    "difficulty":  "medium",
-    "categories":  [
-                       "graph"
-                   ],
-    "function":  {
-                     "name":  "canFinish",
-                     "params":  [
-                                    [
-                                        "numCourses",
-                                        "int"
-                                    ],
-                                    [
-                                        "prerequisites",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "bool"
-                 },
-    "url":  "https://leetcode.com/problems/course-schedule/"
+    "id": 60,
+    "slug": "course-schedule",
+    "title_en": "Course Schedule",
+    "title_zh": "课程表",
+    "difficulty": "medium",
+    "categories": [
+        "graph"
+    ],
+    "function": {
+        "name": "canFinish",
+        "params": [
+            [
+                "numCourses",
+                "int"
+            ],
+            [
+                "prerequisites",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "bool"
+    },
+    "url": "https://leetcode.com/problems/course-schedule/",
+    "description_en": "There are a total of `numCourses` courses you have to take, labeled from `0` to `numCourses - 1`. You are given an array `prerequisites` where `prerequisites[i] = [a(i), b(i)]` indicates that you **must** take course `b(i)` first if you want to take course `a(i)`.\n\n- For example, the pair `[0, 1]`, indicates that to take course `0` you have to first take course `1`.\n\nReturn `true` if you can finish all courses. Otherwise, return `false`.\n\n**Example 1:**\n\n```\n**Input:** numCourses = 2, prerequisites = [[1,0]]\n**Output:** true\n**Explanation:** There are a total of 2 courses to take.\nTo take course 1 you should have finished course 0. So it is possible.\n```\n\n**Example 2:**\n\n```\n**Input:** numCourses = 2, prerequisites = [[1,0],[0,1]]\n**Output:** false\n**Explanation:** There are a total of 2 courses to take.\nTo take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.\n```\n\n**Constraints:**\n\n- `1 <= numCourses <= 2000`\n- `0 <= prerequisites.length <= 5000`\n- `prerequisites[i].length == 2`\n- `0 <= a(i), b(i) < numCourses`\n- All the pairs prerequisites[i] are **unique**.",
+    "description_zh": "There are a total of `numCourses` courses you have to take, labeled from `0` to `numCourses - 1`. You are given an array `prerequisites` where `prerequisites[i] = [a(i), b(i)]` indicates that you **must** take course `b(i)` first if you want to take course `a(i)`.\n\n- For example, the pair `[0, 1]`, indicates that to take course `0` you have to first take course `1`.\n\nReturn `true` if you can finish all courses. Otherwise, return `false`.\n\n**Example 1:**\n\n```\n**Input:** numCourses = 2, prerequisites = [[1,0]]\n**Output:** true\n**Explanation:** There are a total of 2 courses to take.\nTo take course 1 you should have finished course 0. So it is possible.\n```\n\n**Example 2:**\n\n```\n**Input:** numCourses = 2, prerequisites = [[1,0],[0,1]]\n**Output:** false\n**Explanation:** There are a total of 2 courses to take.\nTo take course 1 you should have finished course 0, and to take course 0 you should also have finished course 1. So it is impossible.\n```\n\n**Constraints:**\n\n- `1 <= numCourses <= 2000`\n- `0 <= prerequisites.length <= 5000`\n- `prerequisites[i].length == 2`\n- `0 <= a(i), b(i) < numCourses`\n- All the pairs prerequisites[i] are **unique**.",
+    "constraints": "- `1 <= numCourses <= 2000`\n- `0 <= prerequisites.length <= 5000`\n- `prerequisites[i].length == 2`\n- `0 <= a(i), b(i) < numCourses`\n- All the pairs prerequisites[i] are **unique**.",
+    "leetcode_examples": [
+        "2",
+        "[[1,0]]",
+        "2",
+        "[[1,0],[0,1]]"
+    ]
 }

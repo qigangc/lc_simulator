@@ -1,0 +1,26 @@
+{
+    "id":  50,
+    "slug":  "linked-list-cycle-ii",
+    "title_en":  "Linked List Cycle II",
+    "title_zh":  "环形链表 II",
+    "difficulty":  "medium",
+    "categories":  [
+                       "linked_list",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "detectCycle",
+                     "params":  [
+                                    [
+                                        "head",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "pos",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/linked-list-cycle-ii/"
+}

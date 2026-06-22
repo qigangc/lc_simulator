@@ -1,0 +1,25 @@
+{
+    "id":  61,
+    "slug":  "implement-trie-prefix-tree",
+    "title_en":  "Implement Trie Prefix Tree",
+    "title_zh":  "实现 Trie",
+    "difficulty":  "medium",
+    "categories":  [
+                       "trie"
+                   ],
+    "function":  {
+                     "name":  "trie",
+                     "params":  [
+                                    [
+                                        "operations",
+                                        "List[str]"
+                                    ],
+                                    [
+                                        "values",
+                                        "List[List[str]]"
+                                    ]
+                                ],
+                     "return":  "List[object]"
+                 },
+    "url":  "https://leetcode.com/problems/implement-trie-prefix-tree/"
+}

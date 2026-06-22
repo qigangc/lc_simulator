@@ -1,22 +1,29 @@
 {
-    "id":  56,
-    "slug":  "majority-element",
-    "title_en":  "Majority Element",
-    "title_zh":  "多数元素",
-    "difficulty":  "easy",
-    "categories":  [
-                       "array",
-                       "hash"
-                   ],
-    "function":  {
-                     "name":  "majorityElement",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/majority-element/"
+    "id": 56,
+    "slug": "majority-element",
+    "title_en": "Majority Element",
+    "title_zh": "多数元素",
+    "difficulty": "easy",
+    "categories": [
+        "array",
+        "hash"
+    ],
+    "function": {
+        "name": "majorityElement",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/majority-element/",
+    "description_en": "Given an array `nums` of size `n`, return *the majority element*.\n\nThe majority element is the element that appears more than `⌊n / 2⌋` times. You may assume that the majority element always exists in the array.\n\n**Example 1:**\n\n```\n**Input:** nums = [3,2,3]\n**Output:** 3\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [2,2,1,1,1,2,2]\n**Output:** 2\n```\n\n**Constraints:**\n\n- `n == nums.length`\n- `1 <= n <= 5 * 10(4)`\n- `-10(9) <= nums[i] <= 10(9)`\n- The input is generated such that a majority element will exist in the array.\n\n**Follow-up:** Could you solve the problem in linear time and in `O(1)` space?",
+    "description_zh": "Given an array `nums` of size `n`, return *the majority element*.\n\nThe majority element is the element that appears more than `⌊n / 2⌋` times. You may assume that the majority element always exists in the array.\n\n**Example 1:**\n\n```\n**Input:** nums = [3,2,3]\n**Output:** 3\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [2,2,1,1,1,2,2]\n**Output:** 2\n```\n\n**Constraints:**\n\n- `n == nums.length`\n- `1 <= n <= 5 * 10(4)`\n- `-10(9) <= nums[i] <= 10(9)`\n- The input is generated such that a majority element will exist in the array.\n\n**Follow-up:** Could you solve the problem in linear time and in `O(1)` space?",
+    "constraints": "- `n == nums.length`\n- `1 <= n <= 5 * 10(4)`\n- `-10(9) <= nums[i] <= 10(9)`\n- The input is generated such that a majority element will exist in the array.",
+    "leetcode_examples": [
+        "[3,2,3]",
+        "[2,2,1,1,1,2,2]"
+    ]
 }

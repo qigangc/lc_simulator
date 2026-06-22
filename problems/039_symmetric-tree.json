@@ -1,21 +1,28 @@
 {
-    "id":  39,
-    "slug":  "symmetric-tree",
-    "title_en":  "Symmetric Tree",
-    "title_zh":  "对称二叉树",
-    "difficulty":  "easy",
-    "categories":  [
-                       "binary_tree"
-                   ],
-    "function":  {
-                     "name":  "isSymmetric",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "bool"
-                 },
-    "url":  "https://leetcode.com/problems/symmetric-tree/"
+    "id": 39,
+    "slug": "symmetric-tree",
+    "title_en": "Symmetric Tree",
+    "title_zh": "对称二叉树",
+    "difficulty": "easy",
+    "categories": [
+        "binary_tree"
+    ],
+    "function": {
+        "name": "isSymmetric",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ]
+        ],
+        "return": "bool"
+    },
+    "url": "https://leetcode.com/problems/symmetric-tree/",
+    "description_en": "Given the `root` of a binary tree, *check whether it is a mirror of itself* (i.e., symmetric around its center).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [1,2,2,3,4,4,3]\n**Output:** true\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** root = [1,2,2,null,3,null,3]\n**Output:** false\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[1, 1000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Could you solve it both recursively and iteratively?",
+    "description_zh": "Given the `root` of a binary tree, *check whether it is a mirror of itself* (i.e., symmetric around its center).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [1,2,2,3,4,4,3]\n**Output:** true\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** root = [1,2,2,null,3,null,3]\n**Output:** false\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[1, 1000]`.\n- `-100 <= Node.val <= 100`\n\n**Follow up:** Could you solve it both recursively and iteratively?",
+    "constraints": "- The number of nodes in the tree is in the range `[1, 1000]`.\n- `-100 <= Node.val <= 100`",
+    "leetcode_examples": [
+        "[1,2,2,3,4,4,3]",
+        "[1,2,2,null,3,null,3]"
+    ]
 }

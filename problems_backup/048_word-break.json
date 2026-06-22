@@ -1,0 +1,26 @@
+{
+    "id":  48,
+    "slug":  "word-break",
+    "title_en":  "Word Break",
+    "title_zh":  "单词拆分",
+    "difficulty":  "medium",
+    "categories":  [
+                       "dp",
+                       "trie"
+                   ],
+    "function":  {
+                     "name":  "wordBreak",
+                     "params":  [
+                                    [
+                                        "s",
+                                        "str"
+                                    ],
+                                    [
+                                        "wordDict",
+                                        "List[str]"
+                                    ]
+                                ],
+                     "return":  "bool"
+                 },
+    "url":  "https://leetcode.com/problems/word-break/"
+}

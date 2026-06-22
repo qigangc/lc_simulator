@@ -1,0 +1,21 @@
+{
+    "id":  78,
+    "slug":  "counting-bits",
+    "title_en":  "Counting Bits",
+    "title_zh":  "比特位计数",
+    "difficulty":  "easy",
+    "categories":  [
+                       "dp"
+                   ],
+    "function":  {
+                     "name":  "countBits",
+                     "params":  [
+                                    [
+                                        "n",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/counting-bits/"
+}

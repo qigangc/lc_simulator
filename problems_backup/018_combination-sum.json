@@ -1,0 +1,49 @@
+{
+    "id":  18,
+    "slug":  "combination-sum",
+    "title_en":  "Combination Sum",
+    "title_zh":  "组合总和",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "backtracking"
+                   ],
+    "function":  {
+                     "name":  "combinationSum",
+                     "params":  [
+                                    [
+                                        "candidates",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "target",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[List[int]]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "candidates":  [
+                                                          2,
+                                                          3,
+                                                          6,
+                                                          7
+                                                      ],
+                                       "target":  7
+                                   },
+                         "output":  [
+                                        [
+                                            2,
+                                            2,
+                                            3
+                                        ],
+                                        [
+                                            7
+                                        ]
+                                    ]
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/combination-sum/"
+}

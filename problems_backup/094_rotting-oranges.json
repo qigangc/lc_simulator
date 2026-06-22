@@ -1,0 +1,22 @@
+{
+    "id":  94,
+    "slug":  "rotting-oranges",
+    "title_en":  "Rotting Oranges",
+    "title_zh":  "腐烂的橘子",
+    "difficulty":  "medium",
+    "categories":  [
+                       "graph",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "orangesRotting",
+                     "params":  [
+                                    [
+                                        "grid",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/rotting-oranges/"
+}

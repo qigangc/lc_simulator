@@ -1,0 +1,21 @@
+{
+    "id":  46,
+    "slug":  "longest-consecutive-sequence",
+    "title_en":  "Longest Consecutive Sequence",
+    "title_zh":  "最长连续序列",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash"
+                   ],
+    "function":  {
+                     "name":  "longestConsecutive",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/longest-consecutive-sequence/"
+}

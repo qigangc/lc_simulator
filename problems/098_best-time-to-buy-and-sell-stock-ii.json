@@ -1,22 +1,30 @@
 {
-    "id":  98,
-    "slug":  "best-time-to-buy-and-sell-stock-ii",
-    "title_en":  "Best Time To Buy And Sell Stock II",
-    "title_zh":  "买卖股票的最佳时机 II",
-    "difficulty":  "medium",
-    "categories":  [
-                       "greedy",
-                       "dp"
-                   ],
-    "function":  {
-                     "name":  "maxProfit2",
-                     "params":  [
-                                    [
-                                        "prices",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/"
+    "id": 98,
+    "slug": "best-time-to-buy-and-sell-stock-ii",
+    "title_en": "Best Time To Buy And Sell Stock II",
+    "title_zh": "买卖股票的最佳时机 II",
+    "difficulty": "medium",
+    "categories": [
+        "greedy",
+        "dp"
+    ],
+    "function": {
+        "name": "maxProfit2",
+        "params": [
+            [
+                "prices",
+                "List[int]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+    "description_en": "You are given an integer array `prices` where `prices[i]` is the price of a given stock on the `i(th)` day.\n\nOn each day, you may decide to buy and/or sell the stock. You can only hold **at most one** share of the stock at any time. However, you can sell and buy the stock multiple times on the **same day**, ensuring you never hold more than one share of the stock.\n\nFind and return *the **maximum** profit you can achieve*.\n\n**Example 1:**\n\n```\n**Input:** prices = [7,1,5,3,6,4]\n**Output:** 7\n**Explanation:** Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.\nThen buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.\nTotal profit is 4 + 3 = 7.\n```\n\n**Example 2:**\n\n```\n**Input:** prices = [1,2,3,4,5]\n**Output:** 4\n**Explanation:** Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.\nTotal profit is 4.\n```\n\n**Example 3:**\n\n```\n**Input:** prices = [7,6,4,3,1]\n**Output:** 0\n**Explanation:** There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.\n```\n\n**Constraints:**\n\n- `1 <= prices.length <= 3 * 10(4)`\n- `0 <= prices[i] <= 10(4)`",
+    "description_zh": "You are given an integer array `prices` where `prices[i]` is the price of a given stock on the `i(th)` day.\n\nOn each day, you may decide to buy and/or sell the stock. You can only hold **at most one** share of the stock at any time. However, you can sell and buy the stock multiple times on the **same day**, ensuring you never hold more than one share of the stock.\n\nFind and return *the **maximum** profit you can achieve*.\n\n**Example 1:**\n\n```\n**Input:** prices = [7,1,5,3,6,4]\n**Output:** 7\n**Explanation:** Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.\nThen buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.\nTotal profit is 4 + 3 = 7.\n```\n\n**Example 2:**\n\n```\n**Input:** prices = [1,2,3,4,5]\n**Output:** 4\n**Explanation:** Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.\nTotal profit is 4.\n```\n\n**Example 3:**\n\n```\n**Input:** prices = [7,6,4,3,1]\n**Output:** 0\n**Explanation:** There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.\n```\n\n**Constraints:**\n\n- `1 <= prices.length <= 3 * 10(4)`\n- `0 <= prices[i] <= 10(4)`",
+    "constraints": "- `1 <= prices.length <= 3 * 10(4)`\n- `0 <= prices[i] <= 10(4)`",
+    "leetcode_examples": [
+        "[7,1,5,3,6,4]",
+        "[1,2,3,4,5]",
+        "[7,6,4,3,1]"
+    ]
 }

@@ -1,0 +1,25 @@
+{
+    "id":  88,
+    "slug":  "merge-two-binary-trees",
+    "title_en":  "Merge Two Binary Trees",
+    "title_zh":  "合并二叉树",
+    "difficulty":  "easy",
+    "categories":  [
+                       "binary_tree"
+                   ],
+    "function":  {
+                     "name":  "mergeTrees",
+                     "params":  [
+                                    [
+                                        "root1",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "root2",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/merge-two-binary-trees/"
+}

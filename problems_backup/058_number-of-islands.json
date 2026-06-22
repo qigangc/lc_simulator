@@ -1,0 +1,22 @@
+{
+    "id":  58,
+    "slug":  "number-of-islands",
+    "title_en":  "Number Of Islands",
+    "title_zh":  "岛屿数量",
+    "difficulty":  "medium",
+    "categories":  [
+                       "graph",
+                       "matrix"
+                   ],
+    "function":  {
+                     "name":  "numIslands",
+                     "params":  [
+                                    [
+                                        "grid",
+                                        "List[List[str]]"
+                                    ]
+                                ],
+                     "return":  "int"
+                 },
+    "url":  "https://leetcode.com/problems/number-of-islands/"
+}

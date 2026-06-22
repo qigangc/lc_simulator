@@ -1,22 +1,30 @@
 {
-    "id":  73,
-    "slug":  "longest-increasing-subsequence",
-    "title_en":  "Longest Increasing Subsequence",
-    "title_zh":  "最长递增子序列",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp",
-                       "binary_search"
-                   ],
-    "function":  {
-                     "name":  "lengthOfLIS",
-                     "params":  [
-                                    [
-                                        "nums",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/longest-increasing-subsequence/"
+    "id": 73,
+    "slug": "longest-increasing-subsequence",
+    "title_en": "Longest Increasing Subsequence",
+    "title_zh": "最长递增子序列",
+    "difficulty": "medium",
+    "categories": [
+        "dp",
+        "binary_search"
+    ],
+    "function": {
+        "name": "lengthOfLIS",
+        "params": [
+            [
+                "nums",
+                "List[int]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "description_en": "Given an integer array `nums`, return *the length of the longest **strictly increasing*** ***subsequence***.\n\n**Example 1:**\n\n```\n**Input:** nums = [10,9,2,5,3,7,101,18]\n**Output:** 4\n**Explanation:** The longest increasing subsequence is [2,3,7,101], therefore the length is 4.\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [0,1,0,3,2,3]\n**Output:** 4\n```\n\n**Example 3:**\n\n```\n**Input:** nums = [7,7,7,7,7,7,7]\n**Output:** 1\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 2500`\n- `-10(4) <= nums[i] <= 10(4)`\n\n**Follow up:** Can you come up with an algorithm that runs in `O(n log(n))` time complexity?",
+    "description_zh": "Given an integer array `nums`, return *the length of the longest **strictly increasing*** ***subsequence***.\n\n**Example 1:**\n\n```\n**Input:** nums = [10,9,2,5,3,7,101,18]\n**Output:** 4\n**Explanation:** The longest increasing subsequence is [2,3,7,101], therefore the length is 4.\n```\n\n**Example 2:**\n\n```\n**Input:** nums = [0,1,0,3,2,3]\n**Output:** 4\n```\n\n**Example 3:**\n\n```\n**Input:** nums = [7,7,7,7,7,7,7]\n**Output:** 1\n```\n\n**Constraints:**\n\n- `1 <= nums.length <= 2500`\n- `-10(4) <= nums[i] <= 10(4)`\n\n**Follow up:** Can you come up with an algorithm that runs in `O(n log(n))` time complexity?",
+    "constraints": "- `1 <= nums.length <= 2500`\n- `-10(4) <= nums[i] <= 10(4)`",
+    "leetcode_examples": [
+        "[10,9,2,5,3,7,101,18]",
+        "[0,1,0,3,2,3]",
+        "[7,7,7,7,7,7,7]"
+    ]
 }

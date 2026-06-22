@@ -1,0 +1,26 @@
+{
+    "id":  79,
+    "slug":  "top-k-frequent-elements",
+    "title_en":  "Top K Frequent Elements",
+    "title_zh":  "前 K 个高频元素",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash",
+                       "heap"
+                   ],
+    "function":  {
+                     "name":  "topKFrequent",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "k",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/top-k-frequent-elements/"
+}

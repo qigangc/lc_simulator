@@ -1,35 +1,42 @@
 {
-    "id":  12,
-    "slug":  "generate-parentheses",
-    "title_en":  "Generate Parentheses",
-    "title_zh":  "括号生成",
-    "difficulty":  "medium",
-    "categories":  [
-                       "backtracking"
-                   ],
-    "function":  {
-                     "name":  "generateParenthesis",
-                     "params":  [
-                                    [
-                                        "n",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "List[str]"
-                 },
-    "examples":  [
-                     {
-                         "input":  {
-                                       "n":  3
-                                   },
-                         "output":  [
-                                        "((()))",
-                                        "(()())",
-                                        "(())()",
-                                        "()(())",
-                                        "()()()"
-                                    ]
-                     }
-                 ],
-    "url":  "https://leetcode.com/problems/generate-parentheses/"
+    "id": 12,
+    "slug": "generate-parentheses",
+    "title_en": "Generate Parentheses",
+    "title_zh": "括号生成",
+    "difficulty": "medium",
+    "categories": [
+        "backtracking"
+    ],
+    "function": {
+        "name": "generateParenthesis",
+        "params": [
+            [
+                "n",
+                "int"
+            ]
+        ],
+        "return": "List[str]"
+    },
+    "examples": [
+        {
+            "input": {
+                "n": 3
+            },
+            "output": [
+                "((()))",
+                "(()())",
+                "(())()",
+                "()(())",
+                "()()()"
+            ]
+        }
+    ],
+    "url": "https://leetcode.com/problems/generate-parentheses/",
+    "description_en": "Given `n` pairs of parentheses, write a function to *generate all combinations of well-formed parentheses*.\n\n**Example 1:**\n\n```\n**Input:** n = 3\n**Output:** [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\n```\n\n**Example 2:**\n\n```\n**Input:** n = 1\n**Output:** [\"()\"]\n```\n\n**Constraints:**\n\n- `1 <= n <= 8`",
+    "description_zh": "Given `n` pairs of parentheses, write a function to *generate all combinations of well-formed parentheses*.\n\n**Example 1:**\n\n```\n**Input:** n = 3\n**Output:** [\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]\n```\n\n**Example 2:**\n\n```\n**Input:** n = 1\n**Output:** [\"()\"]\n```\n\n**Constraints:**\n\n- `1 <= n <= 8`",
+    "constraints": "- `1 <= n <= 8`",
+    "leetcode_examples": [
+        "3",
+        "1"
+    ]
 }

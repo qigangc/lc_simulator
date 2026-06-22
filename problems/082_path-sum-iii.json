@@ -1,25 +1,34 @@
 {
-    "id":  82,
-    "slug":  "path-sum-iii",
-    "title_en":  "Path Sum III",
-    "title_zh":  "路径总和 III",
-    "difficulty":  "medium",
-    "categories":  [
-                       "binary_tree"
-                   ],
-    "function":  {
-                     "name":  "pathSum",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ],
-                                    [
-                                        "targetSum",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/path-sum-iii/"
+    "id": 82,
+    "slug": "path-sum-iii",
+    "title_en": "Path Sum III",
+    "title_zh": "路径总和 III",
+    "difficulty": "medium",
+    "categories": [
+        "binary_tree"
+    ],
+    "function": {
+        "name": "pathSum",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ],
+            [
+                "targetSum",
+                "int"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/path-sum-iii/",
+    "description_en": "Given the `root` of a binary tree and an integer `targetSum`, return *the number of paths where the sum of the values along the path equals* `targetSum`.\n\nThe path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8\n**Output:** 3\n**Explanation:** The paths that sum to 8 are shown.\n```\n\n**Example 2:**\n\n```\n**Input:** root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22\n**Output:** 3\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 1000]`.\n- `-10(9) <= Node.val <= 10(9)`\n- `-1000 <= targetSum <= 1000`",
+    "description_zh": "Given the `root` of a binary tree and an integer `targetSum`, return *the number of paths where the sum of the values along the path equals* `targetSum`.\n\nThe path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8\n**Output:** 3\n**Explanation:** The paths that sum to 8 are shown.\n```\n\n**Example 2:**\n\n```\n**Input:** root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22\n**Output:** 3\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 1000]`.\n- `-10(9) <= Node.val <= 10(9)`\n- `-1000 <= targetSum <= 1000`",
+    "constraints": "- The number of nodes in the tree is in the range `[0, 1000]`.\n- `-10(9) <= Node.val <= 10(9)`\n- `-1000 <= targetSum <= 1000`",
+    "leetcode_examples": [
+        "[10,5,-3,3,2,null,11,3,-2,null,1]",
+        "8",
+        "[5,4,8,11,null,13,4,7,2,null,null,5,1]",
+        "22"
+    ]
 }

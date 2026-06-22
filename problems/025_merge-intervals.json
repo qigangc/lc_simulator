@@ -1,22 +1,30 @@
 {
-    "id":  25,
-    "slug":  "merge-intervals",
-    "title_en":  "Merge Intervals",
-    "title_zh":  "合并区间",
-    "difficulty":  "medium",
-    "categories":  [
-                       "array",
-                       "interval"
-                   ],
-    "function":  {
-                     "name":  "merge",
-                     "params":  [
-                                    [
-                                        "intervals",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "List[List[int]]"
-                 },
-    "url":  "https://leetcode.com/problems/merge-intervals/"
+    "id": 25,
+    "slug": "merge-intervals",
+    "title_en": "Merge Intervals",
+    "title_zh": "合并区间",
+    "difficulty": "medium",
+    "categories": [
+        "array",
+        "interval"
+    ],
+    "function": {
+        "name": "merge",
+        "params": [
+            [
+                "intervals",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "List[List[int]]"
+    },
+    "url": "https://leetcode.com/problems/merge-intervals/",
+    "description_en": "Given an array of `intervals` where `intervals[i] = [start(i), end(i)]`, merge all overlapping intervals, and return *an array of the non-overlapping intervals that cover all the intervals in the input*.\n\n**Example 1:**\n\n```\n**Input:** intervals = [[1,3],[2,6],[8,10],[15,18]]\n**Output:** [[1,6],[8,10],[15,18]]\n**Explanation:** Since intervals [1,3] and [2,6] overlap, merge them into [1,6].\n```\n\n**Example 2:**\n\n```\n**Input:** intervals = [[1,4],[4,5]]\n**Output:** [[1,5]]\n**Explanation:** Intervals [1,4] and [4,5] are considered overlapping.\n```\n\n**Example 3:**\n\n```\n**Input:** intervals = [[4,7],[1,4]]\n**Output:** [[1,7]]\n**Explanation:** Intervals [1,4] and [4,7] are considered overlapping.\n```\n\n**Constraints:**\n\n- `1 <= intervals.length <= 10(4)`\n- `intervals[i].length == 2`\n- `0 <= start(i) <= end(i) <= 10(4)`",
+    "description_zh": "Given an array of `intervals` where `intervals[i] = [start(i), end(i)]`, merge all overlapping intervals, and return *an array of the non-overlapping intervals that cover all the intervals in the input*.\n\n**Example 1:**\n\n```\n**Input:** intervals = [[1,3],[2,6],[8,10],[15,18]]\n**Output:** [[1,6],[8,10],[15,18]]\n**Explanation:** Since intervals [1,3] and [2,6] overlap, merge them into [1,6].\n```\n\n**Example 2:**\n\n```\n**Input:** intervals = [[1,4],[4,5]]\n**Output:** [[1,5]]\n**Explanation:** Intervals [1,4] and [4,5] are considered overlapping.\n```\n\n**Example 3:**\n\n```\n**Input:** intervals = [[4,7],[1,4]]\n**Output:** [[1,7]]\n**Explanation:** Intervals [1,4] and [4,7] are considered overlapping.\n```\n\n**Constraints:**\n\n- `1 <= intervals.length <= 10(4)`\n- `intervals[i].length == 2`\n- `0 <= start(i) <= end(i) <= 10(4)`",
+    "constraints": "- `1 <= intervals.length <= 10(4)`\n- `intervals[i].length == 2`\n- `0 <= start(i) <= end(i) <= 10(4)`",
+    "leetcode_examples": [
+        "[[1,3],[2,6],[8,10],[15,18]]",
+        "[[1,4],[4,5]]",
+        "[[4,7],[1,4]]"
+    ]
 }

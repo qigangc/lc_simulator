@@ -1,21 +1,28 @@
 {
-    "id":  41,
-    "slug":  "maximum-depth-of-binary-tree",
-    "title_en":  "Maximum Depth of Binary Tree",
-    "title_zh":  "二叉树的最大深度",
-    "difficulty":  "easy",
-    "categories":  [
-                       "binary_tree"
-                   ],
-    "function":  {
-                     "name":  "maxDepth",
-                     "params":  [
-                                    [
-                                        "root",
-                                        "List[int]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+    "id": 41,
+    "slug": "maximum-depth-of-binary-tree",
+    "title_en": "Maximum Depth of Binary Tree",
+    "title_zh": "二叉树的最大深度",
+    "difficulty": "easy",
+    "categories": [
+        "binary_tree"
+    ],
+    "function": {
+        "name": "maxDepth",
+        "params": [
+            [
+                "root",
+                "List[int]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "description_en": "Given the `root` of a binary tree, return *its maximum depth*.\n\nA binary tree's **maximum depth** is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [3,9,20,null,null,15,7]\n**Output:** 3\n```\n\n**Example 2:**\n\n```\n**Input:** root = [1,null,2]\n**Output:** 2\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 10(4)]`.\n- `-100 <= Node.val <= 100`",
+    "description_zh": "Given the `root` of a binary tree, return *its maximum depth*.\n\nA binary tree's **maximum depth** is the number of nodes along the longest path from the root node down to the farthest leaf node.\n\n**Example 1:**\n\n[image]\n```\n**Input:** root = [3,9,20,null,null,15,7]\n**Output:** 3\n```\n\n**Example 2:**\n\n```\n**Input:** root = [1,null,2]\n**Output:** 2\n```\n\n**Constraints:**\n\n- The number of nodes in the tree is in the range `[0, 10(4)]`.\n- `-100 <= Node.val <= 100`",
+    "constraints": "- The number of nodes in the tree is in the range `[0, 10(4)]`.\n- `-100 <= Node.val <= 100`",
+    "leetcode_examples": [
+        "[3,9,20,null,null,15,7]",
+        "[1,null,2]"
+    ]
 }

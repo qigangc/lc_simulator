@@ -346,9 +346,17 @@ def main():
     print()
 
     for i, path in enumerate(problem_files, 1):
-        slug = extract_slug(path.name)
-        if slug is None:
-            print(f"  SKIP {path.name}: could not extract slug", file=sys.stderr)
+        # Read slug from JSON file (more reliable than filename extraction)
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                problem_data = json.load(f)
+            slug = problem_data.get("slug")
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"  SKIP {path.name}: could not read JSON ({e})", file=sys.stderr)
+            fail_count += 1
+            continue
+        if not slug:
+            print(f"  SKIP {path.name}: no slug field in JSON", file=sys.stderr)
             fail_count += 1
             continue
 

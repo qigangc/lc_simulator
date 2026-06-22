@@ -1,22 +1,30 @@
 {
-    "id":  93,
-    "slug":  "shortest-path-in-binary-matrix",
-    "title_en":  "Shortest Path In Binary Matrix",
-    "title_zh":  "二进制矩阵中的最短路径",
-    "difficulty":  "medium",
-    "categories":  [
-                       "graph",
-                       "matrix"
-                   ],
-    "function":  {
-                     "name":  "shortestPathBinaryMatrix",
-                     "params":  [
-                                    [
-                                        "grid",
-                                        "List[List[int]]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
+    "id": 93,
+    "slug": "shortest-path-in-binary-matrix",
+    "title_en": "Shortest Path In Binary Matrix",
+    "title_zh": "二进制矩阵中的最短路径",
+    "difficulty": "medium",
+    "categories": [
+        "graph",
+        "matrix"
+    ],
+    "function": {
+        "name": "shortestPathBinaryMatrix",
+        "params": [
+            [
+                "grid",
+                "List[List[int]]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/shortest-path-in-binary-matrix/",
+    "description_en": "Given an `n x n` binary matrix `grid`, return *the length of the shortest **clear path** in the matrix*. If there is no clear path, return `-1`.\n\nA **clear path** in a binary matrix is a path from the **top-left** cell (i.e., `(0, 0)`) to the **bottom-right** cell (i.e., `(n - 1, n - 1)`) such that:\n\n- All the visited cells of the path are `0`.\n- All the adjacent cells of the path are **8-directionally** connected (i.e., they are different and they share an edge or a corner).\n\nThe **length of a clear path** is the number of visited cells of this path.\n\n**Example 1:**\n\n[image]\n```\n**Input:** grid = [[0,1],[1,0]]\n**Output:** 2\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** grid = [[0,0,0],[1,1,0],[1,1,0]]\n**Output:** 4\n```\n\n**Example 3:**\n\n```\n**Input:** grid = [[1,0,0],[1,1,0],[1,1,0]]\n**Output:** -1\n```\n\n**Constraints:**\n\n- `n == grid.length`\n- `n == grid[i].length`\n- `1 <= n <= 100`\n- `grid[i][j] is 0 or 1`",
+    "description_zh": "Given an `n x n` binary matrix `grid`, return *the length of the shortest **clear path** in the matrix*. If there is no clear path, return `-1`.\n\nA **clear path** in a binary matrix is a path from the **top-left** cell (i.e., `(0, 0)`) to the **bottom-right** cell (i.e., `(n - 1, n - 1)`) such that:\n\n- All the visited cells of the path are `0`.\n- All the adjacent cells of the path are **8-directionally** connected (i.e., they are different and they share an edge or a corner).\n\nThe **length of a clear path** is the number of visited cells of this path.\n\n**Example 1:**\n\n[image]\n```\n**Input:** grid = [[0,1],[1,0]]\n**Output:** 2\n```\n\n**Example 2:**\n\n[image]\n```\n**Input:** grid = [[0,0,0],[1,1,0],[1,1,0]]\n**Output:** 4\n```\n\n**Example 3:**\n\n```\n**Input:** grid = [[1,0,0],[1,1,0],[1,1,0]]\n**Output:** -1\n```\n\n**Constraints:**\n\n- `n == grid.length`\n- `n == grid[i].length`\n- `1 <= n <= 100`\n- `grid[i][j] is 0 or 1`",
+    "constraints": "- `n == grid.length`\n- `n == grid[i].length`\n- `1 <= n <= 100`\n- `grid[i][j] is 0 or 1`",
+    "leetcode_examples": [
+        "[[0,1],[1,0]]",
+        "[[0,0,0],[1,1,0],[1,1,0]]",
+        "[[1,0,0],[1,1,0],[1,1,0]]"
+    ]
 }

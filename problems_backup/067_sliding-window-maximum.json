@@ -1,0 +1,26 @@
+{
+    "id":  67,
+    "slug":  "sliding-window-maximum",
+    "title_en":  "Sliding Window Maximum",
+    "title_zh":  "滑动窗口最大值",
+    "difficulty":  "hard",
+    "categories":  [
+                       "sliding_window",
+                       "heap"
+                   ],
+    "function":  {
+                     "name":  "maxSlidingWindow",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "k",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/sliding-window-maximum/"
+}

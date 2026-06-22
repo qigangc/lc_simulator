@@ -1,29 +1,40 @@
 {
-    "id":  100,
-    "slug":  "word-ladder",
-    "title_en":  "Word Ladder",
-    "title_zh":  "单词接龙",
-    "difficulty":  "hard",
-    "categories":  [
-                       "graph"
-                   ],
-    "function":  {
-                     "name":  "ladderLength",
-                     "params":  [
-                                    [
-                                        "beginWord",
-                                        "str"
-                                    ],
-                                    [
-                                        "endWord",
-                                        "str"
-                                    ],
-                                    [
-                                        "wordList",
-                                        "List[str]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/word-ladder/"
+    "id": 100,
+    "slug": "word-ladder",
+    "title_en": "Word Ladder",
+    "title_zh": "单词接龙",
+    "difficulty": "hard",
+    "categories": [
+        "graph"
+    ],
+    "function": {
+        "name": "ladderLength",
+        "params": [
+            [
+                "beginWord",
+                "str"
+            ],
+            [
+                "endWord",
+                "str"
+            ],
+            [
+                "wordList",
+                "List[str]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/word-ladder/",
+    "description_en": "A **transformation sequence** from word `beginWord` to word `endWord` using a dictionary `wordList` is a sequence of words `beginWord -> s(1) -> s(2) -> ... -> s(k)` such that:\n\n- Every adjacent pair of words differs by a single letter.\n- Every `s(i)` for `1 <= i <= k` is in `wordList`. Note that `beginWord` does not need to be in `wordList`.\n- `s(k) == endWord`\n\nGiven two words, `beginWord` and `endWord`, and a dictionary `wordList`, return *the **number of words** in the **shortest transformation sequence** from* `beginWord` *to* `endWord`*, or* `0` *if no such sequence exists.*\n\n**Example 1:**\n\n```\n**Input:** beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\n**Output:** 5\n**Explanation:** One shortest transformation sequence is \"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> cog\", which is 5 words long.\n```\n\n**Example 2:**\n\n```\n**Input:** beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\n**Output:** 0\n**Explanation:** The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.\n```\n\n**Constraints:**\n\n- `1 <= beginWord.length <= 10`\n- `endWord.length == beginWord.length`\n- `1 <= wordList.length <= 5000`\n- `wordList[i].length == beginWord.length`\n- `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.\n- `beginWord != endWord`\n- All the words in `wordList` are **unique**.",
+    "description_zh": "A **transformation sequence** from word `beginWord` to word `endWord` using a dictionary `wordList` is a sequence of words `beginWord -> s(1) -> s(2) -> ... -> s(k)` such that:\n\n- Every adjacent pair of words differs by a single letter.\n- Every `s(i)` for `1 <= i <= k` is in `wordList`. Note that `beginWord` does not need to be in `wordList`.\n- `s(k) == endWord`\n\nGiven two words, `beginWord` and `endWord`, and a dictionary `wordList`, return *the **number of words** in the **shortest transformation sequence** from* `beginWord` *to* `endWord`*, or* `0` *if no such sequence exists.*\n\n**Example 1:**\n\n```\n**Input:** beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]\n**Output:** 5\n**Explanation:** One shortest transformation sequence is \"hit\" -> \"hot\" -> \"dot\" -> \"dog\" -> cog\", which is 5 words long.\n```\n\n**Example 2:**\n\n```\n**Input:** beginWord = \"hit\", endWord = \"cog\", wordList = [\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]\n**Output:** 0\n**Explanation:** The endWord \"cog\" is not in wordList, therefore there is no valid transformation sequence.\n```\n\n**Constraints:**\n\n- `1 <= beginWord.length <= 10`\n- `endWord.length == beginWord.length`\n- `1 <= wordList.length <= 5000`\n- `wordList[i].length == beginWord.length`\n- `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.\n- `beginWord != endWord`\n- All the words in `wordList` are **unique**.",
+    "constraints": "- `1 <= beginWord.length <= 10`\n- `endWord.length == beginWord.length`\n- `1 <= wordList.length <= 5000`\n- `wordList[i].length == beginWord.length`\n- `beginWord`, `endWord`, and `wordList[i]` consist of lowercase English letters.\n- `beginWord != endWord`\n- All the words in `wordList` are **unique**.",
+    "leetcode_examples": [
+        "\"hit\"",
+        "\"cog\"",
+        "[\"hot\",\"dot\",\"dog\",\"lot\",\"log\",\"cog\"]",
+        "\"hit\"",
+        "\"cog\"",
+        "[\"hot\",\"dot\",\"dog\",\"lot\",\"log\"]"
+    ]
 }

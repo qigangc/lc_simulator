@@ -1,21 +1,28 @@
 {
-    "id":  69,
-    "slug":  "perfect-squares",
-    "title_en":  "Perfect Squares",
-    "title_zh":  "完全平方数",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp"
-                   ],
-    "function":  {
-                     "name":  "numSquares",
-                     "params":  [
-                                    [
-                                        "n",
-                                        "int"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/perfect-squares/"
+    "id": 69,
+    "slug": "perfect-squares",
+    "title_en": "Perfect Squares",
+    "title_zh": "完全平方数",
+    "difficulty": "medium",
+    "categories": [
+        "dp"
+    ],
+    "function": {
+        "name": "numSquares",
+        "params": [
+            [
+                "n",
+                "int"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/perfect-squares/",
+    "description_en": "Given an integer `n`, return *the least number of perfect square numbers that sum to* `n`.\n\nA **perfect square** is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, `1`, `4`, `9`, and `16` are perfect squares while `3` and `11` are not.\n\n**Example 1:**\n\n```\n**Input:** n = 12\n**Output:** 3\n**Explanation:** 12 = 4 + 4 + 4.\n```\n\n**Example 2:**\n\n```\n**Input:** n = 13\n**Output:** 2\n**Explanation:** 13 = 4 + 9.\n```\n\n**Constraints:**\n\n- `1 <= n <= 10(4)`",
+    "description_zh": "Given an integer `n`, return *the least number of perfect square numbers that sum to* `n`.\n\nA **perfect square** is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, `1`, `4`, `9`, and `16` are perfect squares while `3` and `11` are not.\n\n**Example 1:**\n\n```\n**Input:** n = 12\n**Output:** 3\n**Explanation:** 12 = 4 + 4 + 4.\n```\n\n**Example 2:**\n\n```\n**Input:** n = 13\n**Output:** 2\n**Explanation:** 13 = 4 + 9.\n```\n\n**Constraints:**\n\n- `1 <= n <= 10(4)`",
+    "constraints": "- `1 <= n <= 10(4)`",
+    "leetcode_examples": [
+        "12",
+        "13"
+    ]
 }

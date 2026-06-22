@@ -1,0 +1,38 @@
+{
+    "id":  14,
+    "slug":  "next-permutation",
+    "title_en":  "Next Permutation",
+    "title_zh":  "下一个排列",
+    "difficulty":  "medium",
+    "categories":  [
+                       "array",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "nextPermutation",
+                     "params":  [
+                                    [
+                                        "nums",
+                                        "List[int]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "nums":  [
+                                                    1,
+                                                    2,
+                                                    3
+                                                ]
+                                   },
+                         "output":  [
+                                        1,
+                                        3,
+                                        2
+                                    ]
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/next-permutation/"
+}

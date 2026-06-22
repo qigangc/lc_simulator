@@ -1,0 +1,46 @@
+{
+    "id":  9,
+    "slug":  "remove-nth-node-from-end-of-list",
+    "title_en":  "Remove Nth Node From End of List",
+    "title_zh":  "删除链表的倒数第 N 个结点",
+    "difficulty":  "medium",
+    "categories":  [
+                       "linked_list",
+                       "two_pointers"
+                   ],
+    "function":  {
+                     "name":  "removeNthFromEnd",
+                     "params":  [
+                                    [
+                                        "head",
+                                        "List[int]"
+                                    ],
+                                    [
+                                        "n",
+                                        "int"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "head":  [
+                                                    1,
+                                                    2,
+                                                    3,
+                                                    4,
+                                                    5
+                                                ],
+                                       "n":  2
+                                   },
+                         "output":  [
+                                        1,
+                                        2,
+                                        3,
+                                        5
+                                    ]
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
+}

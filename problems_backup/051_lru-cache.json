@@ -1,0 +1,26 @@
+{
+    "id":  51,
+    "slug":  "lru-cache",
+    "title_en":  "LRU Cache",
+    "title_zh":  "LRU 缓存",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash",
+                       "linked_list"
+                   ],
+    "function":  {
+                     "name":  "lruCache",
+                     "params":  [
+                                    [
+                                        "operations",
+                                        "List[str]"
+                                    ],
+                                    [
+                                        "values",
+                                        "List[List[int]]"
+                                    ]
+                                ],
+                     "return":  "List[int]"
+                 },
+    "url":  "https://leetcode.com/problems/lru-cache/"
+}

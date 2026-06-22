@@ -1,22 +1,29 @@
 {
-    "id":  90,
-    "slug":  "palindromic-substrings",
-    "title_en":  "Palindromic Substrings",
-    "title_zh":  "回文子串",
-    "difficulty":  "medium",
-    "categories":  [
-                       "dp",
-                       "two_pointers"
-                   ],
-    "function":  {
-                     "name":  "countSubstrings",
-                     "params":  [
-                                    [
-                                        "s",
-                                        "str"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/palindromic-substrings/"
+    "id": 90,
+    "slug": "palindromic-substrings",
+    "title_en": "Palindromic Substrings",
+    "title_zh": "回文子串",
+    "difficulty": "medium",
+    "categories": [
+        "dp",
+        "two_pointers"
+    ],
+    "function": {
+        "name": "countSubstrings",
+        "params": [
+            [
+                "s",
+                "str"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/palindromic-substrings/",
+    "description_en": "Given a string `s`, return *the number of **palindromic substrings** in it*.\n\nA string is a **palindrome** when it reads the same backward as forward.\n\nA **substring** is a contiguous sequence of characters within the string.\n\n**Example 1:**\n\n```\n**Input:** s = \"abc\"\n**Output:** 3\n**Explanation:** Three palindromic strings: \"a\", \"b\", \"c\".\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"aaa\"\n**Output:** 6\n**Explanation:** Six palindromic strings: \"a\", \"a\", \"a\", \"aa\", \"aa\", \"aaa\".\n```\n\n**Constraints:**\n\n- `1 <= s.length <= 1000`\n- `s` consists of lowercase English letters.",
+    "description_zh": "Given a string `s`, return *the number of **palindromic substrings** in it*.\n\nA string is a **palindrome** when it reads the same backward as forward.\n\nA **substring** is a contiguous sequence of characters within the string.\n\n**Example 1:**\n\n```\n**Input:** s = \"abc\"\n**Output:** 3\n**Explanation:** Three palindromic strings: \"a\", \"b\", \"c\".\n```\n\n**Example 2:**\n\n```\n**Input:** s = \"aaa\"\n**Output:** 6\n**Explanation:** Six palindromic strings: \"a\", \"a\", \"a\", \"aa\", \"aa\", \"aaa\".\n```\n\n**Constraints:**\n\n- `1 <= s.length <= 1000`\n- `s` consists of lowercase English letters.",
+    "constraints": "- `1 <= s.length <= 1000`\n- `s` consists of lowercase English letters.",
+    "leetcode_examples": [
+        "\"abc\"",
+        "\"aaa\""
+    ]
 }

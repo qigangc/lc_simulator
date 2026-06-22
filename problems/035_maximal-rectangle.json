@@ -1,23 +1,31 @@
 {
-    "id":  35,
-    "slug":  "maximal-rectangle",
-    "title_en":  "Maximal Rectangle",
-    "title_zh":  "最大矩形",
-    "difficulty":  "hard",
-    "categories":  [
-                       "stack",
-                       "dp",
-                       "matrix"
-                   ],
-    "function":  {
-                     "name":  "maximalRectangle",
-                     "params":  [
-                                    [
-                                        "matrix",
-                                        "List[List[str]]"
-                                    ]
-                                ],
-                     "return":  "int"
-                 },
-    "url":  "https://leetcode.com/problems/maximal-rectangle/"
+    "id": 35,
+    "slug": "maximal-rectangle",
+    "title_en": "Maximal Rectangle",
+    "title_zh": "最大矩形",
+    "difficulty": "hard",
+    "categories": [
+        "stack",
+        "dp",
+        "matrix"
+    ],
+    "function": {
+        "name": "maximalRectangle",
+        "params": [
+            [
+                "matrix",
+                "List[List[str]]"
+            ]
+        ],
+        "return": "int"
+    },
+    "url": "https://leetcode.com/problems/maximal-rectangle/",
+    "description_en": "Given a `rows x cols` binary `matrix` filled with `0`'s and `1`'s, find the largest rectangle containing only `1`'s and return *its area*.\n\n**Example 1:**\n\n[image]\n```\n**Input:** matrix = [[\"1\",\"0\",\"1\",\"0\",\"0\"],[\"1\",\"0\",\"1\",\"1\",\"1\"],[\"1\",\"1\",\"1\",\"1\",\"1\"],[\"1\",\"0\",\"0\",\"1\",\"0\"]]\n**Output:** 6\n**Explanation:** The maximal rectangle is shown in the above picture.\n```\n\n**Example 2:**\n\n```\n**Input:** matrix = [[\"0\"]]\n**Output:** 0\n```\n\n**Example 3:**\n\n```\n**Input:** matrix = [[\"1\"]]\n**Output:** 1\n```\n\n**Constraints:**\n\n- `rows == matrix.length`\n- `cols == matrix[i].length`\n- `1 <= rows, cols <= 200`\n- `matrix[i][j]` is `'0'` or `'1'`.",
+    "description_zh": "Given a `rows x cols` binary `matrix` filled with `0`'s and `1`'s, find the largest rectangle containing only `1`'s and return *its area*.\n\n**Example 1:**\n\n[image]\n```\n**Input:** matrix = [[\"1\",\"0\",\"1\",\"0\",\"0\"],[\"1\",\"0\",\"1\",\"1\",\"1\"],[\"1\",\"1\",\"1\",\"1\",\"1\"],[\"1\",\"0\",\"0\",\"1\",\"0\"]]\n**Output:** 6\n**Explanation:** The maximal rectangle is shown in the above picture.\n```\n\n**Example 2:**\n\n```\n**Input:** matrix = [[\"0\"]]\n**Output:** 0\n```\n\n**Example 3:**\n\n```\n**Input:** matrix = [[\"1\"]]\n**Output:** 1\n```\n\n**Constraints:**\n\n- `rows == matrix.length`\n- `cols == matrix[i].length`\n- `1 <= rows, cols <= 200`\n- `matrix[i][j]` is `'0'` or `'1'`.",
+    "constraints": "- `rows == matrix.length`\n- `cols == matrix[i].length`\n- `1 <= rows, cols <= 200`\n- `matrix[i][j]` is `'0'` or `'1'`.",
+    "leetcode_examples": [
+        "[[\"1\",\"0\",\"1\",\"0\",\"0\"],[\"1\",\"0\",\"1\",\"1\",\"1\"],[\"1\",\"1\",\"1\",\"1\",\"1\"],[\"1\",\"0\",\"0\",\"1\",\"0\"]]",
+        "[[\"0\"]]",
+        "[[\"1\"]]"
+    ]
 }

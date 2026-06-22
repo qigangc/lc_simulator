@@ -1,0 +1,40 @@
+{
+    "id":  8,
+    "slug":  "letter-combinations-of-a-phone-number",
+    "title_en":  "Letter Combinations of a Phone Number",
+    "title_zh":  "电话号码的字母组合",
+    "difficulty":  "medium",
+    "categories":  [
+                       "hash",
+                       "backtracking"
+                   ],
+    "function":  {
+                     "name":  "letterCombinations",
+                     "params":  [
+                                    [
+                                        "digits",
+                                        "str"
+                                    ]
+                                ],
+                     "return":  "List[str]"
+                 },
+    "examples":  [
+                     {
+                         "input":  {
+                                       "digits":  "23"
+                                   },
+                         "output":  [
+                                        "ad",
+                                        "ae",
+                                        "af",
+                                        "bd",
+                                        "be",
+                                        "bf",
+                                        "cd",
+                                        "ce",
+                                        "cf"
+                                    ]
+                     }
+                 ],
+    "url":  "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+}
