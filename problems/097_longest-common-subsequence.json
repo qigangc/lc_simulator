@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  97,
     "slug":  "longest-common-subsequence",
     "title_en":  "Longest Common Subsequence",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/longest-common-subsequence/"
 }

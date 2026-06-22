@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  76,
     "slug":  "coin-change",
     "title_en":  "Coin Change",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/coin-change/"
 }

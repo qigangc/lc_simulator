@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  32,
     "slug":  "subsets",
     "title_en":  "Subsets",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[List[int]]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/subsets/"
 }

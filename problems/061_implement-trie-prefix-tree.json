@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  61,
     "slug":  "implement-trie-prefix-tree",
     "title_en":  "Implement Trie Prefix Tree",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "List[object]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/implement-trie-prefix-tree/"
 }

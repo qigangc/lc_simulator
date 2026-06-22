@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  66,
     "slug":  "product-of-array-except-self",
     "title_en":  "Product Of Array Except Self",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/product-of-array-except-self/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  65,
     "slug":  "lowest-common-ancestor-of-a-binary-tree",
     "title_en":  "Lowest Common Ancestor Of A Binary Tree",
@@ -24,5 +24,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/"
 }

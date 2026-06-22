@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  90,
     "slug":  "palindromic-substrings",
     "title_en":  "Palindromic Substrings",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/palindromic-substrings/"
 }

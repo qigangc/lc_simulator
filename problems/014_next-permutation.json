@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  14,
     "slug":  "next-permutation",
     "title_en":  "Next Permutation",
@@ -33,5 +33,6 @@
                                         2
                                     ]
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/next-permutation/"
 }

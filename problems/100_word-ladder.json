@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  100,
     "slug":  "word-ladder",
     "title_en":  "Word Ladder",
@@ -24,5 +24,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/word-ladder/"
 }

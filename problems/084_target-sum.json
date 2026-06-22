@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  84,
     "slug":  "target-sum",
     "title_en":  "Target Sum",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/target-sum/"
 }

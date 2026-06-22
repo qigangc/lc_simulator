@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  77,
     "slug":  "house-robber-iii",
     "title_en":  "House Robber III",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/house-robber-iii/"
 }

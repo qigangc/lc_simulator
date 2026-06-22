@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  78,
     "slug":  "counting-bits",
     "title_en":  "Counting Bits",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/counting-bits/"
 }

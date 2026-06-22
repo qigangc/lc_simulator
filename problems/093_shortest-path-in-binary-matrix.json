@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  93,
     "slug":  "shortest-path-in-binary-matrix",
     "title_en":  "Shortest Path In Binary Matrix",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/shortest-path-in-binary-matrix/"
 }

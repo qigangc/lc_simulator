@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  75,
     "slug":  "best-time-to-buy-and-sell-stock-with-cooldown",
     "title_en":  "Best Time To Buy And Sell Stock With Cooldown",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/"
 }

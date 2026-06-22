@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  67,
     "slug":  "sliding-window-maximum",
     "title_en":  "Sliding Window Maximum",
@@ -21,5 +21,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/sliding-window-maximum/"
 }

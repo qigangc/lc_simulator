@@ -16,6 +16,8 @@ def print_problem(problem, lang):
     print(f"{msg(lang, 'difficulty')}: {problem['difficulty']}")
     cats = ", ".join(category_name(lang, c) for c in problem["categories"])
     print(f"{msg(lang, 'categories')}: {cats}")
+    if problem.get("url"):
+        print(f"{msg(lang, 'url')}: {problem['url']}")
     fn = problem["function"]
     params = ", ".join(f"{name}: {typ}" for name, typ in fn["params"])
     print(f"Python: Solution.{fn['name']}({params}) -> {fn['return']}")
@@ -58,13 +60,14 @@ def command_test(args):
     if not problem:
         print(msg(args.lang, "not_found"))
         return
-    ok, results = run_problem(problem)
+    ok, results = run_problem(problem, args.case)
     for result in results:
         if "error" in result:
             print(result["error"])
             continue
         print(f"{msg(args.lang, 'case')} {result['index']}: {msg(args.lang, 'passed' if result['passed'] else 'failed')}")
         if not result["passed"]:
+            print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
             print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
             print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
     print(msg(args.lang, "passed" if ok else "failed"))
@@ -108,6 +111,7 @@ def build_parser():
     p = sub.add_parser("test")
     add_lang(p)
     p.add_argument("id", type=int)
+    p.add_argument("--case", type=int, metavar="N", help="run only the N-th test case (1-based)")
     p.set_defaults(func=command_test)
     p = sub.add_parser("done")
     add_lang(p)

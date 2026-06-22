@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  54,
     "slug":  "min-stack",
     "title_en":  "Min Stack",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/min-stack/"
 }

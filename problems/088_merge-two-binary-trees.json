@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  88,
     "slug":  "merge-two-binary-trees",
     "title_en":  "Merge Two Binary Trees",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/merge-two-binary-trees/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  70,
     "slug":  "move-zeroes",
     "title_en":  "Move Zeroes",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/move-zeroes/"
 }

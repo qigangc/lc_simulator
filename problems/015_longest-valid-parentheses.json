@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  15,
     "slug":  "longest-valid-parentheses",
     "title_en":  "Longest Valid Parentheses",
@@ -25,5 +25,6 @@
                                    },
                          "output":  2
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/longest-valid-parentheses/"
 }

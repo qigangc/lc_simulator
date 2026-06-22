@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  19,
     "slug":  "trapping-rain-water",
     "title_en":  "Trapping Rain Water",
@@ -40,5 +40,6 @@
                                    },
                          "output":  6
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/trapping-rain-water/"
 }

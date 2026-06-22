@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  94,
     "slug":  "rotting-oranges",
     "title_en":  "Rotting Oranges",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/rotting-oranges/"
 }

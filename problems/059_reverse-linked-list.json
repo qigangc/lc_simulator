@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  59,
     "slug":  "reverse-linked-list",
     "title_en":  "Reverse Linked List",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/reverse-linked-list/"
 }

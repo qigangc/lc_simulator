@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  80,
     "slug":  "decode-string",
     "title_en":  "Decode String",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "str"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/decode-string/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  31,
     "slug":  "minimum-window-substring",
     "title_en":  "Minimum Window Substring",
@@ -21,5 +21,6 @@
                                     ]
                                 ],
                      "return":  "str"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/minimum-window-substring/"
 }

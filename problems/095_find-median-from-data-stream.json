@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  95,
     "slug":  "find-median-from-data-stream",
     "title_en":  "Find Median From Data Stream",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "List[float]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/find-median-from-data-stream/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  1,
     "slug":  "two-sum",
     "title_en":  "Two Sum",
@@ -38,5 +38,6 @@
                                         1
                                     ]
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/two-sum/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  43,
     "slug":  "flatten-binary-tree-to-linked-list",
     "title_en":  "Flatten Binary Tree To Linked List",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/flatten-binary-tree-to-linked-list/"
 }

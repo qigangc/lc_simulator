@@ -1,3 +1,4 @@
+import copy
 import importlib.util
 import json
 from .paths import WORKSPACE
@@ -17,16 +18,26 @@ def normalize(value):
     return value
 
 
-def run_problem(problem):
+def run_problem(problem, case_index=None):
     path = WORKSPACE / solution_filename(problem)
     if not path.exists():
         return False, [{"error": f"missing solution file: {path}"}]
+
+    cases = list(problem.get("tests", problem.get("examples", [])))
+    if case_index is not None:
+        if case_index < 1 or case_index > len(cases):
+            return False, [{"error": f"case {case_index} out of range (1..{len(cases)})"}]
+        indexed_cases = [(case_index, cases[case_index - 1])]
+    else:
+        indexed_cases = enumerate(cases, start=1)
+
     solution = load_solution(path)
     fn = getattr(solution, problem["function"]["name"])
     results = []
     ok = True
-    for index, case in enumerate(problem.get("tests", problem.get("examples", [])), start=1):
-        args = [case["input"][name] for name, _ in problem["function"]["params"]]
+    for index, case in indexed_cases:
+        original_input = copy.deepcopy(case["input"])
+        args = [copy.deepcopy(case["input"][name]) for name, _ in problem["function"]["params"]]
         expected = case["output"]
         try:
             actual = normalize(fn(*args))
@@ -35,7 +46,7 @@ def run_problem(problem):
             actual = f"{type(exc).__name__}: {exc}"
             passed = False
         ok = ok and passed
-        results.append({"index": index, "passed": passed, "expected": expected, "actual": actual})
+        results.append({"index": index, "input": original_input, "passed": passed, "expected": expected, "actual": actual})
     return ok, results
 
 

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  24,
     "slug":  "jump-game",
     "title_en":  "Jump Game",
@@ -18,5 +18,6 @@
                                     ]
                                 ],
                      "return":  "bool"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/jump-game/"
 }

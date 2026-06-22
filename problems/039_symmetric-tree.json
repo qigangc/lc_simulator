@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  39,
     "slug":  "symmetric-tree",
     "title_en":  "Symmetric Tree",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "bool"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/symmetric-tree/"
 }

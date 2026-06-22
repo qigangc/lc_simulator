@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  16,
     "slug":  "search-in-rotated-sorted-array",
     "title_en":  "Search in Rotated Sorted Array",
@@ -38,5 +38,6 @@
                                    },
                          "output":  4
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/search-in-rotated-sorted-array/"
 }

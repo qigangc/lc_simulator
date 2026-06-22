@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  27,
     "slug":  "minimum-path-sum",
     "title_en":  "Minimum Path Sum",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/minimum-path-sum/"
 }

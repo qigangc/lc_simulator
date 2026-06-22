@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  3,
     "slug":  "longest-substring-without-repeating-characters",
     "title_en":  "Longest Substring Without Repeating Characters",
@@ -25,5 +25,6 @@
                                    },
                          "output":  3
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
 }

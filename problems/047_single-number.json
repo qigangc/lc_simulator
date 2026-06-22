@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  47,
     "slug":  "single-number",
     "title_en":  "Single Number",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/single-number/"
 }

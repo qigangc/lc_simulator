@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  5,
     "slug":  "longest-palindromic-substring",
     "title_en":  "Longest Palindromic Substring",
@@ -25,5 +25,6 @@
                                    },
                          "output":  "bab"
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/longest-palindromic-substring/"
 }

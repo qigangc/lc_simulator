@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  35,
     "slug":  "maximal-rectangle",
     "title_en":  "Maximal Rectangle",
@@ -18,5 +18,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/maximal-rectangle/"
 }

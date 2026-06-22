@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  36,
     "slug":  "decode-ways",
     "title_en":  "Decode Ways",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/decode-ways/"
 }

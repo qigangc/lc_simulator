@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  44,
     "slug":  "best-time-to-buy-and-sell-stock",
     "title_en":  "Best Time To Buy And Sell Stock",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
 }

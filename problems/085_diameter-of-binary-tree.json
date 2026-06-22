@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  85,
     "slug":  "diameter-of-binary-tree",
     "title_en":  "Diameter Of Binary Tree",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/diameter-of-binary-tree/"
 }

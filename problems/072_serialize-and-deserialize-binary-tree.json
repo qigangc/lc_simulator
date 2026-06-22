@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  72,
     "slug":  "serialize-and-deserialize-binary-tree",
     "title_en":  "Serialize And Deserialize Binary Tree",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/"
 }

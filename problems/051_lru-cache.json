@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  51,
     "slug":  "lru-cache",
     "title_en":  "LRU Cache",
@@ -21,5 +21,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/lru-cache/"
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  37,
     "slug":  "validate-binary-search-tree",
     "title_en":  "Validate Binary Search Tree",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "bool"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/validate-binary-search-tree/"
 }

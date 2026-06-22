@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  9,
     "slug":  "remove-nth-node-from-end-of-list",
     "title_en":  "Remove Nth Node From End of List",
@@ -41,5 +41,6 @@
                                         5
                                     ]
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/remove-nth-node-from-end-of-list/"
 }

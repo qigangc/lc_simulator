@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  21,
     "slug":  "rotate-image",
     "title_en":  "Rotate Image",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[List[int]]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/rotate-image/"
 }

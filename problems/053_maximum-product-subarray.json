@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  53,
     "slug":  "maximum-product-subarray",
     "title_en":  "Maximum Product Subarray",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/maximum-product-subarray/"
 }

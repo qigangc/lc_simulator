@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  81,
     "slug":  "partition-equal-subset-sum",
     "title_en":  "Partition Equal Subset Sum",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "bool"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/partition-equal-subset-sum/"
 }

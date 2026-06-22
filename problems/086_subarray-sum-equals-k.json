@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  86,
     "slug":  "subarray-sum-equals-k",
     "title_en":  "Subarray Sum Equals K",
@@ -21,5 +21,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/subarray-sum-equals-k/"
 }

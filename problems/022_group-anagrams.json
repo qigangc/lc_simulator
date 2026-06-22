@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  22,
     "slug":  "group-anagrams",
     "title_en":  "Group Anagrams",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "List[List[str]]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/group-anagrams/"
 }

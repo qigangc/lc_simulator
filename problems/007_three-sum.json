@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  7,
     "slug":  "three-sum",
     "title_en":  "3Sum",
@@ -43,5 +43,6 @@
                                         ]
                                     ]
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/three-sum/"
 }

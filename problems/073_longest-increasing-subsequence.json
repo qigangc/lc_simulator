@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  73,
     "slug":  "longest-increasing-subsequence",
     "title_en":  "Longest Increasing Subsequence",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/longest-increasing-subsequence/"
 }

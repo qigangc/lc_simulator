@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  29,
     "slug":  "edit-distance",
     "title_en":  "Edit Distance",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/edit-distance/"
 }

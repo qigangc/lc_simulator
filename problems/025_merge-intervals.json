@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  25,
     "slug":  "merge-intervals",
     "title_en":  "Merge Intervals",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "List[List[int]]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/merge-intervals/"
 }

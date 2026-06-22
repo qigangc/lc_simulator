@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  17,
     "slug":  "find-first-and-last-position-of-element-in-sorted-array",
     "title_en":  "Find First and Last Position of Element in Sorted Array",
@@ -40,5 +40,6 @@
                                         4
                                     ]
                      }
-                 ]
+                 ],
+    "url":  "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
 }

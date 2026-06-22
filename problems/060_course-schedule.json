@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  60,
     "slug":  "course-schedule",
     "title_en":  "Course Schedule",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "bool"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/course-schedule/"
 }

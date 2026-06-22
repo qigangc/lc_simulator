@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  92,
     "slug":  "partition-labels",
     "title_en":  "Partition Labels",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/partition-labels/"
 }

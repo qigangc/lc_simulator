@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  50,
     "slug":  "linked-list-cycle-ii",
     "title_en":  "Linked List Cycle II",
@@ -21,5 +21,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/linked-list-cycle-ii/"
 }

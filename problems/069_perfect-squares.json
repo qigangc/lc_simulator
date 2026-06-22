@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  69,
     "slug":  "perfect-squares",
     "title_en":  "Perfect Squares",
@@ -16,5 +16,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/perfect-squares/"
 }

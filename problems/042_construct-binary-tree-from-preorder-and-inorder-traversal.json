@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  42,
     "slug":  "construct-binary-tree-from-preorder-and-inorder-traversal",
     "title_en":  "Construct Binary Tree From Preorder And Inorder Traversal",
@@ -20,5 +20,6 @@
                                     ]
                                 ],
                      "return":  "List[int]"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/"
 }

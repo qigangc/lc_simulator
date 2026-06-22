@@ -1,4 +1,4 @@
-﻿{
+{
     "id":  99,
     "slug":  "find-minimum-in-rotated-sorted-array",
     "title_en":  "Find Minimum In Rotated Sorted Array",
@@ -17,5 +17,6 @@
                                     ]
                                 ],
                      "return":  "int"
-                 }
+                 },
+    "url":  "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
 }
