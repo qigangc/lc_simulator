@@ -1,0 +1,59 @@
+FETCH-PROBLEMS-CONTENT MANUAL QA REPORT
+========================================
+Date: 2026-06-22
+
+SCENARIO 1: fetch_content.py --dry-run --limit 1
+  Command: python scripts/fetch_content.py --dry-run --limit 1
+  Result: PASS
+  Evidence: .omo/evidence/f3-dry-run.txt
+  Notes: Previewed 1 problem without writing. Showed CACHE_HIT and planned fields.
+
+SCENARIO 2: validate_content.py
+  Command: python scripts/validate_content.py
+  Result: PASS
+  Evidence: .omo/evidence/f3-validate.txt
+  Notes: 100/100 passed, 0 failed. One warning on 007_three-sum.json backup missing.
+
+SCENARIO 3: lc list
+  Command: python -m lc list
+  Result: PASS
+  Evidence: .omo/evidence/f3-list.txt
+  Notes: No crash. Listed 100 problems with ID, Difficulty, Status, Title.
+
+SCENARIO 4: lc show 1
+  Command: python -m lc show 1
+  Result: PASS
+  Evidence: .omo/evidence/f3-show.txt
+  Notes: No crash. Showed URL, title, difficulty, categories, function signature, example I/O.
+
+SCENARIO 5: lc test 1
+  Command: python -m lc test 1
+  Result: PASS
+  Evidence: .omo/evidence/f3-test.txt
+  Notes: No crash. Reported missing solution file and exited with Failed status.
+
+SCENARIO 6: unittest discover
+  Command: python -m unittest discover -s tests -v
+  Result: PASS
+  Evidence: .omo/evidence/f3-unittest.txt
+  Notes: Ran 48 tests in 0.066s. OK.
+
+SCENARIO 7: Markdown descriptions with code blocks (3 random problems)
+  Problems checked: 001_two-sum, 042_construct-binary-tree..., 095_find-median...
+  Result: PASS
+  Evidence: .omo/evidence/f3-markdown-check.txt
+  Notes: All 3 have readable Markdown with ``` code blocks for examples.
+
+SCENARIO 8: Chinese descriptions present or fallback to English
+  Sample size: 10 random problems
+  Result: PASS
+  Evidence: .omo/evidence/f3-chinese-check.txt
+  Notes: title_zh present in all sampled files. description_zh falls back to English when no Chinese translation available (expected behavior).
+
+SCENARIO 9: Existing examples preserved
+  Comparison: problems/001_two-sum.json vs problems_backup/001_two-sum.json
+  Result: PASS
+  Evidence: .omo/evidence/f3-backup-diff.txt
+  Notes: Files are identical. Original examples and structure preserved.
+
+VERDICT: ALL SCENARIOS PASS
