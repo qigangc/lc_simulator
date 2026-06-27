@@ -21,6 +21,8 @@ MESSAGES = {
         "total": "Total",
         "completed": "Completed",
         "usage": "Local LeetCode Hot 100 simulator",
+        "no_problems_found": "No problems found in category: {category}",
+        "specify_id_or_category": "Please provide a problem ID or --category",
     },
     "zh": {
         "id": "编号",
@@ -44,6 +46,8 @@ MESSAGES = {
         "total": "总数",
         "completed": "已完成",
         "usage": "本地 LeetCode Hot 100 模拟器",
+        "no_problems_found": "未找到分类为 {category} 的题目",
+        "specify_id_or_category": "请提供题目编号或 --category",
     },
 }
 
@@ -88,8 +92,11 @@ CATEGORY_NAMES = {
     },
 }
 
-def msg(lang, key):
-    return MESSAGES.get(lang, MESSAGES["en"]).get(key, key)
+def msg(lang, key, **kwargs):
+    value = MESSAGES.get(lang, MESSAGES["en"]).get(key, key)
+    if kwargs:
+        return value.format(**kwargs)
+    return value
 
 def category_name(lang, key):
     return CATEGORY_NAMES.get(lang, CATEGORY_NAMES["en"]).get(key, key)

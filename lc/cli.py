@@ -39,11 +39,24 @@ def command_list(args):
 
 
 def command_show(args):
-    problem = find_problem(args.id)
-    if not problem:
-        print(msg(args.lang, "not_found"))
-        return
-    print_problem(problem, args.lang)
+    if args.id is not None:
+        problem = find_problem(args.id)
+        if not problem:
+            print(msg(args.lang, "not_found"))
+            return
+        print_problem(problem, args.lang)
+    elif args.category:
+        problems = load_problems()
+        matches = [p for p in problems if args.category in p["categories"]]
+        if not matches:
+            print(msg(args.lang, "no_problems_found", category=args.category))
+            return
+        for i, problem in enumerate(matches):
+            if i > 0:
+                print()
+            print_problem(problem, args.lang)
+    else:
+        print(msg(args.lang, "specify_id_or_category"))
 
 
 def command_new(args):
@@ -102,7 +115,8 @@ def build_parser():
     p.set_defaults(func=command_list)
     p = sub.add_parser("show")
     add_lang(p)
-    p.add_argument("id", type=int)
+    p.add_argument("id", type=int, nargs="?", help="problem ID")
+    p.add_argument("--category", help="filter by category")
     p.set_defaults(func=command_show)
     p = sub.add_parser("new")
     add_lang(p)
