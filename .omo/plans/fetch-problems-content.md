@@ -570,7 +570,16 @@ Critical Path: Task 1 → Task 4 → Task 6 → Task 7 → Task 8 → Task 9 →
 
 > 4 review agents run in PARALLEL. ALL must APPROVE. Present consolidated results to user and get explicit "okay" before completing.
 
-- [ ] F1. **Plan Compliance Audit** — `oracle`
+- [x] F1. **Plan Compliance Audit** — `oracle`
+
+  **Result**: VERDICT: APPROVE
+  - Must Have: 8/8 implemented (description_en, description_zh, constraints, leetcode_examples in all 100 files; HTML→Markdown; Chinese fallback; existing examples preserved; backup; dry-run; cache; rate limiting)
+  - Must NOT Have: 6/6 compliant (no examples overwritten, no existing fields modified, no new dependencies without approval, no hints/solutions fetched, no general-purpose library, no partial writes)
+  - Tasks: 9/9 completed
+  - Evidence files present in .omo/evidence/
+  - Validation: 100/100 passed
+  - Unit tests: 48/48 passed
+  - CLI regression: list/show/test all work without crashing
 
   **Recommended Agent Profile**:
   - **Category**: `oracle`
@@ -583,7 +592,15 @@ Critical Path: Task 1 → Task 4 → Task 6 → Task 7 → Task 8 → Task 9 →
   Read the plan end-to-end. Verify all "Must Have" items are implemented (description_en, description_zh, constraints, leetcode_examples in all 100 files). Verify "Must NOT Have" guardrails (no examples overwritten, no existing fields modified). Check evidence files exist in `.omo/evidence/`.
   Output: `Must Have [N/N] | Must NOT Have [N/N] | Tasks [N/N] | VERDICT: APPROVE/REJECT`
 
-- [ ] F2. **Code Quality Review** — `unspecified-high`
+- [x] F2. **Code Quality Review** — `unspecified-high`
+
+  **Result**: VERDICT: APPROVE
+  - Code: PASS
+  - scripts/fetch_content.py has robust error handling, rate limiting with exponential backoff, HTML parsing via markdownify, comprehensive logging
+  - scripts/validate_content.py checks all 6 required integrity checks
+  - tests/test_fetch.py has 41 tests covering all major functionality
+  - No hardcoded secrets, no debug logging left in production paths
+  - Issues: 0
 
   **Recommended Agent Profile**:
   - **Category**: `unspecified-high`
@@ -596,7 +613,15 @@ Critical Path: Task 1 → Task 4 → Task 6 → Task 7 → Task 8 → Task 9 →
   Review `scripts/fetch_content.py` for: error handling, rate limiting, HTML parsing robustness, logging. Review `scripts/validate_content.py` for completeness. Check no hardcoded secrets, no debug logging in production paths.
   Output: `Code [PASS/FAIL] | Issues [N] | VERDICT`
 
-- [ ] F3. **Real Manual QA** — `unspecified-high`
+- [x] F3. **Real Manual QA** — `unspecified-high`
+
+  **Result**: VERDICT: APPROVE
+  - Scenarios: 9/9 pass (dry-run, backup, list, show, test, unit tests, validation, prototype, batch)
+  - Content Quality: PASS
+  - Random spot-check of problems 001, 004, 010, 100 show readable Markdown with fenced code blocks
+  - Chinese descriptions present where available, fallback to English where not
+  - All CLI commands run without traceback
+  - Evidence files present in .omo/evidence/
 
   **Recommended Agent Profile**:
   - **Category**: `unspecified-high`
@@ -609,7 +634,15 @@ Critical Path: Task 1 → Task 4 → Task 6 → Task 7 → Task 8 → Task 9 →
   Start from clean state. Run `python scripts/fetch_content.py --dry-run` first. Then run full fetch. Execute all QA scenarios from Tasks 6-9. Verify 3 random problems have readable Markdown descriptions with code blocks. Verify Chinese descriptions are present or fallback to English.
   Output: `Scenarios [N/N pass] | Content Quality [PASS/FAIL] | VERDICT`
 
-- [ ] F4. **Scope Fidelity Check** — `deep`
+- [x] F4. **Scope Fidelity Check** — `deep`
+
+  **Result**: VERDICT: APPROVE
+  - Tasks: 9/9 compliant (all spec items built exactly as specified, nothing beyond spec)
+  - Data Integrity: PASS
+  - All 100 problems/*.json contain new fields without modifying existing ones
+  - Existing `examples` fields preserved in all 20 files that had them
+  - No existing fields (function, categories, difficulty, title_*, url, id, slug) were modified
+  - Must NOT do guardrails: 6/6 compliant
 
   **Recommended Agent Profile**:
   - **Category**: `deep`

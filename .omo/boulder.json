@@ -6,9 +6,9 @@
       "work_id": "fetch-problems-content-f3e63356",
       "active_plan": "D:\\workspace\\lc_simulator\\.omo\\plans\\fetch-problems-content.md",
       "plan_name": "fetch-problems-content",
-      "status": "active",
+      "status": "completed",
       "started_at": "2026-06-22T15:07:36.003Z",
-      "updated_at": "2026-06-22T15:27:01.009Z",
+      "updated_at": "2026-06-27T02:35:18.513Z",
       "session_ids": [
         "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
         "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -58,15 +58,19 @@
           "session_id": "opencode:ses_1100ed30bffeFRZgZ6IjnIDHco",
           "agent": "Sisyphus-Junior",
           "category": "deep",
-          "updated_at": "2026-06-22T15:27:01.009Z"
+          "updated_at": "2026-06-27T02:29:10.039Z",
+          "ended_at": "2026-06-27T02:29:10.039Z",
+          "status": "completed"
         }
-      }
+      },
+      "ended_at": "2026-06-27T02:35:18.513Z",
+      "elapsed_ms": 386862510
     }
   },
   "active_plan": "D:\\workspace\\lc_simulator\\.omo\\plans\\fetch-problems-content.md",
   "started_at": "2026-06-22T15:07:36.003Z",
-  "status": "active",
-  "updated_at": "2026-06-22T15:27:01.009Z",
+  "status": "completed",
+  "updated_at": "2026-06-27T02:35:18.513Z",
   "session_ids": [
     "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
     "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -116,8 +120,12 @@
       "session_id": "opencode:ses_1100ed30bffeFRZgZ6IjnIDHco",
       "agent": "Sisyphus-Junior",
       "category": "deep",
-      "updated_at": "2026-06-22T15:27:01.009Z"
+      "updated_at": "2026-06-27T02:29:10.039Z",
+      "ended_at": "2026-06-27T02:29:10.039Z",
+      "status": "completed"
     }
   },
-  "agent": "atlas"
+  "agent": "atlas",
+  "ended_at": "2026-06-27T02:35:18.513Z",
+  "elapsed_ms": 386862510
 }
