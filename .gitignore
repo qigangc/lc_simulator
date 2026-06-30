@@ -149,3 +149,10 @@ desktop.ini
 # Local development
 *.local
 *.dev
+
+# Project specific
+workspace/
+.data/
+cache/
+problems_backup/
+.omo/
