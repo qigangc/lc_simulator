@@ -1,7 +1,8 @@
 from pathlib import Path
+from .config import PROBLEMS_DIR_NAME, WORKSPACE_DIR_NAME, DATA_DIR_NAME, PROGRESS_FILENAME
 
 ROOT = Path(__file__).resolve().parent.parent
-PROBLEMS_DIR = ROOT / "problems"
-WORKSPACE = ROOT / "workspace"
-DATA = ROOT / "data"
-PROGRESS_FILE = DATA / "progress.json"
+PROBLEMS_DIR = ROOT / PROBLEMS_DIR_NAME
+WORKSPACE = ROOT / WORKSPACE_DIR_NAME
+DATA = ROOT / DATA_DIR_NAME
+PROGRESS_FILE = DATA / PROGRESS_FILENAME

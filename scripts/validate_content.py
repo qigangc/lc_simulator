@@ -17,8 +17,10 @@ import json
 import sys
 from pathlib import Path
 
-PROBLEMS_DIR = Path("problems")
-BACKUP_DIR = Path("problems_backup")
+from lc.config import PROBLEMS_DIR_NAME, BACKUP_DIR_NAME, MIN_DESCRIPTION_LENGTH, JSON_ENCODING
+
+PROBLEMS_DIR = Path(PROBLEMS_DIR_NAME)
+BACKUP_DIR = Path(BACKUP_DIR_NAME)
 
 # Fields that existed before the fetch (the "original" schema)
 ORIGINAL_FIELDS = {"id", "slug", "title_en", "title_zh", "difficulty",
@@ -38,7 +40,7 @@ def get_problem_number(filepath: Path) -> int:
     return int(filepath.stem.split("_")[0])
 
 
-def load_json(filepath: Path, encoding: str = "utf-8-sig") -> dict | None:
+def load_json(filepath: Path, encoding: str = JSON_ENCODING) -> dict | None:
     """Load a JSON file, returning None on failure."""
     try:
         with open(filepath, encoding=encoding) as f:
@@ -55,8 +57,8 @@ def check_new_fields(data: dict, filename: str, errors: list) -> None:
         errors.append(f"{filename}: missing 'description_en'")
     elif not isinstance(desc_en, str):
         errors.append(f"{filename}: 'description_en' is not a string")
-    elif len(desc_en) <= 50:
-        errors.append(f"{filename}: 'description_en' too short ({len(desc_en)} chars, need > 50)")
+    elif len(desc_en) <= MIN_DESCRIPTION_LENGTH:
+        errors.append(f"{filename}: 'description_en' too short ({len(desc_en)} chars, need > {MIN_DESCRIPTION_LENGTH})")
 
     # 2. description_zh: exists, length > 50 or equals description_en
     desc_zh = data.get("description_zh")
@@ -64,7 +66,7 @@ def check_new_fields(data: dict, filename: str, errors: list) -> None:
         errors.append(f"{filename}: missing 'description_zh'")
     elif not isinstance(desc_zh, str):
         errors.append(f"{filename}: 'description_zh' is not a string")
-    elif len(desc_zh) <= 50 and desc_zh != desc_en:
+    elif len(desc_zh) <= MIN_DESCRIPTION_LENGTH and desc_zh != desc_en:
         errors.append(f"{filename}: 'description_zh' too short ({len(desc_zh)} chars) and not equal to description_en")
 
     # 3. constraints: non-empty string

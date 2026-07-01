@@ -1,5 +1,6 @@
 import json
 from .paths import PROBLEMS_DIR
+from .config import MAX_TEST_CASES, PROBLEM_FILE_PATTERN, JSON_ENCODING
 
 
 def default_output(return_type):
@@ -48,16 +49,16 @@ def make_default_case(problem, index):
 def ensure_examples(problem):
     problem.setdefault("examples", [make_default_case(problem, 0)])
     cases = list(problem.get("tests", problem["examples"]))
-    for index in range(len(cases), 20):
+    for index in range(len(cases), MAX_TEST_CASES):
         cases.append(make_default_case(problem, index))
-    problem["tests"] = cases[:20]
+    problem["tests"] = cases[:MAX_TEST_CASES]
     return problem
 
 
 def load_problems():
     problems = []
-    for path in sorted(PROBLEMS_DIR.glob("[0-9][0-9][0-9]_*.json")):
-        with path.open("r", encoding="utf-8-sig") as f:
+    for path in sorted(PROBLEMS_DIR.glob(PROBLEM_FILE_PATTERN)):
+        with path.open("r", encoding=JSON_ENCODING) as f:
             problems.append(json.load(f))
     return [ensure_examples(p) for p in sorted(problems, key=lambda p: p["id"])]
 

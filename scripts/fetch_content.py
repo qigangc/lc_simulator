@@ -30,13 +30,16 @@ except ImportError:
 
 
 # --- Constants ---
-GRAPHQL_URL = "https://leetcode.com/graphql"
-PROBLEMS_DIR = Path("problems")
-BACKUP_DIR = Path("problems_backup")
-CACHE_DIR = Path("cache")
-REQUEST_TIMEOUT = 10  # seconds
-RATE_LIMIT_DELAY = 2  # seconds between requests
-MAX_BACKOFF = 30  # max exponential backoff seconds
+from lc.config import (
+    GRAPHQL_URL, REQUEST_TIMEOUT, RATE_LIMIT_DELAY,
+    MAX_RETRY_BACKOFF, MAX_RETRY_ATTEMPTS, USER_AGENT,
+    PROBLEMS_DIR_NAME, BACKUP_DIR_NAME, CACHE_DIR_NAME,
+    PROBLEM_FILE_PATTERN,
+)
+
+PROBLEMS_DIR = Path(PROBLEMS_DIR_NAME)
+BACKUP_DIR = Path(BACKUP_DIR_NAME)
+CACHE_DIR = Path(CACHE_DIR_NAME)
 
 GRAPHQL_QUERY = """
 query questionData($titleSlug: String!) {
@@ -120,13 +123,13 @@ def fetch_problem(slug: str, force: bool = False) -> dict | None:
 
     headers = {
         "Content-Type": "application/json",
-        "User-Agent": "Mozilla/5.0 (compatible; LCProblemFetcher/1.0)",
+        "User-Agent": USER_AGENT,
     }
 
     last_error = None
     backoff = RATE_LIMIT_DELAY
 
-    for attempt in range(5):  # max 5 attempts
+    for attempt in range(MAX_RETRY_ATTEMPTS):  # max attempts
         try:
             resp = requests.post(
                 GRAPHQL_URL,
@@ -162,10 +165,10 @@ def fetch_problem(slug: str, force: bool = False) -> dict | None:
             elif resp.status_code in (429,) or 500 <= resp.status_code < 600:
                 # Rate limited or server error — backoff
                 jitter = random.uniform(0, 1)
-                sleep_time = min(backoff + jitter, MAX_BACKOFF)
+                sleep_time = min(backoff + jitter, MAX_RETRY_BACKOFF)
                 log(slug, f"RETRY({resp.status_code}) sleeping {sleep_time:.1f}s")
                 time.sleep(sleep_time)
-                backoff = min(backoff * 2, MAX_BACKOFF)
+                backoff = min(backoff * 2, MAX_RETRY_BACKOFF)
                 last_error = resp.status_code
                 continue
             else:
@@ -175,8 +178,8 @@ def fetch_problem(slug: str, force: bool = False) -> dict | None:
         except requests.exceptions.Timeout:
             log(slug, f"TIMEOUT (attempt {attempt + 1})")
             last_error = "timeout"
-            time.sleep(min(backoff, MAX_BACKOFF))
-            backoff = min(backoff * 2, MAX_BACKOFF)
+            time.sleep(min(backoff, MAX_RETRY_BACKOFF))
+            backoff = min(backoff * 2, MAX_RETRY_BACKOFF)
             continue
         except requests.exceptions.RequestException as e:
             log(slug, f"NETWORK_ERROR {e}")
@@ -329,7 +332,7 @@ def main():
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
     # Collect and sort problem files
-    problem_files = sorted(PROBLEMS_DIR.glob("[0-9][0-9][0-9]_*.json"))
+    problem_files = sorted(PROBLEMS_DIR.glob(PROBLEM_FILE_PATTERN))
 
     if not problem_files:
         print("No problem files found.", file=sys.stderr)
