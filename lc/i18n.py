@@ -95,7 +95,10 @@ CATEGORY_NAMES = {
 def msg(lang, key, **kwargs):
     value = MESSAGES.get(lang, MESSAGES["en"]).get(key, key)
     if kwargs:
-        return value.format(**kwargs)
+        try:
+            return value.format(**kwargs)
+        except (KeyError, ValueError, IndexError):
+            return value
     return value
 
 def category_name(lang, key):

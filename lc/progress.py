@@ -6,8 +6,11 @@ from .paths import DATA, PROGRESS_FILE
 def load_progress():
     if not PROGRESS_FILE.exists():
         return {"done": {}}
-    with PROGRESS_FILE.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with PROGRESS_FILE.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return {"done": {}}
 
 
 def save_progress(progress):

@@ -1,4 +1,5 @@
 import json
+import sys
 from .paths import PROBLEMS_DIR
 from .config import MAX_TEST_CASES, PROBLEM_FILE_PATTERN, JSON_ENCODING
 
@@ -47,6 +48,11 @@ def make_default_case(problem, index):
 
 
 def ensure_examples(problem):
+    if not isinstance(problem, dict):
+        return problem
+    if "function" not in problem or not isinstance(problem.get("function"), dict):
+        problem["tests"] = []
+        return problem
     problem.setdefault("examples", [make_default_case(problem, 0)])
     cases = list(problem.get("tests", problem["examples"]))
     for index in range(len(cases), MAX_TEST_CASES):
@@ -58,9 +64,14 @@ def ensure_examples(problem):
 def load_problems():
     problems = []
     for path in sorted(PROBLEMS_DIR.glob(PROBLEM_FILE_PATTERN)):
-        with path.open("r", encoding=JSON_ENCODING) as f:
-            problems.append(json.load(f))
-    return [ensure_examples(p) for p in sorted(problems, key=lambda p: p["id"])]
+        try:
+            with path.open("r", encoding=JSON_ENCODING) as f:
+                data = json.load(f)
+            if isinstance(data, dict) and "id" in data:
+                problems.append(data)
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"Warning: skipping {path.name}: {e}", file=sys.stderr)
+    return [ensure_examples(p) for p in sorted(problems, key=lambda p: p.get("id", 0))]
 
 
 def find_problem(problem_id):

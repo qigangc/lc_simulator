@@ -6,10 +6,17 @@ from .problems import solution_filename
 
 
 def load_solution(path):
-    spec = importlib.util.spec_from_file_location("lc_user_solution", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module.Solution()
+    try:
+        spec = importlib.util.spec_from_file_location("lc_user_solution", path)
+        if spec is None or spec.loader is None:
+            raise ImportError(f"Cannot load module from {path}")
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        if not hasattr(module, "Solution"):
+            raise AttributeError(f"No Solution class found in {path}")
+        return module.Solution()
+    except Exception as e:
+        raise RuntimeError(f"Failed to load solution from {path}: {e}")
 
 
 def normalize(value):
@@ -19,6 +26,12 @@ def normalize(value):
 
 
 def run_problem(problem, case_index=None):
+    if not isinstance(problem, dict):
+        return False, [{"error": "invalid problem data"}]
+    if "function" not in problem or not isinstance(problem["function"], dict):
+        return False, [{"error": "problem missing function definition"}]
+    if "name" not in problem["function"]:
+        return False, [{"error": "problem function missing name"}]
     path = WORKSPACE / solution_filename(problem)
     if not path.exists():
         return False, [{"error": f"missing solution file: {path}"}]

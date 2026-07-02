@@ -26,7 +26,11 @@ def stub_value(return_type):
 
 
 def render_solution(problem):
+    if not isinstance(problem, dict) or "function" not in problem:
+        return "class Solution:\n    pass\n"
     fn = problem["function"]
+    if not isinstance(fn, dict) or "name" not in fn:
+        return "class Solution:\n    pass\n"
     params = ", ".join([f"{name}: {typ}" for name, typ in fn["params"]])
     if params:
         params = ", " + params
@@ -40,6 +44,8 @@ def render_solution(problem):
 
 
 def create_solution(problem):
+    if not isinstance(problem, dict):
+        return None, False
     WORKSPACE.mkdir(exist_ok=True)
     path = WORKSPACE / solution_filename(problem)
     if path.exists():
