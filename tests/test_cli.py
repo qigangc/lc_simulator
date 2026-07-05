@@ -9,6 +9,16 @@ from lc.cli import build_parser
 
 
 class CliParserTests(unittest.TestCase):
+    def test_version_flag_prints_version_and_exits(self):
+        from lc import __version__
+
+        buf = StringIO()
+        with self.assertRaises(SystemExit):
+            with redirect_stdout(buf):
+                build_parser().parse_args(["--version"])
+
+        self.assertIn(__version__, buf.getvalue())
+
     def test_test_command_accepts_single_case_argument(self):
         args = build_parser().parse_args(["test", "1", "--case", "2"])
 
