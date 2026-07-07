@@ -1,4 +1,5 @@
 import argparse
+from . import __version__
 from .i18n import msg, category_name
 from .problems import load_problems, find_problem
 from .progress import is_done, mark_done, load_progress
@@ -107,6 +108,10 @@ def add_lang(parser):
 
 def build_parser():
     parser = argparse.ArgumentParser(description=msg("en", "usage"))
+    parser.add_argument(
+        "--version", action="version",
+        version=f"lc-simulator {__version__}"
+    )
     sub = parser.add_subparsers(dest="command", required=True)
     p = sub.add_parser("list")
     add_lang(p)
