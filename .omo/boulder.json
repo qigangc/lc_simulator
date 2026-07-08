@@ -8,7 +8,7 @@
       "plan_name": "fetch-problems-content",
       "status": "completed",
       "started_at": "2026-06-22T15:07:36.003Z",
-      "updated_at": "2026-07-02T04:15:30.654Z",
+      "updated_at": "2026-07-08T04:26:06.158Z",
       "session_ids": [
         "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
         "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -36,15 +36,15 @@
         "todo:1": {
           "task_key": "todo:1",
           "task_label": "1",
-          "task_title": "**Create fetch script skeleton and GraphQL client**",
-          "session_id": "opencode:ses_1101f78edffegWzE2uu73DDA7C",
+          "task_title": "`_read_cache(slug, cache_path)` — cache read logic",
+          "session_id": "opencode:ses_0c0078caaffeWCsL1jdaccaGK1",
           "agent": "Sisyphus-Junior",
           "category": "quick",
-          "updated_at": "2026-06-22T15:14:45.998Z",
           "started_at": "2026-06-22T15:12:36.802Z",
+          "ended_at": "2026-07-08T04:26:06.158Z",
+          "elapsed_ms": 1343609356,
           "status": "completed",
-          "ended_at": "2026-06-22T15:14:45.998Z",
-          "elapsed_ms": 129196
+          "updated_at": "2026-07-08T04:26:06.158Z"
         },
         "todo:8": {
           "task_key": "todo:8",
@@ -78,7 +78,7 @@
   "active_plan": "D:\\workspace\\lc_simulator\\.omo\\plans\\fetch-problems-content.md",
   "started_at": "2026-06-22T15:07:36.003Z",
   "status": "completed",
-  "updated_at": "2026-07-02T04:15:30.654Z",
+  "updated_at": "2026-07-08T04:26:06.158Z",
   "session_ids": [
     "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
     "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -106,15 +106,15 @@
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "**Create fetch script skeleton and GraphQL client**",
-      "session_id": "opencode:ses_1101f78edffegWzE2uu73DDA7C",
+      "task_title": "`_read_cache(slug, cache_path)` — cache read logic",
+      "session_id": "opencode:ses_0c0078caaffeWCsL1jdaccaGK1",
       "agent": "Sisyphus-Junior",
       "category": "quick",
-      "updated_at": "2026-06-22T15:14:45.998Z",
       "started_at": "2026-06-22T15:12:36.802Z",
+      "ended_at": "2026-07-08T04:26:06.158Z",
+      "elapsed_ms": 1343609356,
       "status": "completed",
-      "ended_at": "2026-06-22T15:14:45.998Z",
-      "elapsed_ms": 129196
+      "updated_at": "2026-07-08T04:26:06.158Z"
     },
     "todo:8": {
       "task_key": "todo:8",

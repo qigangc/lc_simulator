@@ -98,22 +98,43 @@ def html_to_markdown(html_str: str) -> str:
 
 
 # --- GraphQL Fetch ---
+def _read_cache(slug, cache_path):
+    """Read cached API response for a slug. Returns dict or None."""
+    if not cache_path.exists():
+        return None
+    try:
+        with open(cache_path, "r", encoding="utf-8") as f:
+            cached = json.load(f)
+        log(slug, "CACHE_HIT")
+        return cached
+    except (json.JSONDecodeError, OSError) as e:
+        log(slug, f"CACHE_READ_ERROR {e}")
+        return None
+
+
+def _save_cache(result, cache_path, slug):
+    """Save a successful API response to the cache directory."""
+    try:
+        CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        with open(cache_path, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=4, ensure_ascii=False)
+        log(slug, "OK")
+    except OSError as e:
+        log(slug, f"CACHE_WRITE_ERROR {e}")
+
+
 def fetch_problem(slug: str, force: bool = False) -> dict | None:
     """Fetch problem data from LeetCode GraphQL API.
 
     Returns dict with keys: content, translatedContent, exampleTestcases
     Returns None on failure.
     """
-    # Check cache
     cache_path = CACHE_DIR / f"{slug}.json"
-    if cache_path.exists() and not force:
-        try:
-            with open(cache_path, "r", encoding="utf-8") as f:
-                cached = json.load(f)
-            log(slug, "CACHE_HIT")
+
+    if not force:
+        cached = _read_cache(slug, cache_path)
+        if cached is not None:
             return cached
-        except (json.JSONDecodeError, OSError) as e:
-            log(slug, f"CACHE_READ_ERROR {e}")
 
     payload = {
         "operationName": "questionData",
@@ -151,15 +172,7 @@ def fetch_problem(slug: str, force: bool = False) -> dict | None:
                     "exampleTestcases": question.get("exampleTestcases"),
                 }
 
-                # Save to cache
-                try:
-                    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-                    with open(cache_path, "w", encoding="utf-8") as f:
-                        json.dump(result, f, indent=4, ensure_ascii=False)
-                except OSError as e:
-                    log(slug, f"CACHE_WRITE_ERROR {e}")
-
-                log(slug, "OK")
+                _save_cache(result, cache_path, slug)
                 return result
 
             elif resp.status_code in (429,) or 500 <= resp.status_code < 600:
