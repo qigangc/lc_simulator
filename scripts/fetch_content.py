@@ -382,7 +382,7 @@ def main():
         data = fetch_problem(slug, force=args.force)
         if data is None:
             fail_count += 1
-            print(f"  SKIP: fetch failed for '{slug}'")
+            print(f"  SKIP: fetch failed for '{slug}'", file=sys.stderr)
             print()
             continue
 
@@ -408,7 +408,7 @@ def main():
             if backup_problem_json(path):
                 print(f"  Backup saved to {BACKUP_DIR / path.name}")
             else:
-                print(f"  WARNING: backup failed for {path.name}")
+                print(f"  WARNING: backup failed for {path.name}", file=sys.stderr)
 
         # Update JSON
         if update_problem_json(path, data):
