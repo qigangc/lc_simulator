@@ -2,7 +2,7 @@ import argparse
 from . import __version__
 from .i18n import msg, category_name
 from .problems import load_problems, find_problem
-from .progress import is_done, mark_done, load_progress
+from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time
 from .runner import run_problem, format_value
 from .templates import create_solution
 
@@ -87,12 +87,25 @@ def command_test(args):
     print(msg(args.lang, "passed" if ok else "failed"))
 
 
+def command_start(args):
+    problem = find_problem(args.id)
+    if not problem:
+        print(msg(args.lang, "not_found"))
+        return
+    start_problem(args.id)
+    print(f"{msg(args.lang, 'started')}: {args.id}")
+
+
 def command_done(args):
     if not find_problem(args.id):
         print(msg(args.lang, "not_found"))
         return
     mark_done(args.id)
-    print(f"{msg(args.lang, 'marked_done')}: {args.id}")
+    elapsed = elapsed_time(args.id)
+    if elapsed:
+        print(f"{msg(args.lang, 'marked_done')}: {args.id}  ({msg(args.lang, 'elapsed')}: {elapsed})")
+    else:
+        print(f"{msg(args.lang, 'marked_done')}: {args.id}")
 
 
 def command_stats(args):
@@ -100,6 +113,9 @@ def command_stats(args):
     completed = len(load_progress().get("done", {}))
     print(f"{msg(args.lang, 'total')}: {total}")
     print(f"{msg(args.lang, 'completed')}: {completed}")
+    time_str = total_elapsed_time()
+    if time_str != "0s":
+        print(f"{msg(args.lang, 'total_time')}: {time_str}")
 
 
 def add_lang(parser):
@@ -127,6 +143,10 @@ def build_parser():
     add_lang(p)
     p.add_argument("id", type=int)
     p.set_defaults(func=command_new)
+    p = sub.add_parser("start")
+    add_lang(p)
+    p.add_argument("id", type=int)
+    p.set_defaults(func=command_start)
     p = sub.add_parser("test")
     add_lang(p)
     p.add_argument("id", type=int)
