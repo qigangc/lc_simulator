@@ -83,6 +83,11 @@ def command_test(args):
                 continue
             print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
             print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
+        if results and "error" not in results[0]:
+            if ok:
+                print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
+            else:
+                print(f"[ERROR] {msg(args.lang, 'verdict_runtime_error')}")
         return
     
     ok, results = run_problem(problem, args.case)
@@ -95,7 +100,13 @@ def command_test(args):
             print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
             print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
             print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
-    print(msg(args.lang, "passed" if ok else "failed"))
+    has_error = any("error" in r for r in results)
+    if has_error:
+        print(f"[ERROR] {msg(args.lang, 'verdict_runtime_error')}")
+    elif ok:
+        print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
+    else:
+        print(f"[FAIL] {msg(args.lang, 'verdict_wrong_answer')}")
 
 
 def command_start(args):

@@ -26,6 +26,9 @@ MESSAGES = {
         "usage": "Local LeetCode Hot 100 simulator",
         "no_problems_found": "No problems found in category: {category}",
         "specify_id_or_category": "Please provide a problem ID or --category",
+        "verdict_accepted": "Accepted",
+        "verdict_wrong_answer": "Wrong Answer",
+        "verdict_runtime_error": "Runtime Error",
     },
     "zh": {
         "id": "编号",
@@ -54,6 +57,9 @@ MESSAGES = {
         "usage": "本地 LeetCode Hot 100 模拟器",
         "no_problems_found": "未找到分类为 {category} 的题目",
         "specify_id_or_category": "请提供题目编号或 --category",
+        "verdict_accepted": "通过",
+        "verdict_wrong_answer": "解答错误",
+        "verdict_runtime_error": "运行错误",
     },
 }
 
