@@ -3,7 +3,7 @@ from . import __version__
 from .i18n import msg, category_name
 from .problems import load_problems, find_problem
 from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time
-from .runner import run_problem, format_value
+from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
 
 
@@ -74,6 +74,17 @@ def command_test(args):
     if not problem:
         print(msg(args.lang, "not_found"))
         return
+    
+    if getattr(args, "input", None):
+        ok, results = run_custom_case(problem, args.input)
+        for result in results:
+            if "error" in result:
+                print(result["error"])
+                continue
+            print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
+            print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
+        return
+    
     ok, results = run_problem(problem, args.case)
     for result in results:
         if "error" in result:
@@ -151,6 +162,7 @@ def build_parser():
     add_lang(p)
     p.add_argument("id", type=int)
     p.add_argument("--case", type=int, metavar="N", help="run only the N-th test case (1-based)")
+    p.add_argument("--input", type=str, metavar="JSON", help="custom input as JSON, e.g. '{\"nums\": [1,2], \"target\": 3}'")
     p.set_defaults(func=command_test)
     p = sub.add_parser("done")
     add_lang(p)
