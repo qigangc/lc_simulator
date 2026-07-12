@@ -29,6 +29,7 @@ MESSAGES = {
         "verdict_accepted": "Accepted",
         "verdict_wrong_answer": "Wrong Answer",
         "verdict_runtime_error": "Runtime Error",
+        "no_submissions": "No submissions yet. Run lc test <id> first.",
     },
     "zh": {
         "id": "编号",
@@ -60,6 +61,7 @@ MESSAGES = {
         "verdict_accepted": "通过",
         "verdict_wrong_answer": "解答错误",
         "verdict_runtime_error": "运行错误",
+        "no_submissions": "暂无提交记录。请先运行 lc test <id>。",
     },
 }
 

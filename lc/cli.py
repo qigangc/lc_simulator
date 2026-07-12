@@ -2,7 +2,7 @@ import argparse
 from . import __version__
 from .i18n import msg, category_name
 from .problems import load_problems, find_problem
-from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time
+from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time, record_submission, load_submissions
 from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
 
@@ -84,6 +84,8 @@ def command_test(args):
             print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
             print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
         if results and "error" not in results[0]:
+            verdict = "Accepted" if ok else "Runtime Error"
+            record_submission(args.id, verdict, 1, 1)
             if ok:
                 print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
             else:
@@ -100,13 +102,42 @@ def command_test(args):
             print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
             print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
             print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
+    passed_count = sum(1 for r in results if r.get("passed"))
+    total_count = len(results)
     has_error = any("error" in r for r in results)
+    if has_error:
+        verdict = "Runtime Error"
+    elif ok:
+        verdict = "Accepted"
+    else:
+        verdict = "Wrong Answer"
+    record_submission(args.id, verdict, passed_count, total_count)
+
     if has_error:
         print(f"[ERROR] {msg(args.lang, 'verdict_runtime_error')}")
     elif ok:
         print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
     else:
         print(f"[FAIL] {msg(args.lang, 'verdict_wrong_answer')}")
+
+
+def command_history(args):
+    """Show submission history."""
+    submissions = load_submissions()
+    if not submissions:
+        print(msg(args.lang, "no_submissions"))
+        return
+
+    # Print header
+    print(f"{'#':>3}  {'ID':>3}  {'Time':<20}  {'Verdict':<15}  {'Cases':<8}")
+    print("-" * 55)
+
+    for i, sub in enumerate(reversed(submissions[-20:]), 1):  # show last 20
+        pid = sub["id"]
+        at = sub["at"]
+        verdict = sub["verdict"]
+        cases = f"{sub['passed']}/{sub['total']}"
+        print(f"{i:>3}  {pid:>3}  {at:<20}  {verdict:<15}  {cases:<8}")
 
 
 def command_start(args):
@@ -182,6 +213,9 @@ def build_parser():
     p = sub.add_parser("stats")
     add_lang(p)
     p.set_defaults(func=command_stats)
+    p = sub.add_parser("history")
+    add_lang(p)
+    p.set_defaults(func=command_history)
     return parser
 
 

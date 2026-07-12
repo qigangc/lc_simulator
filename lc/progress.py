@@ -1,6 +1,6 @@
 import json
 import datetime
-from .paths import DATA, PROGRESS_FILE
+from .paths import DATA, PROGRESS_FILE, SUBMISSIONS_FILE
 
 
 def load_progress():
@@ -59,6 +59,44 @@ def total_elapsed_time():
             done_at = datetime.datetime.fromisoformat(info["at"])
             total += (done_at - started).total_seconds()
     return _format_duration(datetime.timedelta(seconds=int(total))) if total > 0 else "0s"
+
+
+def load_submissions():
+    """Load submission history from JSON file."""
+    if not SUBMISSIONS_FILE.exists():
+        return []
+    try:
+        with SUBMISSIONS_FILE.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return []
+
+
+def save_submissions(submissions):
+    """Save submission history to JSON file."""
+    DATA.mkdir(exist_ok=True)
+    with SUBMISSIONS_FILE.open("w", encoding="utf-8") as f:
+        json.dump(submissions, f, ensure_ascii=False, indent=2)
+
+
+def record_submission(problem_id, verdict, passed_count, total_count):
+    """Record a test submission with problem ID, timestamp, and verdict.
+
+    Args:
+        problem_id: int — the problem number
+        verdict: str — "Accepted", "Wrong Answer", or "Runtime Error"
+        passed_count: int — number of passing test cases
+        total_count: int — total test cases run
+    """
+    submissions = load_submissions()
+    submissions.append({
+        "id": problem_id,
+        "at": datetime.datetime.now().isoformat(timespec="seconds"),
+        "verdict": verdict,
+        "passed": passed_count,
+        "total": total_count,
+    })
+    save_submissions(submissions)
 
 
 def _format_duration(td):
