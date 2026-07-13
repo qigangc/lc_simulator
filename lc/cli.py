@@ -1,4 +1,5 @@
 import argparse
+import datetime
 from . import __version__
 from .i18n import msg, category_name
 from .problems import load_problems, find_problem
@@ -124,6 +125,9 @@ def command_test(args):
 def command_history(args):
     """Show submission history."""
     submissions = load_submissions()
+    if args.yesterday:
+        yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+        submissions = [s for s in submissions if s["at"].startswith(yesterday)]
     if not submissions:
         print(msg(args.lang, "no_submissions"))
         return
@@ -138,6 +142,47 @@ def command_history(args):
         verdict = sub["verdict"]
         cases = f"{sub['passed']}/{sub['total']}"
         print(f"{i:>3}  {pid:>3}  {at:<20}  {verdict:<15}  {cases:<8}")
+
+
+def command_footprint(args):
+    """Show yesterday's practice footprint."""
+    submissions = load_submissions()
+    yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    recent = [s for s in submissions if s["at"].startswith(yesterday)]
+
+    if not recent:
+        print(msg(args.lang, "no_footprint"))
+        return
+
+    problem_ids = sorted(set(s["id"] for s in recent))
+    problems = load_problems()
+    problem_map = {p["id"]: p for p in problems}
+
+    print(f"\n{msg(args.lang, 'footprint_title')} ({yesterday})")
+    print("=" * 50)
+
+    total_tests = 0
+    accepted_count = 0
+    for s in recent:
+        total_tests += 1
+        if s["verdict"] == "Accepted":
+            accepted_count += 1
+
+    for pid in problem_ids:
+        p = problem_map.get(pid)
+        if p is None:
+            continue
+        name = p["title_en"] if args.lang == "en" else p["title_zh"]
+        submissions_for_pid = [s for s in recent if s["id"] == pid]
+        last = submissions_for_pid[-1]
+        attempts = len(submissions_for_pid)
+        verdict = last["verdict"]
+        status = "[PASS]" if verdict == "Accepted" else "[FAIL]"
+        print(f"  {status} #{pid} {name}  ({attempts} attempt{'s' if attempts > 1 else ''})")
+
+    print("-" * 50)
+    print(f"  {msg(args.lang, 'footprint_total')}: {total_tests} {msg(args.lang, 'footprint_submissions')}, {accepted_count} {msg(args.lang, 'footprint_accepted')}")
+    print()
 
 
 def command_start(args):
@@ -215,7 +260,11 @@ def build_parser():
     p.set_defaults(func=command_stats)
     p = sub.add_parser("history")
     add_lang(p)
+    p.add_argument("--yesterday", action="store_true", help="show only yesterday's submissions")
     p.set_defaults(func=command_history)
+    p = sub.add_parser("footprint")
+    add_lang(p)
+    p.set_defaults(func=command_footprint)
     return parser
 
 

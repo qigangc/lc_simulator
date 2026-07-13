@@ -30,6 +30,11 @@ MESSAGES = {
         "verdict_wrong_answer": "Wrong Answer",
         "verdict_runtime_error": "Runtime Error",
         "no_submissions": "No submissions yet. Run lc test <id> first.",
+        "no_footprint": "No submissions found for yesterday. Keep practicing!",
+        "footprint_title": "Yesterday's Practice Footprint",
+        "footprint_total": "Total",
+        "footprint_submissions": "submissions",
+        "footprint_accepted": "accepted",
     },
     "zh": {
         "id": "编号",
@@ -62,6 +67,11 @@ MESSAGES = {
         "verdict_wrong_answer": "解答错误",
         "verdict_runtime_error": "运行错误",
         "no_submissions": "暂无提交记录。请先运行 lc test <id>。",
+        "no_footprint": "昨天没有提交记录。继续加油！",
+        "footprint_title": "昨日练习足迹",
+        "footprint_total": "共",
+        "footprint_submissions": "次提交",
+        "footprint_accepted": "次通过",
     },
 }
 
