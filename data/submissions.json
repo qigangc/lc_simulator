@@ -1,35 +1,7 @@
 [
   {
     "id": 1,
-    "at": "2026-07-12T22:49:10",
-    "verdict": "Wrong Answer",
-    "passed": 0,
-    "total": 1
-  },
-  {
-    "id": 1,
-    "at": "2026-07-12T22:49:36",
-    "verdict": "Wrong Answer",
-    "passed": 19,
-    "total": 20
-  },
-  {
-    "id": 1,
-    "at": "2026-07-12T22:49:44",
-    "verdict": "Wrong Answer",
-    "passed": 0,
-    "total": 1
-  },
-  {
-    "id": 1,
-    "at": "2026-07-13T11:54:06",
-    "verdict": "Wrong Answer",
-    "passed": 0,
-    "total": 1
-  },
-  {
-    "id": 1,
-    "at": "2026-07-13T11:54:36",
+    "at": "2026-07-13T12:26:52",
     "verdict": "Wrong Answer",
     "passed": 0,
     "total": 1

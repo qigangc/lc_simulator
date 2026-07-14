@@ -8,7 +8,7 @@
       "plan_name": "fetch-problems-content",
       "status": "completed",
       "started_at": "2026-06-22T15:07:36.003Z",
-      "updated_at": "2026-07-10T05:31:09.899Z",
+      "updated_at": "2026-07-13T04:26:30.709Z",
       "session_ids": [
         "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
         "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -38,15 +38,15 @@
         "todo:1": {
           "task_key": "todo:1",
           "task_label": "1",
-          "task_title": "`lc start <id>` — records a `started_at` timestamp for a problem",
-          "session_id": "opencode:ses_0b57f6fb0ffeDk0lJmIi3I4r1b",
+          "task_title": "`lc reset` — clears all local practice history (progress + submissions + started timestamps), with confirmation prompt",
+          "session_id": "opencode:ses_0a6471ca4ffeG9y6VdCsaiRgPo",
           "agent": "Sisyphus-Junior",
           "category": "quick",
           "started_at": "2026-06-22T15:12:36.802Z",
-          "ended_at": "2026-07-10T05:31:09.899Z",
-          "elapsed_ms": 1520313097,
+          "ended_at": "2026-07-13T04:26:30.709Z",
+          "elapsed_ms": 1775633907,
           "status": "completed",
-          "updated_at": "2026-07-10T05:31:09.899Z"
+          "updated_at": "2026-07-13T04:26:30.709Z"
         },
         "todo:8": {
           "task_key": "todo:8",
@@ -80,7 +80,7 @@
   "active_plan": "D:\\workspace\\lc_simulator\\.omo\\plans\\fetch-problems-content.md",
   "started_at": "2026-06-22T15:07:36.003Z",
   "status": "completed",
-  "updated_at": "2026-07-10T05:31:09.899Z",
+  "updated_at": "2026-07-13T04:26:30.709Z",
   "session_ids": [
     "opencode:ses_11283a425ffeYng5E8r5rpiMPA",
     "opencode:ses_1100ef2c9ffeb9BYVXkQ7a8LWt",
@@ -110,15 +110,15 @@
     "todo:1": {
       "task_key": "todo:1",
       "task_label": "1",
-      "task_title": "`lc start <id>` — records a `started_at` timestamp for a problem",
-      "session_id": "opencode:ses_0b57f6fb0ffeDk0lJmIi3I4r1b",
+      "task_title": "`lc reset` — clears all local practice history (progress + submissions + started timestamps), with confirmation prompt",
+      "session_id": "opencode:ses_0a6471ca4ffeG9y6VdCsaiRgPo",
       "agent": "Sisyphus-Junior",
       "category": "quick",
       "started_at": "2026-06-22T15:12:36.802Z",
-      "ended_at": "2026-07-10T05:31:09.899Z",
-      "elapsed_ms": 1520313097,
+      "ended_at": "2026-07-13T04:26:30.709Z",
+      "elapsed_ms": 1775633907,
       "status": "completed",
-      "updated_at": "2026-07-10T05:31:09.899Z"
+      "updated_at": "2026-07-13T04:26:30.709Z"
     },
     "todo:8": {
       "task_key": "todo:8",

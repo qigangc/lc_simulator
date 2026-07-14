@@ -35,6 +35,12 @@ MESSAGES = {
         "footprint_total": "Total",
         "footprint_submissions": "submissions",
         "footprint_accepted": "accepted",
+        "nothing_to_reset": "No practice data to clear.",
+        "reset_confirm": "This will clear {done} completed problems and {subs} submission records.",
+        "reset_prompt": "Are you sure? (y/N):",
+        "reset_cancelled": "Reset cancelled.",
+        "reset_done": "All practice data cleared.",
+        "export_done": "Data exported to {filename}",
     },
     "zh": {
         "id": "编号",
@@ -72,6 +78,12 @@ MESSAGES = {
         "footprint_total": "共",
         "footprint_submissions": "次提交",
         "footprint_accepted": "次通过",
+        "nothing_to_reset": "没有可清除的练习数据。",
+        "reset_confirm": "将清除 {done} 条完成记录和 {subs} 条提交记录。",
+        "reset_prompt": "确认清除？(y/N):",
+        "reset_cancelled": "已取消。",
+        "reset_done": "练习数据已全部清除。",
+        "export_done": "数据已导出到 {filename}",
     },
 }
 

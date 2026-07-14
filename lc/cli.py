@@ -1,7 +1,10 @@
 import argparse
 import datetime
+import json
+import os
 from . import __version__
 from .i18n import msg, category_name
+from .paths import PROGRESS_FILE, SUBMISSIONS_FILE
 from .problems import load_problems, find_problem
 from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time, record_submission, load_submissions
 from .runner import run_problem, format_value, run_custom_case
@@ -216,6 +219,51 @@ def command_stats(args):
         print(f"{msg(args.lang, 'total_time')}: {time_str}")
 
 
+def command_reset(args):
+    """Clear all practice history."""
+    progress = load_progress()
+    done_count = len(progress.get("done", {}))
+    submissions = load_submissions()
+    sub_count = len(submissions)
+
+    if done_count == 0 and sub_count == 0:
+        print(msg(args.lang, "nothing_to_reset"))
+        return
+
+    if not args.yes:
+        print(msg(args.lang, "reset_confirm", done=done_count, subs=sub_count))
+        print(f"  {msg(args.lang, 'reset_prompt')}", end=" ")
+        try:
+            answer = input().strip().lower()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            print(msg(args.lang, "reset_cancelled"))
+            return
+        if answer not in ("y", "yes"):
+            print(msg(args.lang, "reset_cancelled"))
+            return
+
+    if PROGRESS_FILE.exists():
+        os.remove(PROGRESS_FILE)
+    if SUBMISSIONS_FILE.exists():
+        os.remove(SUBMISSIONS_FILE)
+
+    print(msg(args.lang, "reset_done"))
+
+
+def command_export(args):
+    """Export all practice data to a JSON file."""
+    data = {
+        "progress": load_progress(),
+        "submissions": load_submissions(),
+    }
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    filename = f"lc_backup_{timestamp}.json"
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(msg(args.lang, "export_done", filename=filename))
+
+
 def add_lang(parser):
     parser.add_argument("--lang", choices=["en", "zh"], default="en")
 
@@ -265,6 +313,13 @@ def build_parser():
     p = sub.add_parser("footprint")
     add_lang(p)
     p.set_defaults(func=command_footprint)
+    p = sub.add_parser("reset")
+    add_lang(p)
+    p.add_argument("--yes", action="store_true", help="skip confirmation")
+    p.set_defaults(func=command_reset)
+    p = sub.add_parser("export")
+    add_lang(p)
+    p.set_defaults(func=command_export)
     return parser
 
 
