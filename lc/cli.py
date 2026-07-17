@@ -2,6 +2,7 @@ import argparse
 import datetime
 import json
 import os
+import random
 from . import __version__
 from .i18n import msg, category_name
 from .paths import PROGRESS_FILE, SUBMISSIONS_FILE
@@ -9,6 +10,7 @@ from .problems import load_problems, find_problem
 from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time, record_submission, load_submissions
 from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
+from .color import red, green, yellow, cyan, bold
 
 
 def title(problem, lang):
@@ -16,8 +18,8 @@ def title(problem, lang):
 
 
 def print_problem(problem, lang):
-    print(f"{msg(lang, 'id')}: {problem['id']}")
-    print(f"{msg(lang, 'title')}: {title(problem, lang)}")
+    print(f"{msg(lang, 'id')}: {bold(str(problem['id']))}")
+    print(f"{msg(lang, 'title')}: {bold(title(problem, lang))}")
     print(f"{msg(lang, 'difficulty')}: {problem['difficulty']}")
     cats = ", ".join(category_name(lang, c) for c in problem["categories"])
     print(f"{msg(lang, 'categories')}: {cats}")
@@ -40,7 +42,8 @@ def command_list(args):
     print(f"{msg(args.lang, 'id'):>3}  {msg(args.lang, 'difficulty'):<6}  {msg(args.lang, 'status'):<8}  {msg(args.lang, 'title')}")
     for problem in problems:
         status = msg(args.lang, "done" if is_done(problem["id"]) else "todo")
-        print(f"{problem['id']:>3}  {problem['difficulty']:<6}  {status:<8}  {title(problem, args.lang)}")
+        status_str = green(status) if is_done(problem["id"]) else yellow(status)
+        print(f"{problem['id']:>3}  {problem['difficulty']:<6}  {status_str:<8}  {title(problem, args.lang)}")
 
 
 def command_show(args):
@@ -91,9 +94,9 @@ def command_test(args):
             verdict = "Accepted" if ok else "Runtime Error"
             record_submission(args.id, verdict, 1, 1)
             if ok:
-                print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
+                print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
             else:
-                print(f"[ERROR] {msg(args.lang, 'verdict_runtime_error')}")
+                print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
         return
     
     ok, results = run_problem(problem, args.case)
@@ -118,11 +121,11 @@ def command_test(args):
     record_submission(args.id, verdict, passed_count, total_count)
 
     if has_error:
-        print(f"[ERROR] {msg(args.lang, 'verdict_runtime_error')}")
+        print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
     elif ok:
-        print(f"[PASS] {msg(args.lang, 'verdict_accepted')}")
+        print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
     else:
-        print(f"[FAIL] {msg(args.lang, 'verdict_wrong_answer')}")
+        print(f"{red('[FAIL]')} {msg(args.lang, 'verdict_wrong_answer')}")
 
 
 def command_history(args):
@@ -180,7 +183,7 @@ def command_footprint(args):
         last = submissions_for_pid[-1]
         attempts = len(submissions_for_pid)
         verdict = last["verdict"]
-        status = "[PASS]" if verdict == "Accepted" else "[FAIL]"
+        status = green("[PASS]") if verdict == "Accepted" else red("[FAIL]")
         print(f"  {status} #{pid} {name}  ({attempts} attempt{'s' if attempts > 1 else ''})")
 
     print("-" * 50)
@@ -204,7 +207,7 @@ def command_done(args):
     mark_done(args.id)
     elapsed = elapsed_time(args.id)
     if elapsed:
-        print(f"{msg(args.lang, 'marked_done')}: {args.id}  ({msg(args.lang, 'elapsed')}: {elapsed})")
+        print(f"{msg(args.lang, 'marked_done')}: {args.id}  ({green(msg(args.lang, 'elapsed'))}: {green(elapsed)})")
     else:
         print(f"{msg(args.lang, 'marked_done')}: {args.id}")
 
@@ -213,10 +216,32 @@ def command_stats(args):
     total = len(load_problems())
     completed = len(load_progress().get("done", {}))
     print(f"{msg(args.lang, 'total')}: {total}")
-    print(f"{msg(args.lang, 'completed')}: {completed}")
+    print(f"{msg(args.lang, 'completed')}: {green(str(completed))}")
     time_str = total_elapsed_time()
-    if time_str != "0s":
-        print(f"{msg(args.lang, 'total_time')}: {time_str}")
+    if time_str and time_str != "0s":
+        print(f"{msg(args.lang, 'total_time')}: {cyan(time_str)}")
+
+
+def command_random(args):
+    """Pick a random problem and show its details."""
+    problems = load_problems()
+
+    if args.category:
+        problems = [p for p in problems if args.category in p["categories"]]
+
+    if args.difficulty:
+        problems = [p for p in problems if p["difficulty"] == args.difficulty]
+
+    if args.undone:
+        problems = [p for p in problems if not is_done(p["id"])]
+
+    if not problems:
+        print(msg(args.lang, "random_no_match"))
+        return
+
+    problem = random.choice(problems)
+    print(f"\n{cyan(msg(args.lang, 'random_pick'))}\n")
+    print_problem(problem, args.lang)
 
 
 def command_reset(args):
@@ -248,7 +273,7 @@ def command_reset(args):
     if SUBMISSIONS_FILE.exists():
         os.remove(SUBMISSIONS_FILE)
 
-    print(msg(args.lang, "reset_done"))
+    print(yellow(msg(args.lang, "reset_done")))
 
 
 def command_export(args):
@@ -261,7 +286,7 @@ def command_export(args):
     filename = f"lc_backup_{timestamp}.json"
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print(msg(args.lang, "export_done", filename=filename))
+    print(green(msg(args.lang, "export_done", filename=filename)))
 
 
 def add_lang(parser):
@@ -317,6 +342,12 @@ def build_parser():
     add_lang(p)
     p.add_argument("--yes", action="store_true", help="skip confirmation")
     p.set_defaults(func=command_reset)
+    p = sub.add_parser("random")
+    add_lang(p)
+    p.add_argument("--category", help="filter by category")
+    p.add_argument("--difficulty", choices=["easy", "medium", "hard"], help="filter by difficulty")
+    p.add_argument("--undone", action="store_true", help="only unsolved problems")
+    p.set_defaults(func=command_random)
     p = sub.add_parser("export")
     add_lang(p)
     p.set_defaults(func=command_export)

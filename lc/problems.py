@@ -2,6 +2,7 @@ import json
 import sys
 from .paths import PROBLEMS_DIR
 from .config import MAX_TEST_CASES, PROBLEM_FILE_PATTERN, JSON_ENCODING
+from .color import yellow
 
 
 def default_output(return_type):
@@ -70,7 +71,7 @@ def load_problems():
             if isinstance(data, dict) and "id" in data:
                 problems.append(data)
         except (json.JSONDecodeError, OSError) as e:
-            print(f"Warning: skipping {path.name}: {e}", file=sys.stderr)
+            print(yellow(f"Warning: skipping {path.name}: {e}"), file=sys.stderr)
     return [ensure_examples(p) for p in sorted(problems, key=lambda p: p.get("id", 0))]
 
 

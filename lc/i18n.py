@@ -41,6 +41,8 @@ MESSAGES = {
         "reset_cancelled": "Reset cancelled.",
         "reset_done": "All practice data cleared.",
         "export_done": "Data exported to {filename}",
+        "random_no_match": "No problems match the given filters.",
+        "random_pick": "Problem picked for you:",
     },
     "zh": {
         "id": "编号",
@@ -84,6 +86,8 @@ MESSAGES = {
         "reset_cancelled": "已取消。",
         "reset_done": "练习数据已全部清除。",
         "export_done": "数据已导出到 {filename}",
+        "random_no_match": "没有找到符合条件的题目。",
+        "random_pick": "🎯 为你随机挑选的题目：",
     },
 }
 

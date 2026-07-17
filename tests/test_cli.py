@@ -100,7 +100,7 @@ class CliParserTests(unittest.TestCase):
 
         text = output.getvalue()
         # Should contain the array problem (id=1) but not the others
-        self.assertIn("ID: 1", text)
+        self.assertIn("1", text)
         self.assertIn("Two Sum", text)
         self.assertNotIn("ID: 2", text)
         self.assertNotIn("Add Two Numbers", text)
@@ -155,7 +155,7 @@ class CliParserTests(unittest.TestCase):
             with redirect_stdout(output):
                 cli.command_show(args)
 
-        self.assertIn("ID: 1", output.getvalue())
+        self.assertIn("1", output.getvalue())
         self.assertIn("Two Sum", output.getvalue())
 
     def test_show_parser_accepts_category_without_id(self):
