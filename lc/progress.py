@@ -1,6 +1,6 @@
 import json
-from datetime import datetime
-from .paths import DATA, PROGRESS_FILE
+import datetime
+from .paths import DATA, PROGRESS_FILE, SUBMISSIONS_FILE
 
 
 def load_progress():
@@ -25,5 +25,87 @@ def is_done(problem_id):
 
 def mark_done(problem_id):
     progress = load_progress()
-    progress.setdefault("done", {})[str(problem_id)] = {"at": datetime.now().isoformat(timespec="seconds")}
+    progress.setdefault("done", {})[str(problem_id)] = {"at": datetime.datetime.now().isoformat(timespec="seconds")}
     save_progress(progress)
+
+
+def start_problem(problem_id):
+    """Record the start time for a problem."""
+    progress = load_progress()
+    progress.setdefault("started", {})[str(problem_id)] = datetime.datetime.now().isoformat(timespec="seconds")
+    save_progress(progress)
+
+
+def elapsed_time(problem_id):
+    """Return human-readable elapsed time for a problem since started_at.
+    Returns None if no start time recorded."""
+    progress = load_progress()
+    started_str = progress.get("started", {}).get(str(problem_id))
+    if not started_str:
+        return None
+    started = datetime.datetime.fromisoformat(started_str)
+    elapsed = datetime.datetime.now() - started
+    return _format_duration(elapsed)
+
+
+def total_elapsed_time():
+    """Return total elapsed time across all completed problems that have start records."""
+    progress = load_progress()
+    total = 0
+    for pid, info in progress.get("done", {}).items():
+        started_str = progress.get("started", {}).get(pid)
+        if started_str:
+            started = datetime.datetime.fromisoformat(started_str)
+            done_at = datetime.datetime.fromisoformat(info["at"])
+            total += (done_at - started).total_seconds()
+    return _format_duration(datetime.timedelta(seconds=int(total))) if total > 0 else "0s"
+
+
+def load_submissions():
+    """Load submission history from JSON file."""
+    if not SUBMISSIONS_FILE.exists():
+        return []
+    try:
+        with SUBMISSIONS_FILE.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return []
+
+
+def save_submissions(submissions):
+    """Save submission history to JSON file."""
+    DATA.mkdir(exist_ok=True)
+    with SUBMISSIONS_FILE.open("w", encoding="utf-8") as f:
+        json.dump(submissions, f, ensure_ascii=False, indent=2)
+
+
+def record_submission(problem_id, verdict, passed_count, total_count):
+    """Record a test submission with problem ID, timestamp, and verdict.
+
+    Args:
+        problem_id: int — the problem number
+        verdict: str — "Accepted", "Wrong Answer", or "Runtime Error"
+        passed_count: int — number of passing test cases
+        total_count: int — total test cases run
+    """
+    submissions = load_submissions()
+    submissions.append({
+        "id": problem_id,
+        "at": datetime.datetime.now().isoformat(timespec="seconds"),
+        "verdict": verdict,
+        "passed": passed_count,
+        "total": total_count,
+    })
+    save_submissions(submissions)
+
+
+def _format_duration(td):
+    """Format a timedelta into a human-readable string like '12m 34s' or '1h 23m'."""
+    total_seconds = int(td.total_seconds())
+    hours, remainder = divmod(total_seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+    if hours > 0:
+        return f"{hours}h {minutes}m"
+    if minutes > 0:
+        return f"{minutes}m {seconds}s"
+    return f"{seconds}s"

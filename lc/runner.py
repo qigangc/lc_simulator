@@ -65,3 +65,51 @@ def run_problem(problem, case_index=None):
 
 def format_value(value):
     return json.dumps(value, ensure_ascii=False)
+
+
+def run_custom_case(problem, input_json):
+    """Run a solution with a custom JSON input string.
+    
+    input_json should be a JSON object mapping parameter names to values,
+    e.g. '{"nums": [2,7,11,15], "target": 9}'
+    
+    Returns (ok, results) where results has one entry with the actual output.
+    """
+    if not isinstance(problem, dict):
+        return False, [{"error": "invalid problem data"}]
+    if "function" not in problem or not isinstance(problem["function"], dict):
+        return False, [{"error": "problem missing function definition"}]
+    if "name" not in problem["function"]:
+        return False, [{"error": "problem function missing name"}]
+    
+    path = WORKSPACE / solution_filename(problem)
+    if not path.exists():
+        return False, [{"error": f"missing solution file: {path}"}]
+    
+    try:
+        custom_input = json.loads(input_json)
+    except json.JSONDecodeError as e:
+        return False, [{"error": f"invalid JSON input: {e}"}]
+    
+    if not isinstance(custom_input, dict):
+        return False, [{"error": "input must be a JSON object, e.g. '{\"nums\": [1,2], \"target\": 3}'"}]
+    
+    fn_name = problem["function"]["name"]
+    params = problem["function"]["params"]
+    
+    # Build args list from custom input
+    args = []
+    for name, typ in params:
+        if name not in custom_input:
+            return False, [{"error": f"missing parameter '{name}' in input"}]
+        args.append(copy.deepcopy(custom_input[name]))
+    
+    solution = load_solution(path)
+    fn = getattr(solution, fn_name)
+    
+    try:
+        actual = normalize(fn(*args))
+        return True, [{"index": 1, "input": custom_input, "passed": True, "expected": None, "actual": actual}]
+    except Exception as exc:
+        actual = f"{type(exc).__name__}: {exc}"
+        return False, [{"index": 1, "input": custom_input, "passed": False, "expected": None, "actual": actual}]
