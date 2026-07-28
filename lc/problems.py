@@ -84,3 +84,7 @@ def find_problem(problem_id):
 
 def solution_filename(problem):
     return f"{problem['id']:03d}_{problem['slug'].replace('-', '_')}.py"
+
+
+def note_filename(problem):
+    return f"{problem['id']:03d}_{problem['slug'].replace('-', '_')}.md"

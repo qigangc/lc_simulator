@@ -16,6 +16,7 @@ WORKSPACE_DIR_NAME = os.environ.get("LC_WORKSPACE_DIR", "workspace")
 DATA_DIR_NAME = os.environ.get("LC_DATA_DIR", "data")
 BACKUP_DIR_NAME = os.environ.get("LC_BACKUP_DIR", "problems_backup")
 CACHE_DIR_NAME = os.environ.get("LC_CACHE_DIR", "cache")
+NOTES_DIR_NAME = os.environ.get("LC_NOTES_DIR", "notes")
 
 # Problem settings
 MAX_TEST_CASES = int(os.environ.get("LC_MAX_TEST_CASES", "20"))

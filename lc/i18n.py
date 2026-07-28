@@ -43,6 +43,10 @@ MESSAGES = {
         "export_done": "Data exported to {filename}",
         "random_no_match": "No problems match the given filters.",
         "random_pick": "Problem picked for you:",
+        "note_opened": "Note file: {path}",
+        "note_missing": "No note for this problem yet",
+        "note_empty": "(empty)",
+        "note_path": "Note",
     },
     "zh": {
         "id": "编号",
@@ -88,6 +92,10 @@ MESSAGES = {
         "export_done": "数据已导出到 {filename}",
         "random_no_match": "没有找到符合条件的题目。",
         "random_pick": "🎯 为你随机挑选的题目：",
+        "note_opened": "笔记文件：{path}",
+        "note_missing": "该题目暂无笔记",
+        "note_empty": "（空）",
+        "note_path": "笔记",
     },
 }
 

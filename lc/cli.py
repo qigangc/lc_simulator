@@ -10,6 +10,7 @@ from .problems import load_problems, find_problem
 from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time, record_submission, load_submissions
 from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
+from .notes import open_note, read_note, note_path, ensure_note
 from .color import red, green, yellow, cyan, bold
 
 
@@ -74,6 +75,8 @@ def command_new(args):
         return
     path, created = create_solution(problem)
     print(f"{msg(args.lang, 'created' if created else 'exists')}: {path}")
+    note = ensure_note(problem)
+    print(f"{msg(args.lang, 'note_path')}: {note}")
 
 
 def command_test(args):
@@ -289,20 +292,29 @@ def command_export(args):
     print(green(msg(args.lang, "export_done", filename=filename)))
 
 
+def command_note(args):
+    problem = find_problem(args.id)
+    if not problem:
+        print(msg(args.lang, "not_found"))
+        return
+    if args.show:
+        content = read_note(problem)
+        if not content:
+            print(msg(args.lang, "note_missing"))
+            return
+        print(content, end="")
+    else:
+        path = open_note(problem)
+        print(msg(args.lang, "note_opened", path=path))
+
+
 def add_lang(parser):
     parser.add_argument("--lang", choices=["en", "zh"], default="en")
 
 
 def build_parser():
     parser = argparse.ArgumentParser(description=msg("en", "usage"))
-<<<<<<< HEAD
     parser.add_argument("--version", action="version", version=f"lc {__version__}")
-=======
-    parser.add_argument(
-        "--version", action="version",
-        version=f"lc-simulator {__version__}"
-    )
->>>>>>> 2edbdb3318c32f6d9f87a7da5e18f7719104bc10
     sub = parser.add_subparsers(dest="command", required=True)
     p = sub.add_parser("list")
     add_lang(p)
@@ -355,6 +367,11 @@ def build_parser():
     p = sub.add_parser("export")
     add_lang(p)
     p.set_defaults(func=command_export)
+    p = sub.add_parser("note")
+    add_lang(p)
+    p.add_argument("id", type=int)
+    p.add_argument("--show", action="store_true", help="print note to stdout instead of opening editor")
+    p.set_defaults(func=command_note)
     return parser
 
 
