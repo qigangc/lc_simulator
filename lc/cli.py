@@ -5,12 +5,13 @@ import os
 import random
 from . import __version__
 from .i18n import msg, category_name
-from .paths import PROGRESS_FILE, SUBMISSIONS_FILE
-from .problems import load_problems, find_problem
+from .paths import PROGRESS_FILE, SUBMISSIONS_FILE, WORKSPACE
+from .problems import load_problems, find_problem, solution_filename
 from .progress import is_done, mark_done, load_progress, start_problem, elapsed_time, total_elapsed_time, record_submission, load_submissions
 from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
 from .notes import open_note, read_note, note_path, ensure_note
+from .clipboard import copy_to_clipboard
 from .color import red, green, yellow, cyan, bold
 
 
@@ -308,6 +309,29 @@ def command_note(args):
         print(msg(args.lang, "note_opened", path=path))
 
 
+def command_copy(args):
+    problem = find_problem(args.id)
+    if not problem:
+        print(msg(args.lang, "not_found"))
+        return
+    src = WORKSPACE / solution_filename(problem)
+    if not src.exists():
+        print(red(msg(args.lang, "no_solution")))
+        return
+    code = src.read_text(encoding="utf-8")
+    if args.out:
+        out_path = args.out
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(code)
+        print(green(msg(args.lang, "exported_solution", path=out_path)))
+    else:
+        if copy_to_clipboard(code):
+            print(green(msg(args.lang, "copied")))
+        else:
+            print(yellow(msg(args.lang, "clipboard_unavailable")))
+            print(code, end="")
+
+
 def add_lang(parser):
     parser.add_argument("--lang", choices=["en", "zh"], default="en")
 
@@ -372,6 +396,11 @@ def build_parser():
     p.add_argument("id", type=int)
     p.add_argument("--show", action="store_true", help="print note to stdout instead of opening editor")
     p.set_defaults(func=command_note)
+    p = sub.add_parser("copy")
+    add_lang(p)
+    p.add_argument("id", type=int)
+    p.add_argument("--out", metavar="FILE", help="export solution to a .py file instead of clipboard")
+    p.set_defaults(func=command_copy)
     return parser
 
 

@@ -47,6 +47,10 @@ MESSAGES = {
         "note_missing": "No note for this problem yet",
         "note_empty": "(empty)",
         "note_path": "Note",
+        "copied": "Solution copied to clipboard",
+        "clipboard_unavailable": "Clipboard not available, printing instead:",
+        "exported_solution": "Solution exported to {path}",
+        "no_solution": "Solution file not found. Run 'lc new <id>' first.",
     },
     "zh": {
         "id": "编号",
@@ -96,6 +100,10 @@ MESSAGES = {
         "note_missing": "该题目暂无笔记",
         "note_empty": "（空）",
         "note_path": "笔记",
+        "copied": "解题代码已复制到剪贴板",
+        "clipboard_unavailable": "剪贴板不可用，改为打印：",
+        "exported_solution": "解题代码已导出到 {path}",
+        "no_solution": "未找到解题文件，请先运行 'lc new <id>'。",
     },
 }
 
