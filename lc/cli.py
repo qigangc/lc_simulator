@@ -12,6 +12,7 @@ from .runner import run_problem, format_value, run_custom_case
 from .templates import create_solution
 from .notes import open_note, read_note, note_path, ensure_note
 from .clipboard import copy_to_clipboard
+from .throttle import acquire_lock, release_lock, check_cooldown, record_test_time
 from .color import red, green, yellow, cyan, bold
 
 
@@ -85,51 +86,64 @@ def command_test(args):
     if not problem:
         print(msg(args.lang, "not_found"))
         return
-    
-    if getattr(args, "input", None):
-        ok, results = run_custom_case(problem, args.input)
+
+    can_run, remaining = check_cooldown(args.id)
+    if not can_run:
+        print(yellow(msg(args.lang, "cooldown", seconds=int(remaining) + 1)))
+        return
+
+    if not acquire_lock():
+        print(yellow(msg(args.lang, "test_locked")))
+        return
+
+    try:
+        if getattr(args, "input", None):
+            ok, results = run_custom_case(problem, args.input)
+            for result in results:
+                if "error" in result:
+                    print(result["error"])
+                    continue
+                print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
+                print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
+            if results and "error" not in results[0]:
+                verdict = "Accepted" if ok else "Runtime Error"
+                record_submission(args.id, verdict, 1, 1)
+                if ok:
+                    print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
+                else:
+                    print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
+            return
+
+        ok, results = run_problem(problem, args.case)
         for result in results:
             if "error" in result:
                 print(result["error"])
                 continue
-            print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
-            print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
-        if results and "error" not in results[0]:
-            verdict = "Accepted" if ok else "Runtime Error"
-            record_submission(args.id, verdict, 1, 1)
-            if ok:
-                print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
-            else:
-                print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
-        return
-    
-    ok, results = run_problem(problem, args.case)
-    for result in results:
-        if "error" in result:
-            print(result["error"])
-            continue
-        print(f"{msg(args.lang, 'case')} {result['index']}: {msg(args.lang, 'passed' if result['passed'] else 'failed')}")
-        if not result["passed"]:
-            print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
-            print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
-            print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
-    passed_count = sum(1 for r in results if r.get("passed"))
-    total_count = len(results)
-    has_error = any("error" in r for r in results)
-    if has_error:
-        verdict = "Runtime Error"
-    elif ok:
-        verdict = "Accepted"
-    else:
-        verdict = "Wrong Answer"
-    record_submission(args.id, verdict, passed_count, total_count)
+            print(f"{msg(args.lang, 'case')} {result['index']}: {msg(args.lang, 'passed' if result['passed'] else 'failed')}")
+            if not result["passed"]:
+                print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
+                print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
+                print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
+        passed_count = sum(1 for r in results if r.get("passed"))
+        total_count = len(results)
+        has_error = any("error" in r for r in results)
+        if has_error:
+            verdict = "Runtime Error"
+        elif ok:
+            verdict = "Accepted"
+        else:
+            verdict = "Wrong Answer"
+        record_submission(args.id, verdict, passed_count, total_count)
 
-    if has_error:
-        print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
-    elif ok:
-        print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
-    else:
-        print(f"{red('[FAIL]')} {msg(args.lang, 'verdict_wrong_answer')}")
+        if has_error:
+            print(f"{red('[ERROR]')} {msg(args.lang, 'verdict_runtime_error')}")
+        elif ok:
+            print(f"{green('[PASS]')} {msg(args.lang, 'verdict_accepted')}")
+        else:
+            print(f"{red('[FAIL]')} {msg(args.lang, 'verdict_wrong_answer')}")
+    finally:
+        record_test_time(args.id)
+        release_lock()
 
 
 def command_history(args):

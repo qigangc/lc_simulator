@@ -28,3 +28,7 @@ PROBLEM_FILE_PATTERN = os.environ.get("LC_PROBLEM_PATTERN", "[0-9][0-9][0-9]_*.j
 
 # File encoding
 JSON_ENCODING = os.environ.get("LC_JSON_ENCODING", "utf-8-sig")
+
+# Throttling
+TEST_COOLDOWN_SECONDS = float(os.environ.get("LC_TEST_COOLDOWN", "3"))
+LOCK_TIMEOUT_SECONDS = float(os.environ.get("LC_LOCK_TIMEOUT", "60"))

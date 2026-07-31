@@ -58,7 +58,12 @@ class CliParserTests(unittest.TestCase):
             }
         ]
 
-        with patch.object(cli, "find_problem", return_value=problem), patch.object(cli, "run_problem", return_value=(False, results)):
+        with patch.object(cli, "find_problem", return_value=problem), \
+             patch.object(cli, "run_problem", return_value=(False, results)), \
+             patch.object(cli, "check_cooldown", return_value=(True, 0)), \
+             patch.object(cli, "acquire_lock", return_value=True), \
+             patch.object(cli, "release_lock"), \
+             patch.object(cli, "record_test_time"):
             output = StringIO()
             with redirect_stdout(output):
                 cli.command_test(args)

@@ -51,6 +51,8 @@ MESSAGES = {
         "clipboard_unavailable": "Clipboard not available, printing instead:",
         "exported_solution": "Solution exported to {path}",
         "no_solution": "Solution file not found. Run 'lc new <id>' first.",
+        "cooldown": "Please wait {seconds}s before running again (throttle).",
+        "test_locked": "Another test is already running. Please wait.",
     },
     "zh": {
         "id": "编号",
@@ -104,6 +106,8 @@ MESSAGES = {
         "clipboard_unavailable": "剪贴板不可用，改为打印：",
         "exported_solution": "解题代码已导出到 {path}",
         "no_solution": "未找到解题文件，请先运行 'lc new <id>'。",
+        "cooldown": "请等待 {seconds} 秒后再运行（节流保护）。",
+        "test_locked": "已有评测正在运行，请稍候。",
     },
 }
 
