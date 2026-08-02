@@ -13,6 +13,8 @@ from .templates import create_solution
 from .notes import open_note, read_note, note_path, ensure_note
 from .clipboard import copy_to_clipboard
 from .throttle import acquire_lock, release_lock, check_cooldown, record_test_time
+from .network import is_online, fetch_problem_content
+from .settings import load_settings, update_setting, VALID_THEMES, VALID_FONT_SIZES
 from .color import red, green, yellow, cyan, bold
 
 
@@ -346,6 +348,66 @@ def command_copy(args):
             print(code, end="")
 
 
+def command_fetch(args):
+    if not is_online():
+        print(yellow(msg(args.lang, "offline_mode")))
+        return
+
+    if args.id is not None:
+        problem = find_problem(args.id)
+        if not problem:
+            print(msg(args.lang, "not_found"))
+            return
+        targets = [problem]
+    else:
+        targets = load_problems()
+        if args.limit:
+            targets = targets[:args.limit]
+
+    for problem in targets:
+        slug = problem.get("slug", "")
+        if not slug:
+            continue
+        result = fetch_problem_content(slug, force=args.force)
+        status = result["status"]
+        if status == "offline":
+            print(yellow(msg(args.lang, "offline_mode")))
+            return
+        if status == "missing_dependency":
+            print(yellow(msg(args.lang, "fetch_missing_dep")))
+            return
+        if status == "ok":
+            print(green(msg(args.lang, "fetch_success", id=problem["id"])))
+        else:
+            print(red(msg(args.lang, "fetch_failed", id=problem["id"], message=result["message"])))
+
+
+def command_config(args):
+    settings = load_settings()
+    if args.theme is not None:
+        if args.theme not in VALID_THEMES:
+            print(red(msg(args.lang, "config_invalid_theme")))
+            return
+        settings = update_setting("theme", args.theme)
+    if args.font_size is not None:
+        if args.font_size not in VALID_FONT_SIZES:
+            print(red(msg(args.lang, "config_invalid_font_size")))
+            return
+        settings = update_setting("font_size", args.font_size)
+
+    if args.theme is not None or args.font_size is not None:
+        changed = []
+        if args.theme is not None:
+            changed.append(f"theme = {args.theme}")
+        if args.font_size is not None:
+            changed.append(f"font_size = {args.font_size}")
+        for item in changed:
+            print(green(msg(args.lang, "config_saved", key=item.split("=")[0].strip(), value=item.split("=")[1].strip())))
+
+    print(f"{msg(args.lang, 'config_theme')}: {settings.get('theme', 'dark')}")
+    print(f"{msg(args.lang, 'config_font_size')}: {settings.get('font_size', 16)}px")
+
+
 def add_lang(parser):
     parser.add_argument("--lang", choices=["en", "zh"], default="en")
 
@@ -415,6 +477,12 @@ def build_parser():
     p.add_argument("id", type=int)
     p.add_argument("--out", metavar="FILE", help="export solution to a .py file instead of clipboard")
     p.set_defaults(func=command_copy)
+    p = sub.add_parser("fetch")
+    add_lang(p)
+    p.add_argument("id", type=int, nargs="?", help="problem ID (omit to fetch all)")
+    p.add_argument("--limit", type=int, help="max problems to fetch when no ID given")
+    p.add_argument("--force", action="store_true", help="skip cache, force network fetch")
+    p.set_defaults(func=command_fetch)
     return parser
 
 
