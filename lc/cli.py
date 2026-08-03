@@ -483,6 +483,11 @@ def build_parser():
     p.add_argument("--limit", type=int, help="max problems to fetch when no ID given")
     p.add_argument("--force", action="store_true", help="skip cache, force network fetch")
     p.set_defaults(func=command_fetch)
+    p = sub.add_parser("config")
+    add_lang(p)
+    p.add_argument("--theme", choices=["dark", "light"], help="set color theme")
+    p.add_argument("--font-size", type=int, choices=[14, 16, 18], metavar="SIZE", help="set font size (14/16/18)")
+    p.set_defaults(func=command_config)
     return parser
 
 
