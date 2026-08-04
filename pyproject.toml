@@ -4,6 +4,9 @@ version = "0.1.0"
 description = "Local Python-only LeetCode Hot 100 CLI simulator"
 requires-python = ">=3.9"
 
+[project.optional-dependencies]
+dev = ["pre-commit", "pytest", "black", "ruff"]
+
 [project.scripts]
 lc = "lc.cli:main"
 

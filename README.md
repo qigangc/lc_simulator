@@ -238,6 +238,36 @@ Each problem is a JSON document with metadata, bilingual titles and descriptions
 
 ---
 
+## Pre-commit Hooks
+
+Every `git commit` runs automated formatting and linting through [pre-commit](https://pre-commit.com/).  This keeps the codebase clean without manual effort.
+
+### One-time setup
+
+```bash
+python -m pip install pre-commit
+pre-commit install
+```
+
+After that, `ruff` and `ruff-format` will run automatically before each commit.  Files are reformatted in-place — you just need to re-stage the changes and commit again.
+
+### What runs on commit
+
+| Hook | Purpose |
+| --- | --- |
+| `ruff` | Lint: fixes import order, removes unused imports, catches bug patterns |
+| `ruff-format` | Format: enforces consistent spacing, quotes, and line length |
+| `trailing-whitespace` | Strips trailing spaces |
+| `end-of-file-fixer` | Ensures a final newline in every file |
+
+### Run manually
+
+```bash
+pre-commit run --all-files
+```
+
+---
+
 ## Testing
 
 Runtime use of the CLI needs no external dependencies. The test suite uses `pytest`.
