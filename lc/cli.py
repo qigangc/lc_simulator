@@ -26,16 +26,16 @@ def print_problem(problem, lang):
     print(f"{msg(lang, 'id')}: {bold(str(problem['id']))}")
     print(f"{msg(lang, 'title')}: {bold(title(problem, lang))}")
     print(f"{msg(lang, 'difficulty')}: {problem['difficulty']}")
-    cats = ", ".join(category_name(lang, c) for c in problem["categories"])
+    cats = ", ".join(category_name(lang, cat) for cat in problem["categories"])
     print(f"{msg(lang, 'categories')}: {cats}")
     if problem.get("url"):
         print(f"{msg(lang, 'url')}: {problem['url']}")
-    fn = problem["function"]
-    params = ", ".join(f"{name}: {typ}" for name, typ in fn["params"])
-    print(f"Python: Solution.{fn['name']}({params}) -> {fn['return']}")
-    for item in problem.get("examples", []):
-        print(f"input: {format_value(item['input'])}")
-        print(f"output: {format_value(item['output'])}")
+    func_sig = problem["function"]
+    params = ", ".join(f"{name}: {typ}" for name, typ in func_sig["params"])
+    print(f"Python: Solution.{func_sig['name']}({params}) -> {func_sig['return']}")
+    for example in problem.get("examples", []):
+        print(f"input: {format_value(example['input'])}")
+        print(f"output: {format_value(example['output'])}")
 
 
 def command_list(args):
@@ -126,9 +126,9 @@ def command_test(args):
                 print(f"{msg(args.lang, 'input')}: {format_value(result['input'])}")
                 print(f"{msg(args.lang, 'expected')}: {format_value(result['expected'])}")
                 print(f"{msg(args.lang, 'actual')}: {format_value(result['actual'])}")
-        passed_count = sum(1 for r in results if r.get("passed"))
+        passed_count = sum(1 for result in results if result.get("passed"))
         total_count = len(results)
-        has_error = any("error" in r for r in results)
+        has_error = any("error" in result for result in results)
         if has_error:
             verdict = "Runtime Error"
         elif ok:
@@ -153,7 +153,7 @@ def command_history(args):
     submissions = load_submissions()
     if args.yesterday:
         yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-        submissions = [s for s in submissions if s["at"].startswith(yesterday)]
+        submissions = [sub for sub in submissions if sub["at"].startswith(yesterday)]
     if not submissions:
         print(msg(args.lang, "no_submissions"))
         return
@@ -174,32 +174,32 @@ def command_footprint(args):
     """Show yesterday's practice footprint."""
     submissions = load_submissions()
     yesterday = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime("%Y-%m-%d")
-    recent = [s for s in submissions if s["at"].startswith(yesterday)]
+    recent = [sub for sub in submissions if sub["at"].startswith(yesterday)]
 
     if not recent:
         print(msg(args.lang, "no_footprint"))
         return
 
-    problem_ids = sorted(set(s["id"] for s in recent))
+    problem_ids = sorted(set(sub["id"] for sub in recent))
     problems = load_problems()
-    problem_map = {p["id"]: p for p in problems}
+    problem_map = {problem["id"]: problem for problem in problems}
 
     print(f"\n{msg(args.lang, 'footprint_title')} ({yesterday})")
     print("=" * 50)
 
     total_tests = 0
     accepted_count = 0
-    for s in recent:
+    for sub in recent:
         total_tests += 1
-        if s["verdict"] == "Accepted":
+        if sub["verdict"] == "Accepted":
             accepted_count += 1
 
     for pid in problem_ids:
-        p = problem_map.get(pid)
-        if p is None:
+        problem = problem_map.get(pid)
+        if problem is None:
             continue
-        name = p["title_en"] if args.lang == "en" else p["title_zh"]
-        submissions_for_pid = [s for s in recent if s["id"] == pid]
+        name = problem["title_en"] if args.lang == "en" else problem["title_zh"]
+        submissions_for_pid = [sub for sub in recent if sub["id"] == pid]
         last = submissions_for_pid[-1]
         attempts = len(submissions_for_pid)
         verdict = last["verdict"]
@@ -416,74 +416,74 @@ def build_parser():
     parser = argparse.ArgumentParser(description=msg("en", "usage"))
     parser.add_argument("--version", action="version", version=f"lc {__version__}")
     sub = parser.add_subparsers(dest="command", required=True)
-    p = sub.add_parser("list")
+    subparser = sub.add_parser("list")
     add_lang(p)
     p.add_argument("--category")
     p.add_argument("--difficulty", choices=["easy", "medium", "hard"])
     p.set_defaults(func=command_list)
-    p = sub.add_parser("show")
+    subparser = sub.add_parser("show")
     add_lang(p)
     p.add_argument("id", type=int, nargs="?", help="problem ID")
     p.add_argument("--category", help="filter by category")
     p.set_defaults(func=command_show)
-    p = sub.add_parser("new")
+    subparser = sub.add_parser("new")
     add_lang(p)
     p.add_argument("id", type=int)
     p.set_defaults(func=command_new)
-    p = sub.add_parser("start")
+    subparser = sub.add_parser("start")
     add_lang(p)
     p.add_argument("id", type=int)
     p.set_defaults(func=command_start)
-    p = sub.add_parser("test")
+    subparser = sub.add_parser("test")
     add_lang(p)
     p.add_argument("id", type=int)
     p.add_argument("--case", type=int, metavar="N", help="run only the N-th test case (1-based)")
     p.add_argument("--input", type=str, metavar="JSON", help="custom input as JSON, e.g. '{\"nums\": [1,2], \"target\": 3}'")
     p.set_defaults(func=command_test)
-    p = sub.add_parser("done")
+    subparser = sub.add_parser("done")
     add_lang(p)
     p.add_argument("id", type=int)
     p.set_defaults(func=command_done)
-    p = sub.add_parser("stats")
+    subparser = sub.add_parser("stats")
     add_lang(p)
     p.set_defaults(func=command_stats)
-    p = sub.add_parser("history")
+    subparser = sub.add_parser("history")
     add_lang(p)
     p.add_argument("--yesterday", action="store_true", help="show only yesterday's submissions")
     p.set_defaults(func=command_history)
-    p = sub.add_parser("footprint")
+    subparser = sub.add_parser("footprint")
     add_lang(p)
     p.set_defaults(func=command_footprint)
-    p = sub.add_parser("reset")
+    subparser = sub.add_parser("reset")
     add_lang(p)
     p.add_argument("--yes", action="store_true", help="skip confirmation")
     p.set_defaults(func=command_reset)
-    p = sub.add_parser("random")
+    subparser = sub.add_parser("random")
     add_lang(p)
     p.add_argument("--category", help="filter by category")
     p.add_argument("--difficulty", choices=["easy", "medium", "hard"], help="filter by difficulty")
     p.add_argument("--undone", action="store_true", help="only unsolved problems")
     p.set_defaults(func=command_random)
-    p = sub.add_parser("export")
+    subparser = sub.add_parser("export")
     add_lang(p)
     p.set_defaults(func=command_export)
-    p = sub.add_parser("note")
+    subparser = sub.add_parser("note")
     add_lang(p)
     p.add_argument("id", type=int)
     p.add_argument("--show", action="store_true", help="print note to stdout instead of opening editor")
     p.set_defaults(func=command_note)
-    p = sub.add_parser("copy")
+    subparser = sub.add_parser("copy")
     add_lang(p)
     p.add_argument("id", type=int)
     p.add_argument("--out", metavar="FILE", help="export solution to a .py file instead of clipboard")
     p.set_defaults(func=command_copy)
-    p = sub.add_parser("fetch")
+    subparser = sub.add_parser("fetch")
     add_lang(p)
     p.add_argument("id", type=int, nargs="?", help="problem ID (omit to fetch all)")
     p.add_argument("--limit", type=int, help="max problems to fetch when no ID given")
     p.add_argument("--force", action="store_true", help="skip cache, force network fetch")
     p.set_defaults(func=command_fetch)
-    p = sub.add_parser("config")
+    subparser = sub.add_parser("config")
     add_lang(p)
     p.add_argument("--theme", choices=["dark", "light"], help="set color theme")
     p.add_argument("--font-size", type=int, choices=[14, 16, 18], metavar="SIZE", help="set font size (14/16/18)")
