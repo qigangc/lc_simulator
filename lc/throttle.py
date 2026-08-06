@@ -49,11 +49,11 @@ def check_cooldown(problem_id):
         progress = json.loads(PROGRESS_FILE.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
         return True, 0
-    last_str = progress.get("last_test", {}).get(str(problem_id))
-    if not last_str:
+    last_timestamp = progress.get("last_test", {}).get(str(problem_id))
+    if not last_timestamp:
         return True, 0
     try:
-        last = datetime.datetime.fromisoformat(last_str)
+        last = datetime.datetime.fromisoformat(last_timestamp)
     except ValueError:
         return True, 0
     elapsed = (_now() - last).total_seconds()

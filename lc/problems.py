@@ -40,10 +40,10 @@ def default_input(typ, index):
 
 
 def make_default_case(problem, index):
-    fn = problem["function"]
+    func_sig = problem["function"]
     return {
-        "input": {name: default_input(typ, index) for name, typ in fn["params"]},
-        "output": default_output(fn["return"]),
+        "input": {name: default_input(typ, index) for name, typ in func_sig["params"]},
+        "output": default_output(func_sig["return"]),
         "generated": True,
     }
 
@@ -67,12 +67,12 @@ def load_problems():
     for path in sorted(PROBLEMS_DIR.glob(PROBLEM_FILE_PATTERN)):
         try:
             with path.open("r", encoding=JSON_ENCODING) as f:
-                data = json.load(f)
-            if isinstance(data, dict) and "id" in data:
-                problems.append(data)
+                problem_data = json.load(f)
+            if isinstance(problem_data, dict) and "id" in problem_data:
+                problems.append(problem_data)
         except (json.JSONDecodeError, OSError) as e:
             print(yellow(f"Warning: skipping {path.name}: {e}"), file=sys.stderr)
-    return [ensure_examples(p) for p in sorted(problems, key=lambda p: p.get("id", 0))]
+    return [ensure_examples(prob) for prob in sorted(problems, key=lambda prob: prob.get("id", 0))]
 
 
 def find_problem(problem_id):

@@ -40,10 +40,10 @@ def elapsed_time(problem_id):
     """Return human-readable elapsed time for a problem since started_at.
     Returns None if no start time recorded."""
     progress = load_progress()
-    started_str = progress.get("started", {}).get(str(problem_id))
-    if not started_str:
+    started_at = progress.get("started", {}).get(str(problem_id))
+    if not started_at:
         return None
-    started = datetime.datetime.fromisoformat(started_str)
+    started = datetime.datetime.fromisoformat(started_at)
     elapsed = datetime.datetime.now() - started
     return _format_duration(elapsed)
 
@@ -53,9 +53,9 @@ def total_elapsed_time():
     progress = load_progress()
     total = 0
     for pid, info in progress.get("done", {}).items():
-        started_str = progress.get("started", {}).get(pid)
-        if started_str:
-            started = datetime.datetime.fromisoformat(started_str)
+        started_at = progress.get("started", {}).get(pid)
+        if started_at:
+            started = datetime.datetime.fromisoformat(started_at)
             done_at = datetime.datetime.fromisoformat(info["at"])
             total += (done_at - started).total_seconds()
     return _format_duration(datetime.timedelta(seconds=int(total))) if total > 0 else "0s"

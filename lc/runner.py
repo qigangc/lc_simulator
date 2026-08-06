@@ -45,7 +45,7 @@ def run_problem(problem, case_index=None):
         indexed_cases = enumerate(cases, start=1)
 
     solution = load_solution(path)
-    fn = getattr(solution, problem["function"]["name"])
+    solution_fn = getattr(solution, problem["function"]["name"])
     results = []
     ok = True
     for index, case in indexed_cases:
@@ -53,7 +53,7 @@ def run_problem(problem, case_index=None):
         args = [copy.deepcopy(case["input"][name]) for name, _ in problem["function"]["params"]]
         expected = case["output"]
         try:
-            actual = normalize(fn(*args))
+            actual = normalize(solution_fn(*args))
             passed = actual == expected
         except Exception as exc:
             actual = f"{type(exc).__name__}: {exc}"
@@ -105,10 +105,10 @@ def run_custom_case(problem, input_json):
         args.append(copy.deepcopy(custom_input[name]))
     
     solution = load_solution(path)
-    fn = getattr(solution, fn_name)
+    solution_fn = getattr(solution, fn_name)
     
     try:
-        actual = normalize(fn(*args))
+        actual = normalize(solution_fn(*args))
         return True, [{"index": 1, "input": custom_input, "passed": True, "expected": None, "actual": actual}]
     except Exception as exc:
         actual = f"{type(exc).__name__}: {exc}"

@@ -20,9 +20,9 @@ def load_settings():
         return dict(DEFAULT_SETTINGS)
     try:
         with SETTINGS_FILE.open("r", encoding="utf-8") as f:
-            data = json.load(f)
+            file_data = json.load(f)
         settings = dict(DEFAULT_SETTINGS)
-        settings.update(data)
+        settings.update(file_data)
         return settings
     except (json.JSONDecodeError, OSError):
         return dict(DEFAULT_SETTINGS)

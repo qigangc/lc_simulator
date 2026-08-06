@@ -3,7 +3,7 @@ from .problems import solution_filename
 
 
 def type_imports(problem):
-    text = " ".join([p[1] for p in problem["function"]["params"]] + [problem["function"]["return"]])
+    text = " ".join([param[1] for param in problem["function"]["params"]] + [problem["function"]["return"]])
     names = []
     for name in ["List", "Optional", "Dict", "Set", "Tuple"]:
         if name in text:
@@ -28,17 +28,17 @@ def stub_value(return_type):
 def render_solution(problem):
     if not isinstance(problem, dict) or "function" not in problem:
         return "class Solution:\n    pass\n"
-    fn = problem["function"]
-    if not isinstance(fn, dict) or "name" not in fn:
+    func_sig = problem["function"]
+    if not isinstance(func_sig, dict) or "name" not in func_sig:
         return "class Solution:\n    pass\n"
-    params = ", ".join([f"{name}: {typ}" for name, typ in fn["params"]])
+    params = ", ".join([f"{name}: {typ}" for name, typ in func_sig["params"]])
     if params:
         params = ", " + params
     lines = [
         type_imports(problem),
         "class Solution:\n",
-        f"    def {fn['name']}(self{params}) -> {fn['return']}:\n",
-        f"        return {stub_value(fn['return'])}\n",
+        f"    def {func_sig['name']}(self{params}) -> {func_sig['return']}:\n",
+        f"        return {stub_value(func_sig['return'])}\n",
     ]
     return "".join(lines)
 
